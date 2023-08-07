@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+import { Header } from "@/components/shared/header/header";
 import StyledComponentsRegistry from "../lib/registry";
 import "./globals.css";
 import type { Metadata } from "next";
