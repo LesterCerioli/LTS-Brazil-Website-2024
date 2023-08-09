@@ -7,18 +7,22 @@ pr:
 pool:
   name: 'DS11'
 
-stages:
-- stage: Build
-  jobs:
-  - job: BuildApp
-    steps:
-    - script: |
-        npm install
-        npm run build
-      displayName: 'Build Next.js and React.js app'
-    - task: PublishBuildArtifacts@1
-      displayName: 'Publish build artifacts'
-      inputs:
-        pathtoPublish: './build'
-        artifactName: 'build'
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "14.x"
+    displayName: "Install Node.js"
 
+  - script: |
+
+      npm install
+    displayName: "Install Dependencies"
+
+  - script: |
+      npm build
+    displayName: "Build"
+
+  - script: |
+      cd test
+      npm test
+    displayName: "Run npm test"
