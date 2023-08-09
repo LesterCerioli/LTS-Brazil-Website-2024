@@ -1,10 +1,11 @@
 trigger:
-  branches:
-    include:
-      - issue/944 # Set your desired branch here
+- '*'
+
+pr:
+- '*'
 
 pool:
-  name: "DS12" # Set your desired VM image here
+  name: 'DS11'
 
 steps:
   - task: NodeTool@0
