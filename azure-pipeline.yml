@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-      - issue#936 # Set your desired branch here
+      - develop # Set your desired branch here
 
 jobs:
   - job: Linux
