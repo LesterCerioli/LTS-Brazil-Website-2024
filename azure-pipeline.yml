@@ -3,48 +3,25 @@ trigger:
     include:
       - develop # Set your desired branch here
 
-jobs:
-  - job: Linux
-    pool:
-      name: "DS11"
-    steps:
-      - task: NodeTool@0
-        inputs:
-          versionSpec: "14.x"
-        displayName: "Install Node.js"
+pool:
+  name: "DS12" # Set your desired VM image here
 
-      - script: |
+steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "14.x"
+    displayName: "Install Node.js"
 
-          npm install
-        displayName: "Install Dependencies"
+  - script: |
 
-      - script: |
-          npm build
-        displayName: "Build"
+      npm install
+    displayName: "Install Dependencies"
 
-      - script: |
-          cd test
-          npm test
-        displayName: "Run npm test"
-  - job: Windows
-    pool:
-      name: "DS31"
-    steps:
-      - task: NodeTool@0
-        inputs:
-          versionSpec: "14.x"
-        displayName: "Install Node.js"
+  - script: |
+      npm build
+    displayName: "Build"
 
-      - script: |
-
-          npm install
-        displayName: "Install Dependencies"
-
-      - script: |
-          npm build
-        displayName: "Build"
-
-      - script: |
-          cd test
-          npm test
-        displayName: "Run npm test"
+  - script: |
+      cd test
+      npm test
+    displayName: "Run npm test"
