@@ -1,7 +1,7 @@
 trigger:
   branches:
     include:
-      - develop # Set your desired branch here
+      - issue/938
 
 pool:
   name: "DS12" # Set your desired VM image here
