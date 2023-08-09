@@ -1,0 +1,41 @@
+trigger:
+- '*'
+
+pr:
+- '*'
+
+pool:
+  name: 'DS11'
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildApp
+    steps:
+    - script: |
+        npm install
+        npm run build
+      displayName: 'Build Next.js and React.js app'
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish build artifacts'
+      inputs:
+        pathtoPublish: './build'
+        artifactName: 'build'
+
+- stage: Deploy
+  jobs:
+  - job: DeployToAzure
+    steps:
+    - task: UseDotNet@2
+      displayName: 'Use Node.js 14.x'
+      inputs:
+        packageType: 'install'
+        installationType: 'layout'
+        installationPath: $(Agent.ToolsDirectory)/nodejs
+        packageVersion: '14.x'
+
+    - script: |
+        npm install
+        npm install -g serve
+        serve -s build
+      displayName: 'Serve built app'
