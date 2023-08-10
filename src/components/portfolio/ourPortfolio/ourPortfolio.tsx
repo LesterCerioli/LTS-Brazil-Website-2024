@@ -1,14 +1,27 @@
 import React from 'react'
 import * as S from './styles'
+import NyseLogo from '../images/NYSE-logo.png'
 
-const OurPortfolio = () => {
+
+export const OurPortfolio = () => {
     return (
-      <section>
-        <h1>Nosso Portfólio</h1>
-        <h4>Mercado Financeiro</h4>
-        <h4>Tecnologias Utilizadas</h4>
-    </section>
+      <S.Container>
+        <div>
+          <S.Title>Nosso Portfólio</S.Title>
+        </div>
+        <section>
+          <div>
+            <img src={NyseLogo} alt="NYSE Logo" />
+          </div>
+          <div>
+            <S.Subtitle>Mercado Financeiro</S.Subtitle>
+            <S.Subtitle>Bolsa de Valores de Nova Iorque</S.Subtitle>
+          </div>
+        </section>
+      </S.Container>
     );
   };
   
   export default OurPortfolio;
+
+  
