@@ -24,15 +24,16 @@ export const Title = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 50%;
   height: 24.25rem;
+  margin: auto;
 
   h1 {
     color: var(--blue);
     text-transform: uppercase;
     text-align: center;
     font-family: "Archivo Black", arial, sans-serif;
-    font-size: 2.2rem;
+    font-size: 3.4rem;
   }
 
   p {
@@ -52,20 +53,32 @@ export const FirstSection = styled.div`
 export const SectionStart = styled.div`
   flex: 1;
   background-color: #021f3e;
-  padding: 2rem;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0;
+  }
 
   h2 {
     color: white;
     font-size: 2.2rem;
+    padding: 2rem;
   }
 
   p {
     color: #a4afc9;
+    font-family: "Montserrat", arial, sans-serif;
     font-size: 22px;
+    line-height: 1.5;
     margin-top: 20px;
+    padding-left: 2rem;
+    letter-spacing: 0.12rem;
   }
+
   button {
     margin: 2rem 0 0;
+    margin-left: 2rem;
     color: #021f3e;
     background-color: white;
   }
@@ -76,16 +89,35 @@ export const SectionStartImg = styled.div``;
 export const SecondSection = styled.div`
   h2 {
     color: #021f3e;
-    font-size: 2.2rem;
+    font-family: "Archivo Black", arial, sans-serif;
+    font-size: 39px;
     text-align: center;
     padding: 1rem;
+    position: relative;
+  }
+
+  .hLine {
+    border-bottom: 3px solid #dadada;
+    width: 150px;
+    margin: auto;
   }
 `;
 
 export const SectionCards = styled.div`
-  height: 180px;
-  background: red;
-  margin: 2.5rem 4rem;
+  height: 286.4px;
+  padding: 2.5rem 4rem;
+  display: flex;
+  gap: 1rem;
+
+  .card {
+    width: 370px;
+    background: blue;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export const ThirdSection = styled.div`
@@ -94,6 +126,7 @@ export const ThirdSection = styled.div`
   height: 16rem;
   align-items: center;
   justify-content: center;
+  margin-top: 50px;
 
   h2 {
     color: white;

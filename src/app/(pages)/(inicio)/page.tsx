@@ -1,5 +1,13 @@
 "use client";
+import React from "react";
+import Image from "next/image";
 import * as S from "./styles";
+import CapaEnglosite from "@/assets/imagensInicio/capaEnglosite.png";
+import Design from "@/assets/imagensInicio/design.png";
+import Crms from "@/assets/imagensInicio/crms.png";
+import Marketing from "@/assets/imagensInicio/marketing.png";
+import Mobile from "@/assets/imagensInicio/mobile.png";
+import Sites from "@/assets/imagensInicio/sites.png";
 
 export default function Home() {
   return (
@@ -12,8 +20,7 @@ export default function Home() {
       <div>
         <S.FirstSection>
           <S.SectionStart>
-            <h3>imagem</h3>
-            <img src="/public/imagensInicio/capa1_englosite.png" alt="" />
+            <Image src={CapaEnglosite} alt="" />
           </S.SectionStart>
 
           <S.SectionStart>
@@ -31,9 +38,24 @@ export default function Home() {
         <S.SecondSection>
           <div>
             <h2>Nossos Serviços</h2>
+            <div className="hLine"></div>
           </div>
           <S.SectionCards>
-            <p>cards</p>
+            <div className="card">
+              <Image src={Design} alt="design" />
+            </div>
+            <div className="card">
+              <Image src={Marketing} alt="marketing" />
+            </div>
+            <div className="card">
+              <Image src={Crms} alt="crms" />
+            </div>
+            <div className="card">
+              <Image src={Sites} alt="sites" />
+            </div>
+            <div className="card">
+              <Image src={Mobile} alt="mobile" />
+            </div>
           </S.SectionCards>
         </S.SecondSection>
 
