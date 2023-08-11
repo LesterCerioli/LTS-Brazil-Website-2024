@@ -7,9 +7,8 @@ export default function AboutUs() {
     <S.Container>
       <h1>Sobre nós</h1>
       <SampleComponent
-        title="Título do componente"
         image="sobreImg/sobreImg.jpg"
-        text="Texto do componente"
+        text=""
       />
     </S.Container>
   );
