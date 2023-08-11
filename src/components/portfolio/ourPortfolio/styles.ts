@@ -12,11 +12,23 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
     color: var(--blue);
+    border-bottom: 2px solid var(--white);
+    display: inline-block;
+    padding-bottom: 8px;
     text-align: center;
     font-size: 42px;
     font-style: normal;
     font-weight: 400;
     line-height: 58.8px; 
+
+`
+
+export const Section = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
 
 `
 

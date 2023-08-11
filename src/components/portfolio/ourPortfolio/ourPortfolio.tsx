@@ -1,6 +1,6 @@
 import React from 'react'
 import * as S from './styles'
-import NyseLogo from '../images/NYSE-logo.png'
+import Image from 'next/image';
 
 
 export const OurPortfolio = () => {
@@ -9,15 +9,11 @@ export const OurPortfolio = () => {
         <div>
           <S.Title>Nosso Portfólio</S.Title>
         </div>
-        <section>
-          <div>
-            <img src={NyseLogo} alt="NYSE Logo" />
-          </div>
-          <div>
+          <S.Section>
             <S.Subtitle>Mercado Financeiro</S.Subtitle>
+            <Image src='/images/nyse.png' alt="NYSE logo" width={300} height={200} />
             <S.Subtitle>Bolsa de Valores de Nova Iorque</S.Subtitle>
-          </div>
-        </section>
+          </S.Section>
       </S.Container>
     );
   };

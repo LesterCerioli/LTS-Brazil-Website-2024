@@ -1,5 +1,6 @@
 import React from 'react'
 import * as S from './styles'
+import ClientsList from '../clientsList/clientsList';
 
 export const OurClients = () => {
     return (
@@ -7,9 +8,7 @@ export const OurClients = () => {
         <div>
           <S.Title>Nossos Clientes</S.Title>
         </div>
-        <section>
-            
-        </section>
+        <ClientsList />
       </S.Container>
     );
   };
