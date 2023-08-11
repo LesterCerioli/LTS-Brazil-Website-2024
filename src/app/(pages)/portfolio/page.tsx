@@ -3,8 +3,9 @@ import * as S from "./styles";
  
 import OurPortfolio from "@/components/portfolio/ourPortfolio/ourPortfolio";
 import OurClients from "@/components/portfolio/ourClients/ourClients";
-import OurGithub from "@/components/portfolio/ourGithub/ourGithub";
 import ClientsList from "@/components/portfolio/clientsList/clientsList";
+import OurGithub from "@/components/portfolio/ourGithub/ourGithub";
+
 
 export default function Portfolio() {
   return (
@@ -14,7 +15,6 @@ export default function Portfolio() {
       </section>
       <section>
         <OurClients />
-        <ClientsList />
       </section>
       <section>
         <OurGithub />

@@ -1,41 +1,32 @@
 import styled from "styled-components";
 
-export const Container = styled.div` 
+export const Container = styled.div `
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+`
+
+export const Card = styled.div` 
     width: 280px;
+    margin: 15px;
+    
 `
 
-
-export const Card = styled.div`
-    background-color:  #F0F0F0;
+export const Header = styled.div`
     border-radius: 10px 10px 0px 0px;
+    background-color: var(--blue);
+    text-align: center;
 `
- export const Image = styled.div`
+ export const StyledImage = styled.img`
     width: 100px;
     border-radius: 50%;
     position: relative;
     bottom: -50px;
 `
-
-/*.colaborador .rodape {
+export const Footer = styled.div`
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
     padding-top: 90px;
     padding-bottom: 40px;
-}
-
-.colaborador .rodape h4 {
-    color: #6278F7;
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.colaborador .rodape h5 {
-    font-size: 18px;
-    line-height: 22px;
-    color: #212121;
-    padding: 0 16px;
-}
-*/
+`

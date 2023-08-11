@@ -6,7 +6,34 @@ export const ClientsList = () => {
     return (
         <S.Container>
             <S.Card>
-                <Image src='/images/bny.png' alt='BNY Mellon logo' width={100} height={100}/>
+                <S.Header>
+                <S.StyledImage src='/images/bny.png' alt="Minha Imagem Estilizada" />
+                </S.Header>
+                <S.Footer />
+            </S.Card>
+            <S.Card>
+                <S.Header>
+                <S.StyledImage src='/images/firjan.png' alt="Minha Imagem Estilizada" />
+                </S.Header>
+                <S.Footer />
+            </S.Card>
+            <S.Card>
+                <S.Header>
+                <S.StyledImage src='/images/muvz.png' alt="Minha Imagem Estilizada" />
+                </S.Header>
+                <S.Footer />
+            </S.Card>
+            <S.Card>
+                <S.Header>
+                <S.StyledImage src='/images/stefanini.png' alt="Minha Imagem Estilizada" />
+                </S.Header>
+                <S.Footer />
+            </S.Card>
+            <S.Card>
+                <S.Header>
+                <S.StyledImage src='/images/pjerj.png' alt="Minha Imagem Estilizada" />
+                </S.Header>
+                <S.Footer />
             </S.Card>
         </S.Container>
     )

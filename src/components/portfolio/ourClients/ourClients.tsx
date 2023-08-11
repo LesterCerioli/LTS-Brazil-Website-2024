@@ -8,7 +8,7 @@ export const OurClients = () => {
         <div>
           <S.Title>Nossos Clientes</S.Title>
         </div>
-        <ClientsList />
+          <ClientsList />
       </S.Container>
     );
   };

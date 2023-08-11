@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     background: var(--white);
-    display: flex;
+    
     flex-direction: column;
     max-width: 100%;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    height: 500px;
 `
 
 export const Title = styled.h1`
@@ -18,5 +19,5 @@ export const Title = styled.h1`
     font-style: normal;
     font-weight: 400;
     line-height: 45px;
-
+    padding: 20px;
 `

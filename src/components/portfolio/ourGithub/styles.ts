@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    background: var(--white);
+    
 `
 
 export const Title = styled.h1`
@@ -12,5 +12,6 @@ export const Title = styled.h1`
     font-style: normal;
     font-weight: 400;
     line-height: 45px;
+    padding: 20px;
 
 `
