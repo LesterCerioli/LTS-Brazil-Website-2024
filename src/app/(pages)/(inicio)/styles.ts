@@ -111,28 +111,83 @@ export const SectionCards = styled.div`
 
   .card {
     width: 370px;
-    background: blue;
+    position: relative;
+  }
+
+  .textCard {
+    width: 100%;
+    height: 128%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
   }
 
   img {
     width: 100%;
     height: auto;
   }
+
+  h3,
+  p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    padding: 1rem;
+    z-index: 2;
+  }
+
+  h3 {
+    top: 15%; /* Posiciona o título a partir do centro vertical */
+    transform: translateY(-50%); /* Centraliza verticalmente o título */
+  }
+
+  p {
+    top: calc(50% + 1rem); /* Posiciona o parágrafo abaixo do título */
+    transform: translateY(-50%); /* Centraliza verticalmente o parágrafo */
+  }
 `;
 
 export const ThirdSection = styled.div`
   display: flex;
-  background-color: gray;
   height: 16rem;
   align-items: center;
   justify-content: center;
   margin-top: 50px;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.1);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   h2 {
     color: white;
     font-size: 2.2rem;
     text-align: center;
     padding: 1rem;
+    z-index: 2;
+  }
+
+  button {
+    z-index: 2;
+    background-color: #fff;
   }
 `;
 
