@@ -3,6 +3,12 @@ import styled from 'styled-components'
 export const MainHero = styled.section`
   align-items: center;
 
+  div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
   h4 {
     text-align: center;
     padding-top: 20px;

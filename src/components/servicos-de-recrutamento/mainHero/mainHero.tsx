@@ -1,6 +1,8 @@
 'use client'
 
 import * as S from './styles'
+import img from '@/assets/recruitment_hero.jpg'
+import Image from 'next/image'
 
 export function HeroMain() {
   return (
@@ -12,6 +14,7 @@ export function HeroMain() {
             aqui para te ajudar! Somos especializados em talent acquisition e
             vamos te ajudar na contratação que mais atende ao seu perfil.
           </h4>
+          <Image src={img} width={780} height={480} alt={'recruitment'} />
         </div>
       </section>
     </S.MainHero>

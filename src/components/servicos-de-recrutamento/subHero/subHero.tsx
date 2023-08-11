@@ -7,11 +7,12 @@ export function SubHero() {
       <S.SubHero>
         <section className="sub__hero">
           <div className="about__us">
-            <h1>Sobre nós</h1>
+            <h1>Vantagens</h1>
             <h4>
-              A Lucas Technologies possui duas décadas em excelência na seleção
-              e recrutamento de talentos de altíssimo nível mirando na máxima
-              satisfação de nossos clientes.
+              Estamos aqui para ajudar você a alcançar o sucesso por meio de
+              estratégias de contratação inteligentes e outsourcing estratégico.
+              Com nossos serviços, você economiza tempo e recursos e alcança
+              resultados excepcionais em cada projeto.
             </h4>
           </div>
         </section>

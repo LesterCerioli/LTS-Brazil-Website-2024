@@ -1,13 +1,20 @@
 import styled from 'styled-components'
 
 export const SubHero = styled.section`
-  margin: 10rem;
-  margin-left: 1100px;
-  width: 30vw;
-  padding-top: 10rem;
+  width: 90vw;
+  padding-top: 50px;
+  margin: 50px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+  }
 
   h1 {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 200;
   }
 
