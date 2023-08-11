@@ -14,7 +14,6 @@ export const Container = styled.div`
     &:hover {
       /* background-color: var(--blue-hover); */
       transition: all ease-in-out 0.2s;
-      background-color: red;
     }
   }
 `;
@@ -24,7 +23,7 @@ export const Title = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 60%;
   height: 24.25rem;
   margin: auto;
 
@@ -42,12 +41,26 @@ export const Title = styled.div`
     font-family: "Montserrat", arial, sans-serif;
     font-style: italic;
     font-size: 1.4rem;
+    margin: 20px;
+  }
+  @media screen and (max-width: 600px) {
+    width: 80%;
+    h1 {
+      font-size: 30px;
+    }
   }
 `;
 
 export const FirstSection = styled.div`
   height: 24.5rem;
   display: flex;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+
+    img {
+      height: auto;
+    }
+  }
 `;
 
 export const SectionStart = styled.div`
@@ -62,8 +75,9 @@ export const SectionStart = styled.div`
 
   h2 {
     color: white;
-    font-size: 2.2rem;
-    padding: 2rem;
+    font-size: 2.44rem;
+    padding: 3rem 2rem 1rem 2rem;
+    font-family: "Archivo Black", arial, sans-serif;
   }
 
   p {
@@ -82,11 +96,17 @@ export const SectionStart = styled.div`
     color: #021f3e;
     background-color: white;
   }
+  @media screen and (max-width: 600px) {
+    h2 {
+      font-size: 28px;
+    }
+  }
 `;
 
-export const SectionStartImg = styled.div``;
+// export const SectionStartImg = styled.div``;
 
 export const SecondSection = styled.div`
+  padding: 2rem;
   h2 {
     color: #021f3e;
     font-family: "Archivo Black", arial, sans-serif;
@@ -139,13 +159,25 @@ export const SectionCards = styled.div`
   }
 
   h3 {
-    top: 15%; /* Posiciona o título a partir do centro vertical */
-    transform: translateY(-50%); /* Centraliza verticalmente o título */
+    top: 15%;
+    transform: translateY(-50%);
   }
 
   p {
     top: calc(50% + 1rem); /* Posiciona o parágrafo abaixo do título */
     transform: translateY(-50%); /* Centraliza verticalmente o parágrafo */
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+
+    img {
+      height: auto;
+    }
+
+    h2 {
+      font-size: 12px;
+    }
   }
 `;
 
@@ -189,28 +221,101 @@ export const ThirdSection = styled.div`
     z-index: 2;
     background-color: #fff;
   }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+
+    img {
+      height: auto;
+    }
+
+    h2 {
+      font-size: 12px;
+    }
+  }
 `;
 
 export const FourthSection = styled.div`
+  padding-top: 2rem;
   h2 {
     color: #021f3e;
-    font-size: 2.2rem;
+    font-family: "Archivo Black", arial, sans-serif;
+    font-size: 39px;
     text-align: center;
     padding: 1rem;
+    position: relative;
+  }
+
+  .hLine {
+    border-bottom: 3px solid #dadada;
+    width: 150px;
+    margin: auto;
   }
 `;
 
 export const FourthSectionCards = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  background-color: red;
+  width: 100%;
+  margin: auto;
+  padding-top: 2rem;
+
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 export const Card = styled.div`
-  width: 200px;
-  height: 100px;
-  background: blue;
-  border: 1px solid #000;
-  padding: 10px;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  img {
+    padding: 5px 5px;
+  }
+
+  h3 {
+    font-size: 22px;
+    font-family: "Montserrat", arial, sans-serif;
+    font-weight: 100;
+  }
+`;
+
+export const FullWidthCard = styled.div`
+  width: 80%;
+  margin: auto;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    color: #021f3e;
+    font-family: "Archivo Black", arial, sans-serif;
+    font-size: 39px;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .hLine {
+    border-bottom: 3px solid #dadada;
+    width: 150px;
+    margin: auto;
+  }
+
+  img {
+    height: 583px;
+  }
+  @media screen and (max-width: 600px) {
+    img {
+      width: 120%;
+      height: auto;
+    }
+
+    h2 {
+      font-size: 25px;
+    }
+  }
 `;

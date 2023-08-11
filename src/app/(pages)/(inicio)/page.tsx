@@ -8,7 +8,14 @@ import Crms from "@/assets/imagensInicio/crms.png";
 import Marketing from "@/assets/imagensInicio/marketing.png";
 import Mobile from "@/assets/imagensInicio/mobile.png";
 import Sites from "@/assets/imagensInicio/sites.png";
-import d from "../../../assets/imagensInicio/digitandoMouseTeclado2.png";
+import Eua from "../../../assets/imagensInicio/digitandoMouseTeclado2.png";
+import Tecnologia from "@/assets/imagensInicio/tecnologia.png";
+import Ecommerces from "@/assets/imagensInicio/eCommerces.png";
+import MercadoFinanceiro from "@/assets/imagensInicio/mercadoFinanceiro.png";
+import Hospitalar from "@/assets/imagensInicio/hospitalar.png";
+import Turismo from "@/assets/imagensInicio/turismo.png";
+import Educacao from "@/assets/imagensInicio/educacao.png";
+import CloudSuite from "@/assets/imagensInicio/cloudSuite.png";
 
 export default function Home() {
   return (
@@ -103,7 +110,7 @@ export default function Home() {
         </S.SecondSection>
 
         <S.ThirdSection>
-          <Image src={d} alt="" />
+          <Image src={Eua} alt="" />
           <div>
             <h2> Lucas Tecnologia nos Estados Unidos</h2>
             <button> Saiba mais</button>
@@ -112,33 +119,40 @@ export default function Home() {
 
         <S.FourthSection>
           <h2>Áreas de Atuação</h2>
+          <div className="hLine"></div>
+
           <S.FourthSectionCards>
             <S.Card>
               <h3>Tecnologia</h3>
-              <p>imagem</p>
+              <Image src={Tecnologia} alt="" />
             </S.Card>
             <S.Card>
               <h3>E-commerces</h3>
-              <p>imagem</p>
+              <Image src={Ecommerces} alt="" />
             </S.Card>
             <S.Card>
               <h3>Mercado Financeiro</h3>
-              <p>imagem</p>
+              <Image src={MercadoFinanceiro} alt="" />
             </S.Card>
             <S.Card>
               <h3>Hospitalar</h3>
-              <p>imagem</p>
+              <Image src={Hospitalar} alt="" />
             </S.Card>
             <S.Card>
               <h3>Turismo</h3>
-              <p>imagem</p>
+              <Image src={Turismo} alt="" />
             </S.Card>
             <S.Card>
               <h3>Educação</h3>
-              <p>imagem</p>
+              <Image src={Educacao} alt="" />
             </S.Card>
-            <div>Gestão da sua empresa nas suas mãos</div>
           </S.FourthSectionCards>
+
+          <S.FullWidthCard>
+            <Image src={CloudSuite} alt="" />
+            <h2>Gestão da sua empresa nas suas mãos</h2>
+            <div className="hLine"></div>
+          </S.FullWidthCard>
         </S.FourthSection>
       </div>
     </S.Container>
