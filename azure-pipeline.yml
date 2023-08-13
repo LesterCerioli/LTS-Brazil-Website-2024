@@ -30,7 +30,7 @@ jobs:
     displayName: "Run npm test"
 - job: Ubuntu Server
   pool:
-    name: 'DS31'
+    name: 'ds31'
   steps:
   - task: NodeTool@0
     inputs:
