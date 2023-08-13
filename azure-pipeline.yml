@@ -28,7 +28,7 @@ jobs:
       cd test
       npm test
     displayName: "Run npm test"
-- job: Windows
+- job: Ubuntu Server
   pool:
     name: 'DS31'
   steps:
