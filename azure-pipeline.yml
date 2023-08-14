@@ -4,10 +4,12 @@ trigger:
 pr:
 - '*'
 
-pool:
-  name: 'DS11'
 
-steps:
+jobs:
+- job: Debian
+  pool:
+    name: 'DS11'
+  steps:
   - task: NodeTool@0
     inputs:
       versionSpec: "14.x"
@@ -26,3 +28,28 @@ steps:
       cd test
       npm test
     displayName: "Run npm test"
+
+
+- job: Ubuntu
+  pool:
+    name: 'DS31'
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "14.x"
+    displayName: "Install Node.js"
+
+  - script: |
+
+      npm install
+    displayName: "Install Dependencies"
+
+  - script: |
+      npm build
+    displayName: "Build"
+
+  - script: |
+      cd test
+      npm test
+    displayName: "Run npm test"
+
