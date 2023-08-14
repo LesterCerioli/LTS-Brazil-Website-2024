@@ -1,52 +1,52 @@
 trigger:
-- '*'
+  - '*'
 
 pr:
-- '*'
-
+  - '*'
 
 jobs:
-- job: Linux
-  pool:
-    name: 'DS11'
-  steps:
-  - task: NodeTool@0
-    inputs:
-      versionSpec: "14.x"
-    displayName: "Install Node.js"
+  - job: Debian
+    pool:
+      name: 'DS11'
+    steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '14.x'
+        displayName: 'Install Node.js'
 
-  - script: |
+      - script: |
 
-      npm install
-    displayName: "Install Dependencies"
+          npm install
+        displayName: 'Install Dependencies'
 
-  - script: |
-      npm build
-    displayName: "Build"
+      - script: |
+          npm build
+        displayName: 'Build'
 
-  - script: |
-      cd test
-      npm test
-    displayName: "Run npm test"
-- job: Windows
-  pool:
-    name: 'DS31'
-  steps:
-  - task: NodeTool@0
-    inputs:
-      versionSpec: "14.x"
-    displayName: "Install Node.js"
+      - script: |
+          cd test
+          npm test
+        displayName: 'Run npm test'
 
-  - script: |
+  - job: Ubuntu
+    pool:
+      name: 'DS31'
+    steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '14.x'
+        displayName: 'Install Node.js'
 
-      npm install
-    displayName: "Install Dependencies"
+      - script: |
 
-  - script: |
-      npm build
-    displayName: "Build"
+          npm install
+        displayName: 'Install Dependencies'
 
-  - script: |
-      cd test
-      npm test
-    displayName: "Run npm test"
+      - script: |
+          npm build
+        displayName: 'Build'
+
+      - script: |
+          cd test
+          npm test
+        displayName: 'Run npm test'
