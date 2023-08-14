@@ -8,7 +8,7 @@ pr:
 jobs:
 - job: Linux
   pool:
-    name: 'DS11'
+    name: 'DS31'
   steps:
   - task: NodeTool@0
     inputs:
