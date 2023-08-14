@@ -8,11 +8,14 @@ export const OurPortfolio = () => {
       <S.Container>
         <div>
           <S.Title>Nosso Portfólio</S.Title>
+          <S.SpanDiv>
+            <S.Span />
+          </S.SpanDiv>
         </div>
           <S.Section>
             <S.Subtitle>Mercado Financeiro</S.Subtitle>
-            <Image src='/images/nyse.png' alt="NYSE logo" width={300} height={200} />
             <S.Subtitle>Bolsa de Valores de Nova Iorque</S.Subtitle>
+            <Image src='/images/nyse2.png' alt="NYSE logo" width={300} height={200} />
           </S.Section>
       </S.Container>
     );

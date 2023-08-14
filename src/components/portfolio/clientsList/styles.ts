@@ -4,6 +4,7 @@ export const Container = styled.div `
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 2em;
 `
 
 export const Card = styled.div` 
@@ -24,9 +25,9 @@ export const Header = styled.div`
     bottom: -50px;
 `
 export const Footer = styled.div`
-    background: #FFFFFF;
+    background: var(--white);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
     padding-top: 90px;
-    padding-bottom: 40px;
+    padding-bottom: 25px;
 `

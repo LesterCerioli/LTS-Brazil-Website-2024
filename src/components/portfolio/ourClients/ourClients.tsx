@@ -7,6 +7,9 @@ export const OurClients = () => {
       <S.Container>
         <div>
           <S.Title>Nossos Clientes</S.Title>
+          <S.SpanDiv>
+            <S.Span />
+          </S.SpanDiv>
         </div>
           <ClientsList />
       </S.Container>
