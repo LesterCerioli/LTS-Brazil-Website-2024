@@ -1,6 +1,6 @@
 import React from 'react'
 import * as S from './styles'
-import DifferentialsText from '@/components/servicos-de-recrutamento/differentialsText/differentialsText'
+import DifferentialsText from '@/components/recruitmentServices/differentialsText/differentialsText'
 
 function Differentials() {
   return (

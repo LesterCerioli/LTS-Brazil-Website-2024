@@ -14,7 +14,7 @@ export function HeroMain() {
             aqui para te ajudar! Somos especializados em talent acquisition e
             vamos te ajudar na contratação que mais atende ao seu perfil.
           </h4>
-          <Image src={img} width={780} height={480} alt={'recruitment'} />
+          <Image src={img} width={1080} height={720} alt={'recruitment'} />
         </div>
       </section>
     </S.MainHero>

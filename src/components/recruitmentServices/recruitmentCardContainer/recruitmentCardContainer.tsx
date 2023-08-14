@@ -1,6 +1,6 @@
 import React from 'react'
 import * as S from './styles'
-import RecruitmentCard from '@/components/servicos-de-recrutamento/recruitmentCard/recruitmentCard'
+import RecruitmentCard from '@/components/recruitmentServices/recruitmentCard/recruitmentCard'
 import { recruitmentCardText } from '../helper/constants' // Import the array
 
 function RecruitmentCardContainer() {

@@ -9,6 +9,8 @@ export const RecruitmentCardContainer = styled.div`
 
   div {
     display: flex;
+    align-items: center;
+    text-align: left;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;

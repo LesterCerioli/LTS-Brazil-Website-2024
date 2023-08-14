@@ -5,8 +5,8 @@ export function SubHero() {
   return (
     <div>
       <S.SubHero>
-        <section className="sub__hero">
-          <div className="about__us">
+        <section>
+          <div>
             <h1>Vantagens</h1>
             <h4>
               Estamos aqui para ajudar você a alcançar o sucesso por meio de

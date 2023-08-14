@@ -8,30 +8,43 @@ const blue = keyframes`
 
   }
   100% {
-    width: 450px;
+    width: 300px;
     height: 300px;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
+     border-radius: 4px;
   }
 
 `
 
-export const RecruitmentCard = styled.div`
-  width: 450px;
+export const Services = styled.div`
+  background-color: #fff;
+  width: 300px;
   height: 300px;
   position: relative;
-  background-color: rgb(2, 31, 62);
+
   border: 1px solid black;
   border-radius: 4px;
-  padding: 50px;
+  padding: 15px;
+
   p,
-  h2 {
+  h3 {
     z-index: 10;
     position: relative;
   }
+  p {
+    padding: 15px;
+  }
 
   &:hover {
-    > div {
+    p {
+      color: white;
+      padding: 15px;
+    }
+    h3 {
+      color: #fff;
+    }
+    span {
       position: absolute;
       background-color: rgb(5, 52, 98);
       animation-name: ${blue};

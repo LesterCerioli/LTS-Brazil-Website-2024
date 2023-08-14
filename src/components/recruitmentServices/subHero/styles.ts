@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
 export const SubHero = styled.section`
-  width: 90vw;
-  padding-top: 50px;
-  margin: 50px;
+  align-items: center;
+  width: 100vw;
 
   div {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: space-around;
+    padding-top: 50px;
+    margin: 50px;
   }
 
   h1 {
@@ -19,7 +19,8 @@ export const SubHero = styled.section`
   }
 
   h4 {
-    padding-top: 1rem;
+    padding-top: 16px;
     font-weight: 300;
+    width: 80vw;
   }
 `

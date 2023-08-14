@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const MainHero = styled.section`
   align-items: center;
+  width: 100vw;
 
   div {
     display: flex;

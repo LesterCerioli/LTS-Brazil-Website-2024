@@ -35,12 +35,12 @@ export const ourServicesText = [
   },
   ,
   {
-    id: 1,
+    id: 3,
     title: 'Foco no Core Business:',
     text: 'Ao confiar em nossos especialistas para tarefas específicas, você permite que sua equipe interna se concentre no desenvolvimento do núcleo do seu negócio.',
   },
   {
-    id: 1,
+    id: 4,
     title: 'Resultados Mensuráveis:',
     text: 'Nossa abordagem orientada por métricas garante que os resultados sejam tangíveis e mensuráveis, permitindo que você acompanhe o sucesso do projeto de perto.',
   },
