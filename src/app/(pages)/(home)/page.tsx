@@ -2,20 +2,20 @@
 import React from "react";
 import Image from "next/image";
 import * as S from "./styles";
-import CapaEnglosite from "@/assets/imagesHome/capaEnglosite.png";
-import Design from "@/assets/imagesHome/design.png";
-import Crms from "@/assets/imagesHome/crms.png";
-import Marketing from "@/assets/imagesHome/marketing.png";
-import Mobile from "@/assets/imagesHome/mobile.png";
-import Sites from "@/assets/imagesHome/sites.png";
-import Eua from "../../../assets/imagesHome/digitandoMouseTeclado2.png";
-import Tecnologia from "@/assets/imagesHome/tecnologia.png";
-import Ecommerces from "@/assets/imagesHome/eCommerces.png";
-import MercadoFinanceiro from "@/assets/imagesHome/mercadoFinanceiro.png";
-import Hospitalar from "@/assets/imagesHome/hospitalar.png";
-import Turismo from "@/assets/imagesHome/turismo.png";
-import Educacao from "@/assets/imagesHome/educacao.png";
-import CloudSuite from "@/assets/imagesHome/cloudSuite.png";
+import CapaEnglosite from "public/assets/imagesHome/capaEnglosite.png";
+import Design from "public/assets/imagesHome/design.png";
+import Crms from "public/assets/imagesHome/crms.png";
+import Marketing from "public/assets/imagesHome/marketing.png";
+import Mobile from "public/assets/imagesHome/mobile.png";
+import Sites from "public/assets/imagesHome/sites.png";
+import Eua from "public/assets/imagesHome/digitandoMouseTeclado2.png";
+import Tecnologia from "public/assets/imagesHome/tecnologia.png";
+import Ecommerces from "public/assets/imagesHome/eCommerces.png";
+import MercadoFinanceiro from "public/assets/imagesHome/mercadoFinanceiro.png";
+import Hospitalar from "public/assets/imagesHome/hospitalar.png";
+import Turismo from "public/assets/imagesHome/turismo.png";
+import Educacao from "public/assets/imagesHome/educacao.png";
+import CloudSuite from "public/assets/imagesHome/cloudSuite.png";
 
 export default function Home() {
   return (
