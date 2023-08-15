@@ -28,7 +28,7 @@ const Form = () => {
       </div>
 
       <div>
-      <button>Enviar</button>
+      <button type='submit'>Enviar</button>
       </div>
       
     </S.Form>
