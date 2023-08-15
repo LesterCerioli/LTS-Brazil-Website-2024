@@ -1,7 +1,19 @@
-import styled from "styled-components";
-import keyframes from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
-export const Container = styled.div`
+export const Animated = keyframes`
+   from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+}
+
+to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+`;
+
+export const AnimatedContainer = styled.div`
+    animation: ${Animated} .7s forwards;
     display: flex;
     height: 537px;
     max-width: 100%;
@@ -9,6 +21,7 @@ export const Container = styled.div`
     align-items: center;
     gap: 40px;
     flex-shrink: 0;
+    margin-top: 50px;
 `
 
 export const Title = styled.h1`

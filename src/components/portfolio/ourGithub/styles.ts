@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    
+    margin-bottom: 50px;
 `
 
 export const Title = styled.h1`
@@ -22,7 +22,7 @@ export const SpanDiv = styled.div`
 export const Span = styled.span`
     display: block;
     height: 2px;
-    width: 15px;
+    width: 40px;
     //border-radius: 50%;
     background-color: var(--blue);
 `
