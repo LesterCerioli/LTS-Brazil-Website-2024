@@ -9,6 +9,7 @@ export const Container = styled.div`
     align-items: center;
     flex-shrink: 0;
     min-height: 500px;
+    background-color: var(--white);
 `
 
 export const Title = styled.h1`

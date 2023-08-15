@@ -13,7 +13,7 @@ export const OurGithub = () => {
         </div>
         <S.RepositoryContainer>
           <div>
-            <Image src='/images/github.png' alt='Github logo' width={375} height={210} />
+            <Image src='/assets/imagesPortfolio/github.png' alt='Github logo' width={375} height={210} />
           </div>
           <S.GithubContainer>
             <S.Subtitle>Nosso repositório</S.Subtitle>

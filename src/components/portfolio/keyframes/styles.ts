@@ -66,3 +66,9 @@ export const Subtitle = styled.h4`
     line-height: 27px; 
 
 `
+
+export const Image = styled.img`
+position:relative;
+
+&:hover{top:-5px;box-shadow:0 10px 10px #666}
+`
