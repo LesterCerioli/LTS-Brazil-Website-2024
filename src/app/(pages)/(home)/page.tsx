@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import * as S from "./styles";
 import CapaEnglosite from "@/assets/imagesHome/capaEnglosite.png";
@@ -16,9 +16,23 @@ import Hospitalar from "@/assets/imagesHome/hospitalar.png";
 import Turismo from "@/assets/imagesHome/turismo.png";
 import Educacao from "@/assets/imagesHome/educacao.png";
 import CloudSuite from "@/assets/imagesHome/cloudSuite.png";
+import Chevron from "@/assets/imagesHome/right_chevron_icon.png";
 import Link from "next/link";
 
 export default function Home() {
+  const carousel = useRef(null);
+
+  const handleLeftClick = (e) => {
+    e.preventDefault();
+    carousel.current.scrollLeft -= carousel.current.offsetWidth;
+  };
+
+  const handleRightClick = (e) => {
+    e.preventDefault();
+
+    carousel.current.scrollLeft += carousel.current.offsetWidth;
+  };
+
   return (
     <S.Container>
       <S.Title>
@@ -52,7 +66,7 @@ export default function Home() {
             <h2>Nossos Serviços</h2>
             <div className="hLine"></div>
           </div>
-          <S.SectionCards>
+          <S.SectionCards ref={carousel}>
             <Link href="">
               <div className="card">
                 <div className="textCard">
@@ -99,7 +113,6 @@ export default function Home() {
             </Link>
 
             <Link href="">
-              {" "}
               <div className="card">
                 <div className="textCard">
                   <h3>Desenvolvimento de sites</h3>
@@ -128,9 +141,19 @@ export default function Home() {
               </div>
             </Link>
           </S.SectionCards>
+
+          <S.ButtonsCarousel>
+            <button onClick={handleLeftClick}>
+              <Image src={Chevron} alt="Scroll Left" />
+            </button>
+
+            <button onClick={handleRightClick}>
+              <Image src={Chevron} alt="Scroll Left" />
+            </button>
+          </S.ButtonsCarousel>
         </S.SecondSection>
 
-        <S.ThirdSection>
+        <S.ThirdSectionEUA>
           <Image src={Eua} alt="" />
           <div>
             <h2> Lucas Tecnologia nos Estados Unidos</h2>
@@ -138,7 +161,7 @@ export default function Home() {
               <button> Saiba mais</button>
             </Link>
           </div>
-        </S.ThirdSection>
+        </S.ThirdSectionEUA>
 
         <S.FourthSection>
           <h2>Áreas de Atuação</h2>

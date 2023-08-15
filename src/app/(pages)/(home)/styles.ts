@@ -53,9 +53,12 @@ export const Title = styled.div`
 
 export const FirstSection = styled.div`
   height: 24.5rem;
+
   display: flex;
+
   @media screen and (max-width: 600px) {
     flex-direction: column;
+    height: 45rem;
 
     img {
       height: auto;
@@ -91,14 +94,28 @@ export const SectionStart = styled.div`
   }
 
   button {
-    margin: 2rem 0 0;
+    margin: 1rem 0 0;
     margin-left: 2rem;
     color: #021f3e;
     background-color: white;
   }
   @media screen and (max-width: 600px) {
+    flex: 0;
+    padding-bottom: 2rem;
+
     h2 {
       font-size: 28px;
+      padding-left: 1rem;
+    }
+
+    p {
+      padding-left: 1rem;
+      margin: 10px;
+    }
+
+    button {
+      width: 80%;
+      height: 60px;
     }
   }
 `;
@@ -107,6 +124,7 @@ export const SectionStart = styled.div`
 
 export const SecondSection = styled.div`
   padding: 2rem;
+  margin-top: 80px;
   h2 {
     color: #021f3e;
     font-family: "Archivo Black", arial, sans-serif;
@@ -121,13 +139,39 @@ export const SecondSection = styled.div`
     width: 150px;
     margin: auto;
   }
+
+  @media screen and (max-width: 600px) {
+    padding: 0;
+  }
+`;
+
+export const ButtonsCarousel = styled.div`
+  width: 100%;
+  text-align: center;
+
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  button:first-child img {
+    transform: rotate(180deg);
+  }
 `;
 
 export const SectionCards = styled.div`
-  height: 286.4px;
-  padding: 2.5rem 4rem;
+  height: 400px;
+  width: 72rem;
   display: flex;
+  align-items: center;
+  margin: auto;
   gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   .card {
     width: 370px;
@@ -140,6 +184,7 @@ export const SectionCards = styled.div`
   .textCard {
     width: 100%;
     height: 100%;
+    border-radius: 16px;
     position: absolute;
     background: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.7));
     z-index: 1;
@@ -147,7 +192,9 @@ export const SectionCards = styled.div`
 
   img {
     width: 100%;
+    height: 100%;
     height: auto;
+    border-radius: 16px;
   }
 
   h3,
@@ -172,7 +219,14 @@ export const SectionCards = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    flex-direction: column;
+    width: 95%;
+    margin-lef: 0;
+    gap: 0.8rem;
+
+    .card {
+      width: 350px;
+      margin-left: 10px;
+    }
 
     img {
       height: auto;
@@ -184,12 +238,12 @@ export const SectionCards = styled.div`
   }
 `;
 
-export const ThirdSection = styled.div`
+export const ThirdSectionEUA = styled.div`
   display: flex;
   height: 16rem;
   align-items: center;
   justify-content: center;
-  margin-top: 250px;
+  margin-top: 50px;
   position: relative;
 
   img {
@@ -226,14 +280,19 @@ export const ThirdSection = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    flex-direction: column;
-
     img {
-      height: auto;
+      object-fit: none;
+      object-position: left center;
     }
 
     h2 {
-      font-size: 12px;
+      font-size: 20px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.5);
     }
   }
 `;
