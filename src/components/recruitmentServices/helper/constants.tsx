@@ -1,3 +1,19 @@
+import React, { ReactElement } from 'react'
+import { FaMapMarkerAlt, FaPortrait, FaPeopleArrows } from 'react-icons/fa'
+import {
+  BsBriefcaseFill,
+  BsFillPersonCheckFill,
+  BsPersonFillExclamation,
+  BsFillTelephoneForwardFill,
+  BsFillPeopleFill,
+  BsChatSquareHeartFill,
+} from 'react-icons/bs'
+import { TbMailSearch } from 'react-icons/tb'
+import { HiDocumentText } from 'react-icons/hi'
+import { AiFillCheckSquare } from 'react-icons/ai'
+import { BiSolidHappyAlt } from 'react-icons/bi'
+import { MdWorkspacePremium } from 'react-icons/md'
+
 export const recruitmentCardText = [
   {
     id: 1,
@@ -43,6 +59,69 @@ export const ourServicesText = [
     id: 4,
     title: 'Resultados Mensuráveis:',
     text: 'Nossa abordagem orientada por métricas garante que os resultados sejam tangíveis e mensuráveis, permitindo que você acompanhe o sucesso do projeto de perto.',
+  },
+]
+
+export const recruitmentCycle = [
+  {
+    id: 1,
+    image: <FaMapMarkerAlt />,
+    text: 'Demanda de recrutamento do cliente',
+  },
+  {
+    id: 2,
+    image: <BsFillPersonCheckFill />,
+    text: 'Recrutador designado para o papel',
+  },
+  {
+    id: 3,
+    image: <BsPersonFillExclamation />,
+    text: 'Entendendo a dor do cliente',
+  },
+  {
+    id: 4,
+    image: <TbMailSearch />,
+    text: 'Procurando talentos em nossos bancos',
+  },
+  {
+    id: 5,
+    image: <HiDocumentText />,
+    text: 'Filtro de currículos',
+  },
+  {
+    id: 6,
+    image: <FaPortrait />,
+    text: 'Entrevista com candidatos selecionados',
+  },
+  {
+    id: 7,
+    image: <MdWorkspacePremium />,
+    text: 'Formatação de currículos',
+  },
+  {
+    id: 8,
+    image: <BsFillPeopleFill />,
+    text: 'Repasse dos talentos ao cliente',
+  },
+  {
+    id: 9,
+    image: <BsChatSquareHeartFill />,
+    text: 'Feedback - Agenda de entrevista',
+  },
+  {
+    id: 10,
+    image: <FaPeopleArrows />,
+    text: 'Entrevista cliente - candidato',
+  },
+  {
+    id: 11,
+    image: <AiFillCheckSquare />,
+    text: 'Contratação',
+  },
+  {
+    id: 12,
+    image: <BiSolidHappyAlt />,
+    text: 'Dor do cliente sanada',
   },
 ]
 

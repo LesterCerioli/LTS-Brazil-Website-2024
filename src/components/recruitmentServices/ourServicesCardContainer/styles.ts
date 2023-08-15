@@ -21,7 +21,6 @@ export const ServicesCardContainer = styled.div`
   align-items: center;
   justify-content: center;
   background-color: lightgray;
-  padding: 20px;
 
   div {
     animation: slide 1s ease 0s 1 normal forwards;
