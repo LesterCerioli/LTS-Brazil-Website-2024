@@ -132,13 +132,16 @@ export const SectionCards = styled.div`
   .card {
     width: 370px;
     position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
   }
 
   .textCard {
     width: 100%;
-    height: 128%;
+    height: 100%;
     position: absolute;
-    background: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.7));
     z-index: 1;
   }
 
@@ -150,22 +153,22 @@ export const SectionCards = styled.div`
   h3,
   p {
     position: absolute;
-    left: 0;
-    right: 0;
     text-align: center;
     color: white;
     padding: 1rem;
     z-index: 2;
+    text-align: left;
   }
 
   h3 {
-    top: 15%;
+    top: 65%;
     transform: translateY(-50%);
   }
 
   p {
-    top: calc(50% + 1rem); /* Posiciona o parágrafo abaixo do título */
-    transform: translateY(-50%); /* Centraliza verticalmente o parágrafo */
+    top: calc(68% + 4rem);
+    transform: translateY(-50%);
+    line-height: 1.5;
   }
 
   @media screen and (max-width: 600px) {
@@ -186,7 +189,7 @@ export const ThirdSection = styled.div`
   height: 16rem;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 250px;
   position: relative;
 
   img {
@@ -257,7 +260,6 @@ export const FourthSectionCards = styled.div`
   width: 100%;
   margin: auto;
   padding-top: 2rem;
-
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
@@ -285,7 +287,7 @@ export const Card = styled.div`
 export const FullWidthCard = styled.div`
   width: 80%;
   margin: auto;
-  padding-top: 40px;
+  padding: 40px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;

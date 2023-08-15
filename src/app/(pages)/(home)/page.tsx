@@ -16,6 +16,7 @@ import Hospitalar from "@/assets/imagesHome/hospitalar.png";
 import Turismo from "@/assets/imagesHome/turismo.png";
 import Educacao from "@/assets/imagesHome/educacao.png";
 import CloudSuite from "@/assets/imagesHome/cloudSuite.png";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -39,7 +40,10 @@ export default function Home() {
               e prototipagem, desenvolvimento de software, teste, implantação e
               manutenção de aplicativos.
             </p>
-            <button>Saiba mais</button>
+
+            <Link href="/servicos">
+              <button>Saiba mais</button>
+            </Link>
           </S.SectionStart>
         </S.FirstSection>
 
@@ -49,63 +53,80 @@ export default function Home() {
             <div className="hLine"></div>
           </div>
           <S.SectionCards>
-            <div className="card">
-              <div className="textCard">
-                <h3>UI/UX Design</h3>
-                <p>
-                  Aumenta a experiência do usuário e a satisfação do cliente,
-                  resultando no crescimento do negócio.
-                </p>
-              </div>
+            <Link href="">
+              <div className="card">
+                <div className="textCard">
+                  <h3>UI/UX Design</h3>
+                  <p>
+                    Aumenta a experiência do usuário e a satisfação do cliente,
+                    resultando no crescimento do negócio.
+                  </p>
+                </div>
 
-              <Image src={Design} alt="design" />
-            </div>
-            <div className="card">
-              <div className="textCard">
-                <h3>Marketing Digital</h3>
-                <p>
-                  Somos uma empresa de marketing digital avançada no Brasil.
-                  Criamos estratégias para divulgar sua marca, facilitando a
-                  interação
-                </p>
+                <Image src={Design} alt="design" />
               </div>
+            </Link>
 
-              <Image src={Marketing} alt="marketing" />
-            </div>
-            <div className="card">
-              <div className="textCard">
-                <h3>Desenvolvimento de CRMs</h3>
-                <p>
-                  É a ferramenta ou técnica que ajuda as empresas a fazer um
-                  relacionamento saudável com seus clientes, organizando os
-                  dados.
-                </p>
+            <Link href="">
+              <div className="card">
+                <div className="textCard">
+                  <h3>Marketing Digital</h3>
+                  <p>
+                    Somos uma empresa de marketing digital avançada no Brasil.
+                    Criamos estratégias para divulgar sua marca, facilitando a
+                    interação
+                  </p>
+                </div>
+
+                <Image src={Marketing} alt="marketing" />
               </div>
+            </Link>
 
-              <Image src={Crms} alt="crms" />
-            </div>
-            <div className="card">
-              <div className="textCard">
-                <h3>Desenvolvimento de sites</h3>
-                <p>
-                  Envolve a construção e manutenção dos sites. Fuinciona
-                  rapidamente com uma experiência de usuário firme.
-                </p>
+            <Link href="">
+              {" "}
+              <div className="card">
+                <div className="textCard">
+                  <h3>Desenvolvimento de CRMs</h3>
+                  <p>
+                    É a ferramenta ou técnica que ajuda as empresas a fazer um
+                    relacionamento saudável com seus clientes, organizando os
+                    dados.
+                  </p>
+                </div>
+
+                <Image src={Crms} alt="crms" />
               </div>
+            </Link>
 
-              <Image src={Sites} alt="sites" />
-            </div>
-            <div className="card">
-              <div className="textCard">
-                <h3>Desenvolvimento mobile</h3>
-                <p>
-                  É o ato de desenvolver aplicativos adequados para dispositivos
-                  móveis que envolvem a escrita de software para os mesmos.
-                </p>{" "}
+            <Link href="">
+              {" "}
+              <div className="card">
+                <div className="textCard">
+                  <h3>Desenvolvimento de sites</h3>
+                  <p>
+                    Envolve a construção e manutenção dos sites. Fuinciona
+                    rapidamente com uma experiência de usuário firme.
+                  </p>
+                </div>
+
+                <Image src={Sites} alt="sites" />
               </div>
+            </Link>
 
-              <Image src={Mobile} alt="mobile" />
-            </div>
+            <Link href="">
+              <div className="card">
+                <div className="textCard">
+                  <h3>Desenvolvimento mobile</h3>
+                  <p>
+                    É o ato de desenvolver aplicativos adequados para
+                    dispositivos móveis que envolvem a escrita de software para
+                    os mesmos.
+                  </p>
+                </div>
+
+                <Image src={Mobile} alt="mobile" />
+              </div>
+            </Link>
           </S.SectionCards>
         </S.SecondSection>
 
@@ -113,7 +134,9 @@ export default function Home() {
           <Image src={Eua} alt="" />
           <div>
             <h2> Lucas Tecnologia nos Estados Unidos</h2>
-            <button> Saiba mais</button>
+            <Link href="https://lucastechnologyservice.com/">
+              <button> Saiba mais</button>
+            </Link>
           </div>
         </S.ThirdSection>
 
