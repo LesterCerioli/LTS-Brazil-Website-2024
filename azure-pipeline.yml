@@ -5,14 +5,14 @@ pr:
   - '*'
 
 jobs:
-  - job: Debian
-    pool:
-      name: 'DS11'
-    steps:
-      - task: NodeTool@0
-        inputs:
-          versionSpec: '14.x'
-        displayName: 'Install Node.js'
+- job: Debian
+  pool:
+    name: 'DS11'
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "14.x"
+    displayName: "Install Node.js"
 
       - script: |
 
@@ -23,19 +23,20 @@ jobs:
           npm build
         displayName: 'Build'
 
-      - script: |
-          cd test
-          npm test
-        displayName: 'Run npm test'
+  - script: |
+      cd test
+      npm test
+    displayName: "Run npm test"
 
-  - job: Ubuntu
-    pool:
-      name: 'DS31'
-    steps:
-      - task: NodeTool@0
-        inputs:
-          versionSpec: '14.x'
-        displayName: 'Install Node.js'
+
+- job: Ubuntu
+  pool:
+    name: 'DS31'
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "14.x"
+    displayName: "Install Node.js"
 
       - script: |
 
