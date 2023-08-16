@@ -9,6 +9,7 @@ import DifferentialsText from '@/components/recruitmentServices/differentialsTex
 import RecruitmentCardContainer from '@/components/recruitmentServices/recruitmentCardContainer/recruitmentCardContainer'
 import OurServicesCardContainer from '@/components/recruitmentServices/ourServicesCardContainer/ourServicesCardContainer'
 import ProgressBarContainer from '@/components/recruitmentServices/progressBarContainer/progressBarContainer'
+import OurSpecialtiesContainer from '@/components/recruitmentServices/ourSpecialtiesContainer/ourSpecialtiesContainer'
 
 export default function RecruitmentServices() {
   return (
@@ -19,6 +20,7 @@ export default function RecruitmentServices() {
       <RecruitmentCardContainer />
       <OurServicesCardContainer />
       <ProgressBarContainer />
+      <OurSpecialtiesContainer />
     </S.Container>
   )
 }

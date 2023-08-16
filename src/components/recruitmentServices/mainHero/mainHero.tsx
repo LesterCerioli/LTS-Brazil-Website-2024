@@ -1,7 +1,7 @@
 'use client'
 
 import * as S from './styles'
-import img from '@/assets/recruitment_hero.jpg'
+import img from '@/assets/imagesRecruitmentServices/recruitment_hero.jpg'
 import Image from 'next/image'
 
 export function HeroMain() {

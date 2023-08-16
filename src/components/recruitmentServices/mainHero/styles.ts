@@ -12,7 +12,7 @@ export const MainHero = styled.section`
 
   h4 {
     text-align: center;
-    padding-top: 20px;
+
     font-weight: 300;
     padding-top: 5vw;
     margin: 0px 50px 50px 50px;

@@ -8,6 +8,17 @@ export const ProgressBar = styled.div`
 
   ul {
     align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 12px;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
   }
 
   li {
@@ -38,13 +49,26 @@ export const ProgressBar = styled.div`
       -o-transition: 0.3s linear;
       transition: 0.3s linear;
       overflow: hidden;
+
+      &:hover {
+        background-color: rgb(5, 52, 98);
+        transform: scale(1.2);
+      }
     }
   }
 
   p {
-    font-size: 16px;
-    text-align: left;
-  }
-  div {
+    font-size: 12px;
+    color: #000;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
   }
 `

@@ -1,7 +1,8 @@
 import React from 'react'
-import * as S from './styles' // Import your styles
+import * as S from './styles'
 import ProgressBar from '../progressBar/progressBar'
 import { recruitmentCycle } from '../helper/constants'
+import ProgressBarDottedLine from '../progressBarDottedLine/progressBarDottedLine'
 
 function ProgressBarContainer() {
   return (
@@ -12,6 +13,7 @@ function ProgressBarContainer() {
           <ProgressBar key={card.id} data={card} />
         ))}
       </div>
+      <ProgressBarDottedLine />
     </S.ProBarContainer>
   )
 }

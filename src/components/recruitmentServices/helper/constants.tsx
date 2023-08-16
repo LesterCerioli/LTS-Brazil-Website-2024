@@ -66,22 +66,22 @@ export const recruitmentCycle = [
   {
     id: 1,
     image: <FaMapMarkerAlt />,
-    text: 'Demanda de recrutamento do cliente',
+    text: 'Demanda de recrutamento',
   },
   {
     id: 2,
     image: <BsFillPersonCheckFill />,
-    text: 'Recrutador designado para o papel',
+    text: 'Recrutador em ação',
   },
   {
     id: 3,
     image: <BsPersonFillExclamation />,
-    text: 'Entendendo a dor do cliente',
+    text: 'Entendendo a demanda',
   },
   {
     id: 4,
     image: <TbMailSearch />,
-    text: 'Procurando talentos em nossos bancos',
+    text: 'Procura de talentos',
   },
   {
     id: 5,
@@ -91,12 +91,12 @@ export const recruitmentCycle = [
   {
     id: 6,
     image: <FaPortrait />,
-    text: 'Entrevista com candidatos selecionados',
+    text: 'Formatação de currículos',
   },
   {
     id: 7,
     image: <MdWorkspacePremium />,
-    text: 'Formatação de currículos',
+    text: 'Entrevistas',
   },
   {
     id: 8,
