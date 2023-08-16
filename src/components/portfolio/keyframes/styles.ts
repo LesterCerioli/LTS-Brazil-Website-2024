@@ -22,6 +22,7 @@ export const AnimatedContainer = styled.div`
     gap: 40px;
     flex-shrink: 0;
     margin-top: 50px;
+    &:hover{top:-5px;box-shadow:0 10px 10px #666}
 `
 
 export const Title = styled.h1`

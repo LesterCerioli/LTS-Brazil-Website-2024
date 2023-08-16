@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     margin-bottom: 50px;
+    &:hover{top:-5px;box-shadow:0 10px 10px #666}
 `
 
 export const Title = styled.h1`

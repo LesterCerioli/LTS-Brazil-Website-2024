@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    //background: var(--white);
-    
     flex-direction: column;
     max-width: 100%;
     justify-content: center;
@@ -10,6 +8,7 @@ export const Container = styled.div`
     flex-shrink: 0;
     min-height: 500px;
     background-color: var(--white);
+    &:hover{top:-5px;box-shadow:0 10px 10px #666}
 `
 
 export const Title = styled.h1`
