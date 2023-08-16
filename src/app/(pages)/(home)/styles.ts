@@ -51,7 +51,7 @@ export const Title = styled.div`
   }
 `;
 
-export const FirstSection = styled.div`
+export const StartHere = styled.div`
   height: 24.5rem;
 
   display: flex;
@@ -120,9 +120,7 @@ export const SectionStart = styled.div`
   }
 `;
 
-// export const SectionStartImg = styled.div``;
-
-export const SecondSection = styled.div`
+export const OurServices = styled.div`
   padding: 2rem;
   margin-top: 80px;
 
@@ -154,6 +152,9 @@ export const ButtonsCarousel = styled.div`
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    padding: 0;
+    border-radius: 0;
   }
   button:first-child img {
     transform: rotate(180deg);
@@ -245,7 +246,7 @@ export const SectionCards = styled.div`
   }
 `;
 
-export const ThirdSectionEUA = styled.div`
+export const SiteEua = styled.div`
   display: flex;
   height: 16rem;
   align-items: center;
@@ -306,7 +307,7 @@ export const ThirdSectionEUA = styled.div`
   }
 `;
 
-export const FourthSection = styled.div`
+export const AreasOfExpertise = styled.div`
   padding-top: 2rem;
   h2 {
     color: #021f3e;
@@ -324,7 +325,7 @@ export const FourthSection = styled.div`
   }
 `;
 
-export const FourthSectionCards = styled.div`
+export const AreasOfExpertiseCards = styled.div`
   width: 100%;
   margin: auto;
   padding-top: 2rem;
@@ -340,6 +341,7 @@ export const Card = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  transition: all ease-in-out 0.2s;
 
   img {
     padding: 5px 5px;
@@ -350,9 +352,19 @@ export const Card = styled.div`
     font-family: "Montserrat", arial, sans-serif;
     font-weight: 100;
   }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 600px) {
+    &:hover {
+      transform: none;
+    }
+  }
 `;
 
-export const FullWidthCard = styled.div`
+export const CloudSuite = styled.div`
   width: 80%;
   margin: auto;
   padding: 40px 40px;

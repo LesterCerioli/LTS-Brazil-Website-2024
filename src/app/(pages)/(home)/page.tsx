@@ -20,17 +20,35 @@ import Chevron from "@/assets/imagesHome/right_chevron_icon.png";
 import Link from "next/link";
 
 export default function Home() {
-  const carousel = useRef(null);
+  const carousel = useRef<HTMLDivElement | null>(null);
 
-  const handleLeftClick = (e) => {
+  // const handleLeftClick = (e) => {
+  //   e.preventDefault();
+  //   carousel.current.scrollLeft -= carousel.current.offsetWidth;
+  // };
+
+  // const handleRightClick = (e) => {
+  //   e.preventDefault();
+
+  //   carousel.current.scrollLeft += carousel.current.offsetWidth;
+  // };
+
+  const handleLeftClick = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     e.preventDefault();
-    carousel.current.scrollLeft -= carousel.current.offsetWidth;
+    if (carousel.current) {
+      carousel.current.scrollLeft -= carousel.current.offsetWidth;
+    }
   };
 
-  const handleRightClick = (e) => {
+  const handleRightClick = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     e.preventDefault();
-
-    carousel.current.scrollLeft += carousel.current.offsetWidth;
+    if (carousel.current) {
+      carousel.current.scrollLeft += carousel.current.offsetWidth;
+    }
   };
 
   return (
@@ -41,7 +59,7 @@ export default function Home() {
       </S.Title>
 
       <div>
-        <S.FirstSection>
+        <S.StartHere>
           <S.SectionStart>
             <Image src={CapaEnglosite} alt="" />
           </S.SectionStart>
@@ -59,9 +77,9 @@ export default function Home() {
               <button>Saiba mais</button>
             </Link>
           </S.SectionStart>
-        </S.FirstSection>
+        </S.StartHere>
 
-        <S.SecondSection>
+        <S.OurServices>
           <div>
             <h2>Nossos Serviços</h2>
             <div className="hLine"></div>
@@ -151,9 +169,9 @@ export default function Home() {
               <Image src={Chevron} alt="Scroll Left" />
             </button>
           </S.ButtonsCarousel>
-        </S.SecondSection>
+        </S.OurServices>
 
-        <S.ThirdSectionEUA>
+        <S.SiteEua>
           <Image src={Eua} alt="" />
           <div>
             <h2> Lucas Tecnologia nos Estados Unidos</h2>
@@ -161,13 +179,13 @@ export default function Home() {
               <button> Saiba mais</button>
             </Link>
           </div>
-        </S.ThirdSectionEUA>
+        </S.SiteEua>
 
-        <S.FourthSection>
+        <S.AreasOfExpertise>
           <h2>Áreas de Atuação</h2>
           <div className="hLine"></div>
 
-          <S.FourthSectionCards>
+          <S.AreasOfExpertiseCards>
             <S.Card>
               <h3>Tecnologia</h3>
               <Image src={Tecnologia} alt="" />
@@ -192,14 +210,14 @@ export default function Home() {
               <h3>Educação</h3>
               <Image src={Educacao} alt="" />
             </S.Card>
-          </S.FourthSectionCards>
+          </S.AreasOfExpertiseCards>
 
-          <S.FullWidthCard>
+          <S.CloudSuite>
             <Image src={CloudSuite} alt="" />
             <h2>Gestão da sua empresa nas suas mãos</h2>
             <div className="hLine"></div>
-          </S.FullWidthCard>
-        </S.FourthSection>
+          </S.CloudSuite>
+        </S.AreasOfExpertise>
       </div>
     </S.Container>
   );
