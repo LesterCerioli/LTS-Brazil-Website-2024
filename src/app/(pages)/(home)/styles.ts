@@ -10,10 +10,10 @@ export const Container = styled.div`
     font-weight: 700;
     letter-spacing: 0.071em;
     font-size: 14px;
+    transition: all ease-in-out 0.2s;
 
     &:hover {
-      /* background-color: var(--blue-hover); */
-      transition: all ease-in-out 0.2s;
+      transform: scale(1.1);
     }
   }
 `;
@@ -125,6 +125,7 @@ export const SectionStart = styled.div`
 export const SecondSection = styled.div`
   padding: 2rem;
   margin-top: 80px;
+
   h2 {
     color: #021f3e;
     font-family: "Archivo Black", arial, sans-serif;
@@ -161,10 +162,11 @@ export const ButtonsCarousel = styled.div`
 
 export const SectionCards = styled.div`
   height: 400px;
-  width: 72rem;
+  width: 1200px;
   display: flex;
   align-items: center;
   margin: auto;
+  padding: 5px;
   gap: 1rem;
   overflow-x: auto;
   scroll-behavior: smooth;
@@ -179,6 +181,11 @@ export const SectionCards = styled.div`
     cursor: pointer;
     display: flex;
     align-items: center;
+    transition: all ease-in-out 0.2s;
+  }
+
+  .card:hover {
+    transform: scale(1.01);
   }
 
   .textCard {
@@ -280,7 +287,7 @@ export const ThirdSectionEUA = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    background-color: red;
+    height: 150px;
 
     img {
       object-fit: none;
@@ -294,7 +301,7 @@ export const ThirdSectionEUA = styled.div`
     div {
       display: flex;
       flex-direction: column;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(0, 0, 0, 0.3);
     }
   }
 `;
