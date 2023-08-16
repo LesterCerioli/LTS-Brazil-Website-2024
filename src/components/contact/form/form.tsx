@@ -1,18 +1,18 @@
 import React from "react";
 import * as S from "./styles";
+import {BsWhatsapp} from "react-icons/bs";
 
 const Form = () => {
   return (
     <S.Form>
       <div>
-        <S.Title>
-          <h1>Fale conosco</h1>
-        </S.Title>
+
+        <label>
+          <h1 className="convite">Fale conosco</h1>
+        </label>
 
         <label className="line"></label>
-
-        <span>Entre em contato</span>
-
+       
         <label>
           <input type="text" placeholder="Nome" required />
         </label>
@@ -27,8 +27,8 @@ const Form = () => {
 
         <label>
           <textarea
-            rows={5}
-            cols={50}
+            rows={8}
+            cols={70}
             id="myTextarea"
             placeholder="Mensagem"
           ></textarea>
@@ -39,16 +39,34 @@ const Form = () => {
         </label>
 
         <label>
-          <h6>
+          <p className="privacidade">
             Este site é protegido por reCAPTCHA. A Política de Privacidade e os
             Termos de Serviço do Google são aplicáveis.
-          </h6>
+          </p>
         </label>
 
-        <span>O seu sucesso é a nossa recompensa!!!</span>
+        <label>
+        <span className="sucesso">O seu sucesso é a nossa recompensa!!!</span>
+        </label>
+        
+        <label>
+          <button type="submit" className="mensagem"><BsWhatsapp/>Enviar mensagem</button>
+        </label>
 
         <label>
-          <button type="submit">Enviar</button>
+          <h4 className="name">Lucas Technology Services</h4>
+        </label>
+
+        <label>
+          <p className="endereco">Av Vicente de Carvalho, </p>
+        </label>
+
+        <label>
+          <a href="mailto:commercial2018@lucastechnologyservice.com">E-mail: commercial2018@lucastecnologyservice.com </a>
+        </label>
+
+        <label>
+          <a href="+552130425441">Tel: +55 21 3042-5441</a>
         </label>
       </div>
     </S.Form>
