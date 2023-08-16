@@ -101,17 +101,17 @@ export const recruitmentCycle = [
   {
     id: 8,
     image: <BsFillPeopleFill />,
-    text: 'Repasse dos talentos ao cliente',
+    text: 'Repasse de talentos',
   },
   {
     id: 9,
     image: <BsChatSquareHeartFill />,
-    text: 'Feedback - Agenda de entrevista',
+    text: 'Agenda de entrevista',
   },
   {
     id: 10,
     image: <FaPeopleArrows />,
-    text: 'Entrevista cliente - candidato',
+    text: 'Entrevista com cliente ',
   },
   {
     id: 11,
@@ -121,7 +121,7 @@ export const recruitmentCycle = [
   {
     id: 12,
     image: <BiSolidHappyAlt />,
-    text: 'Dor do cliente sanada',
+    text: 'Dor sanada',
   },
 ]
 

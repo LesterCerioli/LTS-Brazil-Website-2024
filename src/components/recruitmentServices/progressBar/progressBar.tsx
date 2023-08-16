@@ -14,8 +14,10 @@ function ProgressBar(props: ProgressBarProps) {
     <S.ProgressBar>
       <div>
         <ul>
-          <li>{image}</li>
-          <p>{text}</p>
+          <li>
+            <div>{image}</div>
+            <p>{text}</p>
+          </li>
         </ul>
       </div>
     </S.ProgressBar>
