@@ -280,6 +280,8 @@ export const ThirdSectionEUA = styled.div`
   }
 
   @media screen and (max-width: 600px) {
+    background-color: red;
+
     img {
       object-fit: none;
       object-position: left center;
