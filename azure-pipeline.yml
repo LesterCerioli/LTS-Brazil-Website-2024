@@ -6,7 +6,7 @@ pr:
 
 
 jobs:
-- job: Linux
+- job: Debian
   pool:
     name: 'DS11'
   steps:
@@ -28,3 +28,5 @@ jobs:
       cd test
       npm test
     displayName: "Run npm test"
+
+
