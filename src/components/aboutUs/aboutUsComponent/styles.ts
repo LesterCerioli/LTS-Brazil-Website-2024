@@ -9,16 +9,10 @@ export const Container = styled.div`
 `;
 
 export const Body = styled.div`
+    display: flex;
+    justify-content: center;
     gap: 5rem;
     margin: 6rem 0;
     padding: 2rem 0;
-    font-size: 19px;
-    font-family: "Archivo Black", arial, sans-serif;
-    background-color: lightgray;
+    
 `;
-
-export const Image = styled.div`
-   padding: 3rem 0;
-   
-`;
-
