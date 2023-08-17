@@ -7,68 +7,101 @@ const Form = () => {
     <S.Form>
       <div>
 
-        <label>
-          <h1 className="convite">Fale conosco</h1>
-        </label>
+        <S.Title>
+          
+          <h1>Fale conosco</h1>
+          <label className="line"></label>
+        </S.Title>
 
-        <label className="line"></label>
-       
-        <label>
-          <input type="text" placeholder="Nome" required />
-        </label>
+        <S.Data>
+          <label>
+            
+          <input 
+          type="text"
+           placeholder="Nome" 
+           required />
+          </label>
 
-        <label>
-          <input type="email" placeholder="Email" required />
-        </label>
+          <label>
+            <input
+             type="email" 
+             placeholder="Email" 
+             required />
+          </label>
 
-        <label>
-          <input type="tel" placeholder="Telefone" required />
-        </label>
+          <label>
+            <input 
+            type="tel" 
+            placeholder="Telefone" 
+            required />
+          </label>
 
-        <label>
-          <textarea
-            rows={8}
-            cols={70}
-            id="myTextarea"
-            placeholder="Mensagem"
-          ></textarea>
-        </label>
+          <label>
+            <textarea
+              rows={8}
+              cols={70}
+              id="myTextarea"
+              placeholder="Mensagem"
+            ></textarea>
+          </label>
+        </S.Data>
 
-        <label>
-          <button type="submit">Enviar</button>
-        </label>
-
-        <label>
-          <p className="privacidade">
-            Este site é protegido por reCAPTCHA. A Política de Privacidade e os
-            Termos de Serviço do Google são aplicáveis.
-          </p>
-        </label>
-
-        <label>
-        <span className="sucesso">O seu sucesso é a nossa recompensa!!!</span>
-        </label>
+        <S.FirstButton>
+          <label>
+            <button type="submit">Enviar</button>
+          </label>
+        </S.FirstButton>
         
-        <label>
-          <button type="submit" className="mensagem"><BsWhatsapp/>Enviar mensagem</button>
-        </label>
+        <S.GooglePrivacy>
+          <label>
+            <a href="https://policies.google.com/privacy" className="privacidade">
+              Este site é protegido por reCAPTCHA. A Política de Privacidade e os
+              Termos de Serviço do Google são aplicáveis.
+            </a>
+          </label>
+        </S.GooglePrivacy>
 
-        <label>
-          <h4 className="name">Lucas Technology Services</h4>
-        </label>
+        <S.Text>
+          <label>
+          <h4 className="sucesso">O seu sucesso é a nossa recompensa!!!</h4>
+          </label>
+        </S.Text>
 
-        <label>
-          <p className="endereco">Av Vicente de Carvalho, </p>
-        </label>
+        <S.SecondButton>
+          <label>
+            <button type="submit" className="mensagem"><BsWhatsapp/>Enviar mensagem</button>
+          </label>
+        </S.SecondButton>
+        <S.Name>
+          <label>
+            <h4 className="name">Lucas Technology Services</h4>
+          </label>
+        </S.Name>
 
-        <label>
-          <a href="mailto:commercial2018@lucastechnologyservice.com">E-mail: commercial2018@lucastecnologyservice.com </a>
-        </label>
+        <S.Address>
+          <label>
+            <p className="endereco">Av Vicente de Carvalho, </p>
+          </label>
+        </S.Address>
 
-        <label>
-          <a href="+552130425441">Tel: +55 21 3042-5441</a>
-        </label>
+        <S.Email>
+          <label>
+            <a href="mailto:commercial2018@lucastechnologyservice.com">E-mail: commercial2018@lucastecnologyservice.com </a>
+          </label>
+
+          <label>
+            <a href="+552130425441">Tel: +55 21 3042-5441</a>
+          </label>
+        </S.Email>
+
+        <S.Map>        
+
+        </S.Map>
+        
       </div>
+      
+
+      
     </S.Form>
   );
 };
