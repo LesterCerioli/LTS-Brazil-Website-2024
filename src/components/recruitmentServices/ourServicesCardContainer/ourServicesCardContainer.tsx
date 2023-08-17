@@ -8,9 +8,9 @@ function OurServicesCardContainer() {
     <S.ServicesCardContainer>
       <h1>Nossas especialidades</h1>
       <div>
-        {ourServicesText.map((card) => (
-          <OurServicesCard key={card.id} data={card} />
-        ))}
+        {ourServicesText.map((card) =>
+          card ? <OurServicesCard key={card.id} data={card} /> : null
+        )}
       </div>
     </S.ServicesCardContainer>
   )

@@ -1,5 +1,10 @@
 import React, { ReactElement } from 'react'
-import { FaMapMarkerAlt, FaPortrait, FaPeopleArrows } from 'react-icons/fa'
+import {
+  AiFillCheckSquare,
+  AiOutlineCloudDownload,
+  AiOutlineAreaChart,
+} from 'react-icons/ai'
+import { BiSolidHappyAlt, BiSolidMobileVibration } from 'react-icons/bi'
 import {
   BsBriefcaseFill,
   BsFillPersonCheckFill,
@@ -7,12 +12,29 @@ import {
   BsFillTelephoneForwardFill,
   BsFillPeopleFill,
   BsChatSquareHeartFill,
+  BsCodeSquare,
 } from 'react-icons/bs'
+import {
+  FaMapMarkerAlt,
+  FaPortrait,
+  FaPeopleArrows,
+  FaBusinessTime,
+} from 'react-icons/fa'
+
 import { TbMailSearch } from 'react-icons/tb'
 import { HiDocumentText } from 'react-icons/hi'
-import { AiFillCheckSquare } from 'react-icons/ai'
-import { BiSolidHappyAlt } from 'react-icons/bi'
-import { MdWorkspacePremium } from 'react-icons/md'
+
+import { MdWorkspacePremium, MdSecurity } from 'react-icons/md'
+import { PiStrategyDuotone } from 'react-icons/pi'
+import {
+  MdOutlinePeople,
+  MdCodeOff,
+  MdSettingsApplications,
+} from 'react-icons/md'
+import { BsDatabaseFillUp, BsRocketTakeoff } from 'react-icons/bs'
+import { SiOracle, SiFuturelearn } from 'react-icons/si'
+import { SlPeople } from 'react-icons/sl'
+import { GrHostMaintenance } from 'react-icons/gr'
 
 export const recruitmentCardText = [
   {
@@ -128,95 +150,105 @@ export const recruitmentCycle = [
 export const specialties = [
   {
     id: 1,
-    title: 'Cloud Infrastructure',
+    image: <AiOutlineCloudDownload size={45} />,
+    title: 'Cloud Infrastructure: Soluções em Nuvem',
     text: 'Nossa equipe de especialistas em Cloud Infrastructure capacita sua empresa a migrar e gerenciar seus recursos na nuvem com eficiência e segurança, permitindo flexibilidade e escalabilidade incomparáveis.',
   },
   {
     id: 2,
+    image: <BsCodeSquare size={40} />,
     title: 'Software Development: Transformando Ideias em Realidade',
     text: 'Da concepção à implementação, nossos serviços de Software Development transformam suas ideias inovadoras em soluções digitais robustas e prontas para o mercado, alinhadas às suas necessidades e objetivos.',
   },
   ,
   {
     id: 3,
+    image: <PiStrategyDuotone size={40} />,
     title: 'Project Consulting: Orientação Estratégica para o Sucesso',
     text: 'Nossos serviços de Project Consulting oferecem a você a orientação estratégica necessária para planejar, executar e otimizar projetos complexos, garantindo resultados excepcionais em cada etapa',
   },
   ,
   {
     id: 4,
+    image: <AiOutlineAreaChart size={40} />,
     title: 'Business Analysis: Insights Precisos, Decisões Inteligentes',
     text: 'Com foco em Business Analysis, traduzimos dados em insights acionáveis, permitindo que você tome decisões empresariais mais informadas e estratégicas, impulsionando o crescimento sustentável.',
   },
   ,
   {
     id: 5,
+    image: <BiSolidMobileVibration size={40} />,
     title: 'Digital Marketing: Alcance, Engaje, Converta',
     text: 'Nossa abordagem de Digital Marketing abrange desde estratégias de mídia social até campanhas de SEO, ajudando sua marca a alcançar, engajar e converter o público-alvo em clientes leais.',
   },
   ,
   {
     id: 6,
+    image: <MdOutlinePeople size={40} />,
     title: 'Advisory Services: Orientação Estratégica para o Futuro',
     text: 'Por meio de nossos Advisory Services, oferecemos orientação estratégica personalizada, ajudando sua empresa a navegar pelas mudanças do mercado e abraçar oportunidades de crescimento.',
   },
   ,
   {
     id: 7,
+    image: <MdCodeOff size={40} />,
     title: 'Application Development and Management: Eficiência Contínua',
     text: 'Com foco na Application Development and Management, entregamos soluções de software de alto desempenho e oferecemos suporte contínuo para garantir a eficiência e a qualidade a longo prazo.',
   },
   ,
   {
     id: 8,
+    image: <MdSettingsApplications size={40} />,
     title: 'Enterprise Application Services: Otimização Corporativa',
     text: 'Nossos Enterprise Application Services otimizam seus processos corporativos por meio de soluções personalizadas, melhorando a eficiência operacional e a colaboração em toda a organização.',
   },
   ,
   {
     id: 9,
+    image: <BsDatabaseFillUp size={40} />,
     title: 'Infrastructure Services: Base Sólida para o Sucesso',
     text: 'Com nossos Infrastructure Services, fornecemos a base tecnológica sólida necessária para manter operações eficientes e seguras, garantindo que sua infraestrutura acompanhe suas ambições.',
   },
   ,
   {
     id: 10,
+    image: <FaBusinessTime size={40} />,
     title: 'SAP Solutions: Potencializando com SAP',
     text: 'Nossas soluções SAP oferecem às empresas uma vantagem competitiva, permitindo uma gestão eficaz dos recursos, processos e dados essenciais para impulsionar o crescimento.',
   },
   ,
   {
     id: 11,
+    image: <SiOracle size={40} />,
     title: 'Oracle Solutions: Excelência em Oracle',
     text: 'Por meio das nossas Oracle Solutions, você aproveita ao máximo as tecnologias Oracle, otimizando processos e tomando decisões informadas para atingir seus objetivos de negócios.',
   },
   ,
   {
     id: 12,
+    image: <SiFuturelearn size={40} />,
     title: 'Digital Transformation: Moldando o Futuro Digital',
     text: 'Através da Digital Transformation, ajudamos sua empresa a abraçar a inovação tecnológica, adotando estratégias digitais que impulsionam a eficiência e melhoram a experiência do cliente.',
   },
   ,
   {
     id: 13,
+    image: <GrHostMaintenance size={40} />,
     title: 'IT Service: Mantendo a Tecnologia Funcional',
     text: 'Nossos serviços de IT garantem que sua infraestrutura tecnológica esteja funcionando sem problemas, permitindo que você se concentre no que faz de melhor: seu negócio.',
   },
   ,
   {
     id: 14,
+    image: <BsRocketTakeoff size={40} />,
     title: 'Business Scalability: Crescimento sem Limites',
     text: 'Com nossas soluções de Business Scalability, você pode expandir seus negócios com confiança, sabendo que sua infraestrutura e recursos tecnológicos podem acompanhar suas ambições.',
   },
-  ,
-  {
-    id: 15,
-    title: 'Outsourcing: Liberdade para Focar no Essencial',
-    text: 'Por meio dos nossos serviços de Outsourcing, cuidamos de tarefas operacionais, permitindo que você concentre recursos em atividades centrais que impulsionam o crescimento.',
-  },
+
   ,
   {
     id: 16,
+    image: <MdSecurity size={40} />,
     title: 'Security: Salvaguardando seus Ativos Digitais',
     text: 'Nossas soluções de segurança protegem seus ativos digitais contra ameaças cibernéticas, garantindo a confidencialidade e integridade dos dados críticos da sua empresa.',
   },

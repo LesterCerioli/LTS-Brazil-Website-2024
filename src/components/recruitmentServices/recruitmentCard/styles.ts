@@ -22,7 +22,7 @@ export const RecruitmentCard = styled.div`
   position: relative;
   background-color: rgb(2, 31, 62);
   border: 1px solid black;
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 50px;
   p,
   h2 {
