@@ -2,8 +2,8 @@
 
 import * as S from './styles'
 import img from '@/assets/imagesRecruitmentServices/recruitment_hero.jpg'
-import Image from 'next/image'
-import MainHeroSwiper from '@/components/recruitmentServices/mainHeroSwiper/mainHeroSwiper'
+
+import MainHeroCarousel from '@/components/recruitmentServices/mainHeroCarousel/mainHeroCarousel'
 
 export function MainHero() {
   return (
@@ -16,7 +16,7 @@ export function MainHero() {
             aqui para te ajudar! Somos especializados em talent acquisition e
             vamos te ajudar na contratação que mais atende ao seu perfil.
           </h4>
-          <MainHeroSwiper />
+          <MainHeroCarousel />
         </div>
       </section>
     </S.MainHero>
