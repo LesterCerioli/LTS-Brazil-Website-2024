@@ -17,7 +17,7 @@ function OurSpecialties(props: OurspecialtiesProps) {
       <div>
         <div>
           {image}
-          <h3>{title}</h3>
+          <h4>{title}</h4>
         </div>
 
         <p>{text}</p>

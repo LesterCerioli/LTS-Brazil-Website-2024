@@ -16,8 +16,8 @@ export function MainHero() {
             aqui para te ajudar! Somos especializados em talent acquisition e
             vamos te ajudar na contratação que mais atende ao seu perfil.
           </h4>
-          <MainHeroCarousel />
         </div>
+        <MainHeroCarousel />
       </section>
     </S.MainHero>
   )

@@ -68,7 +68,7 @@ export const ourServicesText = [
   },
   {
     id: 2,
-    title: 'Agilidade sem Comprometer a Qualidade:',
+    title: 'Agilidade focando na Qualidade:',
     text: 'Mantenha o ritmo acelerado do mercado sem comprometer a qualidade do trabalho. Nossos talentos externos são escolhidos para garantir um equilíbrio perfeito entre velocidade e excelência.',
   },
   ,

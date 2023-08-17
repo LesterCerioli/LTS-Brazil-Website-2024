@@ -49,10 +49,13 @@ export const OurSpec = styled.div`
         color: rgb(5, 52, 98);
 
         transition: width 1s, height 1s, background-color linear 0.5s;
-        h3 {
+        h5 {
           color: #000;
         }
       }
+    }
+    p {
+      font-size: 14px;
     }
   }
 `

@@ -11,12 +11,7 @@ export function MainHeroCarousel() {
         <h4>React-Bootstrap Carousel Component</h4>
         <Carousel>
           <Carousel.Item>
-            <Image
-              src="/assets/imagesRecruitmentServices/recruitment_hero.jpg"
-              alt="Image One"
-              width={780}
-              height={1080}
-            />
+            <Image src="" alt="Image One" width={500} height={500} />
           </Carousel.Item>
           <Carousel.Item>
             <img src="" alt="Image Two" />
