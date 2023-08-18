@@ -45,7 +45,7 @@ export const Section = styled.div`
     flex-direction: column;
 
     p {
-      margin: 0 auto;
+      margin: 0 8rem;
       font-size: 1.4rem;
     }
   }
@@ -144,7 +144,7 @@ export const TextElement = styled.div`
     flex-direction: column;
 
     p {
-      margin: 0 auto;
+      margin: 0 2.3rem;
       font-size: 1.4rem;
     }
   }
