@@ -28,6 +28,11 @@ export const Title = styled.div`
       font-size: 30px;
     }
   }
+
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    text-align: center;
+    align-itens: center;
+  }
 `;
 
 export const Section = styled.div`
@@ -45,6 +50,12 @@ export const Section = styled.div`
     }
   }
 
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    flex-wrap: wrap;
+    align-itens: center;
+    gap: 2rem;
+  }
+
 `;
 
 export const SectionContent = styled.div`
@@ -58,7 +69,6 @@ export const SectionContent = styled.div`
     align-items: center;
     text-align: center;
     margin: 1rem auto;
-    
   }
 `;
 
@@ -67,8 +77,6 @@ export const SecondComponent = styled.div`
   justify-content: center;
   background-color: #F6F6F6;
   width: 100%;
-
-  
 `;
 
 export const SecondTitle = styled.div`
@@ -85,9 +93,14 @@ export const SecondTitle = styled.div`
       font-size: 30px;
       margin: 1rem auto;
     }
-  }
 
-  
+    @media screen and (min-width: 601px) and (max-width: 1024px) {
+      width: 80%;
+      flex-wrap: wrap;
+      font-size: 30px;
+      margin: 1rem auto;
+    }
+  }
 
   .htowline {
     border-bottom: 2px solid lightgray;
@@ -95,6 +108,10 @@ export const SecondTitle = styled.div`
     margin-bottom: 5rem;
 
     @media screen and (max-width: 600px) {
+      margin: 1rem auto;
+    }
+
+    @media screen and (min-width: 601px) and (max-width: 1024px) {
       margin: 1rem auto;
     }
   }
@@ -111,6 +128,12 @@ export const SecondElement = styled.div`
     text-align: center;
     margin: 0 auto;
   }
+
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    flex-wrap: wrap;
+    align-itens: center;
+    gap: 2rem;
+  }
 `;
 
 export const TextElement = styled.div`
@@ -124,5 +147,9 @@ export const TextElement = styled.div`
       margin: 0 auto;
       font-size: 1.4rem;
     }
+  }
+
+  @media screen and (min-width: 601px) and (max-width: 1024px) {
+    align-itens: center;
   }
 `;
