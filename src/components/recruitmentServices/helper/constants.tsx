@@ -35,6 +35,39 @@ import { BsDatabaseFillUp, BsRocketTakeoff } from 'react-icons/bs'
 import { SiOracle, SiFuturelearn } from 'react-icons/si'
 import { SlPeople } from 'react-icons/sl'
 import { GrHostMaintenance } from 'react-icons/gr'
+import RH1 from '@/assets/imagesRecruitmentServices/recruitment_hero1.jpg'
+import RH2 from '@/assets/imagesRecruitmentServices/recruitment_hero2.jpg'
+import RH3 from '@/assets/imagesRecruitmentServices/recruitment_hero3.jpg'
+import RH4 from '@/assets/imagesRecruitmentServices/recruitment_hero4.jpg'
+import RH5 from '@/assets/imagesRecruitmentServices/recruitment_hero5.jpg'
+import RH6 from '@/assets/imagesRecruitmentServices/recruitment_hero6.jpg'
+
+export const heroImages = [
+  {
+    id: 1,
+    image: RH1,
+  },
+  {
+    id: 2,
+    image: RH2,
+  },
+  {
+    id: 3,
+    image: RH3,
+  },
+  {
+    id: 4,
+    image: RH4,
+  },
+  {
+    id: 5,
+    image: RH5,
+  },
+  {
+    id: 6,
+    image: RH6,
+  },
+]
 
 export const recruitmentCardText = [
   {
