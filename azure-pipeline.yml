@@ -3,35 +3,30 @@ trigger:
 
 pr:
 - '*'
+
+
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-    
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14'
-    
-    - name: Install dependencies
-      run: npm install
-    
-    - name: Build application
-      run: npm run build
-    
-    - name: Archive artifact
-      uses: actions/upload-artifact@v2
-      with:
-        name: build-artifact
-        path: build
-    
-    - name: Deploy to Azure Web App
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: ltsbrazilwebsite
-        slot-name: production # se estiver usando slots, caso contrário, remova esta linha
-        publish-profile: ${{ secrets.AZURE_WEB_APP_PUBLISH_PROFILE }}
-        package: ./build-artifact/**/*.zip
+- job: Debian
+  pool:
+    name: 'DS11'
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "14.x"
+    displayName: "Install Node.js"
+
+  - script: |
+
+      npm install
+    displayName: "Install Dependencies"
+
+  - script: |
+      npm build
+    displayName: "Build"
+
+  - script: |
+      cd test
+      npm test
+    displayName: "Run npm test"
+
+
