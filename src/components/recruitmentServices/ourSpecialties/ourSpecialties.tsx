@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import * as S from './styles'
+
+import { specialties } from '../helper/constants'
 
 interface OurspecialtiesProps {
   data: {
