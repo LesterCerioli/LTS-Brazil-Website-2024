@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./styles";
 import {BsWhatsapp} from "react-icons/bs";
+import MapLink from "./mapLink/mapLink";
 
 const Form = () => {
   return (
@@ -69,9 +70,13 @@ const Form = () => {
 
         <S.SecondButton>
           <label>
-            <button type="submit" className="mensagem"><BsWhatsapp/>Enviar mensagem</button>
+            <button type="submit" className="mensagem">
+              <BsWhatsapp/>
+              <p>Enviar mensagem</p>
+              </button>
           </label>
         </S.SecondButton>
+
         <S.Name>
           <label>
             <h4 className="name">Lucas Technology Services</h4>
@@ -95,7 +100,7 @@ const Form = () => {
         </S.Email>
 
         <S.Map>        
-
+          <MapLink></MapLink>
         </S.Map>
         
       </div>
