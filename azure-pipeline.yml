@@ -6,9 +6,32 @@ pr:
 
 
 jobs:
-- job: Debian
+- job: Linux
   pool:
-    name: 'DS11'
+    vmImage: 'ubuntu-latest'
+  steps:
+  - task: NodeTool@0
+    inputs:
+      versionSpec: "14.x"
+    displayName: "Install Node.js"
+
+  - script: |
+
+      npm install
+    displayName: "Install Dependencies"
+
+  - script: |
+      npm build
+    displayName: "Build"
+
+  - script: |
+      cd test
+      npm test
+    displayName: "Run npm test"
+
+- job: Windows
+  pool:
+    vmImage: 'windows-2019'
   steps:
   - task: NodeTool@0
     inputs:
