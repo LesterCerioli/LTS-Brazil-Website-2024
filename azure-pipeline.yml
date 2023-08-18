@@ -1,10 +1,8 @@
-name: Azure Web App Deployment
+trigger:
+- '*'
 
-on:
-  push:
-    branches:
-      - main # ou a branch desejada
-
+pr:
+- '*'
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
