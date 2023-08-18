@@ -27,6 +27,10 @@ export const ProgressBar = styled.div`
     width: 20%;
     position: relative;
     z-index: 999;
+    display: inline;
+
+    p {
+    }
 
     div {
       width: 60px;
