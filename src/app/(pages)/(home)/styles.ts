@@ -439,7 +439,7 @@ export const CloudSuite = styled.div`
 `;
 
 export const Cokkies = styled.div`
-  height: 100vh;
+  height: 100%;
   position: sticky;
   bottom: 20px;
   right: 20px;
