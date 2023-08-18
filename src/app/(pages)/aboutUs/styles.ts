@@ -14,6 +14,7 @@ export const Title = styled.div`
     font-size: 3.4rem;
     margin-top: 8rem;
     color: #021F3E;
+    font-weight: 400;
   }
 
   .hline {
@@ -40,6 +41,7 @@ export const Section = styled.div`
   justify-content: center;
   margin: 3rem 6rem;
   gap: 6rem;
+  font-weight: 400;
 
   @media screen and (max-width: 600px) {
     flex-direction: column;
