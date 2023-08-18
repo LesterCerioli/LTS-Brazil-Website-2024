@@ -19,16 +19,46 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.div`
+  height: 720px;
+  position: relative;
+
+  video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .containerTitle {
+    background: rgba(255, 255, 255, 0.65);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  @media screen and (max-width: 600px) {
+  }
+`;
+
+export const TextTitle = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   width: 60%;
-  height: 24.25rem;
+  height: 100%;
   margin: auto;
+  padding-bottom: 100px;
+
+  z-index: 99;
 
   h1 {
-    color: var(--blue);
     text-transform: uppercase;
     text-align: center;
     font-family: "Archivo Black", arial, sans-serif;
@@ -36,15 +66,17 @@ export const Title = styled.div`
   }
 
   p {
-    color: rgb(5, 52, 98);
     text-align: center;
     font-family: "Montserrat", arial, sans-serif;
     font-style: italic;
-    font-size: 1.4rem;
+    font-size: 22px;
     margin: 20px;
+    font-weight: bold;
   }
   @media screen and (max-width: 600px) {
     width: 80%;
+    height: 100%;
+
     h1 {
       font-size: 30px;
     }
@@ -53,7 +85,6 @@ export const Title = styled.div`
 
 export const StartHere = styled.div`
   height: 24.5rem;
-
   display: flex;
 
   @media screen and (max-width: 600px) {
@@ -389,10 +420,15 @@ export const CloudSuite = styled.div`
 
   img {
     height: 583px;
+    transition: all ease-in-out 0.2s;
+
+    &:hover {
+      transform: scale(1.08);
+    }
   }
   @media screen and (max-width: 600px) {
     img {
-      width: 120%;
+      width: 370px;
       height: auto;
     }
 
@@ -400,4 +436,13 @@ export const CloudSuite = styled.div`
       font-size: 25px;
     }
   }
+`;
+
+export const Cokkies = styled.div`
+  height: 100vh;
+  position: sticky;
+  bottom: 20px;
+  right: 20px;
+
+  z-index: 100;
 `;
