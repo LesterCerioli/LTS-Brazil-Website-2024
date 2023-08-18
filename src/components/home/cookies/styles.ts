@@ -12,7 +12,7 @@ export const Container = styled.div`
     padding: 32px;
     margin: 32px;
     border-radius: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 4px rgba(250, 250, 250, 1);
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -30,5 +30,11 @@ export const Container = styled.div`
 
   button {
     margin: auto;
+  }
+
+  @media screen and (max-width: 600px) {
+    div {
+      height: 350px;
+    }
   }
 `;
