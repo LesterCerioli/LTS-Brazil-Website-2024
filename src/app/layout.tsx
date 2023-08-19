@@ -1,10 +1,8 @@
+import { Header } from "@/components/shared/header/header";
 import StyledComponentsRegistry from "../lib/registry";
+import "./globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-
-import { Header } from "@/components/shared/header/header";
-import { Footer } from "@/components/shared/footer/footer";
-import "./globals.css";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -24,7 +22,6 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <Header />
           {children}
-          <Footer />
         </StyledComponentsRegistry>
       </body>
     </html>
