@@ -86,6 +86,7 @@ export const SecondTitle = styled.div`
       flex-wrap: wrap;
       font-size: 30px;
       margin: 1rem auto;
+      text-align: center;
     }
   }
 
