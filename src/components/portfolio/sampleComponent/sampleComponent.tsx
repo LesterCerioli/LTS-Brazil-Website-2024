@@ -1,9 +1,10 @@
 "use client";
 import * as S from "./styles";
-export default function Portfolio() {
+
+export function SampleComponent() {
   return (
     <S.Container>
-      <p>Portfolio</p>
+      <p>Teste</p>
     </S.Container>
   );
 }
