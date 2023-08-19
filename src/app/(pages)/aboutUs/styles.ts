@@ -94,7 +94,6 @@ export const SecondTitle = styled.div`
       flex-wrap: wrap;
       font-size: 30px;
       margin: 1rem auto;
-      text-align: center;
     }
 
     @media screen and (min-width: 601px) and (max-width: 1024px) {
