@@ -21,8 +21,30 @@ import Educacao from "@/assets/imagesHome/educacao.png";
 import CloudSuite from "@/assets/imagesHome/cloudSuite.png";
 import Chevron from "@/assets/imagesHome/right_chevron_icon.png";
 
-export default function Home() {
+interface VideoProps {
+  "data-aid": string;
+  type: string;
+  poster: string;
+  autoPlay?: boolean;
+  loop?: boolean;
+  muted?: boolean;
+  playsInline?: boolean;
+  src: string;
+}
+
+const Home: React.FC = () => {
   const carousel = useRef<HTMLDivElement | null>(null);
+
+  const videoProps: VideoProps = {
+    "data-aid": "HEADER_VIDEO",
+    type: "video/mp4",
+    poster: "../../../assets/imagesHome/poster_QzGPEQx.png",
+    autoPlay: true,
+    loop: true,
+    muted: true,
+    playsInline: true,
+    src: "https://categories.api.godaddy.com/v4/videos/raw/video/QzGPEQx",
+  };
 
   const handleLeftClick = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -51,16 +73,8 @@ export default function Home() {
             <p>A mudança do seu negócio começa aqui.</p>
           </S.TextTitle>
         </div>
-        <video
-          data-aid="HEADER_VIDEO"
-          type="video/mp4"
-          poster="https://img1.wsimg.com/isteam/videos/QzGPEQx"
-          autoplay=""
-          loop="true"
-          muted="true"
-          playsinline=""
-          src="https://categories.api.godaddy.com/v4/videos/raw/video/QzGPEQx"
-        ></video>
+
+        <video {...videoProps}></video>
       </S.Title>
 
       <div>
@@ -229,5 +243,6 @@ export default function Home() {
       </S.Cokkies>
     </S.Container>
   );
-}
+};
 
+export default Home;
