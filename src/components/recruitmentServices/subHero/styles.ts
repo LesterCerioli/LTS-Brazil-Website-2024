@@ -10,7 +10,6 @@ export const SubHero = styled.section`
     align-items: center;
     text-align: center;
     padding-top: 50px;
-    margin: 50px;
   }
 
   h1 {
@@ -24,14 +23,16 @@ export const SubHero = styled.section`
     width: 80vw;
   }
   @media screen and (max-width: 480px) {
+    section {
+      width: 480px;
+      align-items: center;
+      height: auto;
+    }
+
     div {
       width: 480px;
 
       font-size: 20px;
-    }
-    section {
-      width: 480px;
-      height: auto;
     }
   }
 

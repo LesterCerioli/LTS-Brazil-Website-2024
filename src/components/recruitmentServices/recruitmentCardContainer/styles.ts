@@ -20,10 +20,11 @@ export const RecruitmentCardContainer = styled.div`
   @media (max-width: 480px) {
     width: 480px;
     padding-bottom: 1500px;
-    margin-right: 135px;
 
     div {
-      width: 480px;
+      margin-left: -15px;
+      width: 350px;
+      height: 350px;
       margin-top: auto;
       margin-bottom: 35px;
       p {

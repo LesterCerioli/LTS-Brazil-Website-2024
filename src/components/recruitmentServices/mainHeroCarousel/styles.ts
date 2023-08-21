@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
 export const CarrousselStyles = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  width: 100vw;
   padding-bottom: 80px;
 
   h1 {
@@ -9,15 +14,9 @@ export const CarrousselStyles = styled.div`
   h4 {
     font-weight: 500;
   }
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: lightgray;
-  width: 100vw;
-
   .carousel-root {
-    width: 480px;
-    max-width: 480px;
+    width: 100%;
+    max-width: 1080px;
   }
 
   .carousel-item {
@@ -29,6 +28,8 @@ export const CarrousselStyles = styled.div`
   }
 
   @media screen and (max-width: 480px) {
+    max-width: 480px;
+    height: auto;
     h4 {
       width: 480;
       font-weight: 500;
@@ -37,7 +38,6 @@ export const CarrousselStyles = styled.div`
   }
   @media screen and (max-width: 768px) {
     h4 {
-      width: 500px;
       font-weight: 500;
     }
   }

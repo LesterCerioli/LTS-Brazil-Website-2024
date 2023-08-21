@@ -22,27 +22,27 @@ export const MainHero = styled.section`
 
   @media screen and (max-width: 480px) {
     section {
-      width: 500px;
+      width: 480px;
     }
 
     div {
-      width: 580px;
+      width: 480px;
       padding-bottom: 50px;
     }
 
     .carousel-root {
       width: 480px;
-      height: 480px;
+      height: auto;
     }
   }
   @media screen and(min-width: 481) and(max-width: 768px) {
     div {
-      width: 950px;
+      width: 480px;
       padding-bottom: 50px;
     }
 
     .carousel-root {
-      max-width: 100%;
+      max-width: 100vw;
     }
   }
   @media screen and(min-width: 481) and(max-width: 768px) {
