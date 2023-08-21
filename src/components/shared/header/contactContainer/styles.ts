@@ -8,7 +8,7 @@ export const TopHeader = styled.div`
     width: 100%;
     flex-shrink: 1;
     flex-wrap: wrap;
-    
+    margin-bottom: 10px;
     `
 
 export const ContainerFluid = styled.div`
@@ -41,7 +41,7 @@ export const ContactContainer = styled.div`
     max-width: 1324.792px;
     min-height: 1px;
     flex-shrink: 0;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin-top: 5px;
 `
 
@@ -52,12 +52,6 @@ export const InstagramIcon = styled(FaInstagram)`
 `
 
 export const LinkedinIcon = styled(FaLinkedin)`
-    font-size: 20px;
-    color: var(--blue);
-    margin: 0 5px;
-`
-
-export const GithubIcon = styled(FaGithub)`
     font-size: 20px;
     color: var(--blue);
     margin: 0 5px;

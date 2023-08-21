@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Container = styled.nav`
-    position: fixed;
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    height: 62px;
+    justify-content: space-between; 
     align-items: center;
 `
 
@@ -31,7 +31,7 @@ export const LogoContainer = styled.div`
     width: 20%;
     display: flex;
     justify-content: center;
-    padding-top: 20px;
+    top: -40px;
 `
 
 export const RightContainer = styled.div`
@@ -51,4 +51,10 @@ export const RightLink = styled.a`
     line-height: 24px;
     letter-spacing: 1.136px;
     text-transform: uppercase;
+`
+
+export const NavBarFixed = styled.nav`
+    position: fixed;
+    background-color: black;
+    transition: .3s ease-in-out;
 `
