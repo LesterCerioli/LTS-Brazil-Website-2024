@@ -16,4 +16,31 @@ export const RecruitmentCardContainer = styled.div`
     justify-content: space-around;
     color: #fff;
   }
+
+  @media (max-width: 480px) {
+    width: 480px;
+    padding-bottom: 1500px;
+    margin-right: 135px;
+
+    div {
+      width: 480px;
+      margin-top: auto;
+      margin-bottom: 35px;
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+  @media screen and (min-width: 481) and(max-width: 768px) {
+    max-width: 90vw;
+    margin-left: 190px;
+
+    padding: 30px;
+
+    margin-bottom: 300px;
+
+    div {
+      font-size: 14px;
+    }
+  }
 `

@@ -6,6 +6,9 @@ export const CarrousselStyles = styled.div`
   h1 {
     margin-top: 30px;
   }
+  h4 {
+    font-weight: 500;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,8 +16,8 @@ export const CarrousselStyles = styled.div`
   width: 100vw;
 
   .carousel-root {
-    width: 100%;
-    max-width: 1080px;
+    width: 480px;
+    max-width: 480px;
   }
 
   .carousel-item {
@@ -23,5 +26,19 @@ export const CarrousselStyles = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  @media screen and (max-width: 480px) {
+    h4 {
+      width: 480;
+      font-weight: 500;
+      font-size: 20px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    h4 {
+      width: 500px;
+      font-weight: 500;
+    }
   }
 `

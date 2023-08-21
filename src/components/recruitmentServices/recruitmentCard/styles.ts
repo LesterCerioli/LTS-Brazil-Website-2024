@@ -1,11 +1,9 @@
 import styled, { keyframes } from 'styled-components'
 
 const blue = keyframes`
-
   0% { 
     width: 0px;
     height: 0px;
-
   }
   100% {
     width: 450px;
@@ -13,7 +11,6 @@ const blue = keyframes`
     top: 0;
     left: 0;
   }
-
 `
 
 export const RecruitmentCard = styled.div`
@@ -33,7 +30,35 @@ export const RecruitmentCard = styled.div`
     width: 480px;
     height: 350px;
     background-color: rgb(5, 52, 98);
-
     transition: width 1s, height 1s, background-color linear 0.5s;
+  }
+
+  @media screen and (max-width: 480px) {
+    div {
+      width: 50%;
+      height: 50%;
+      padding: 5px;
+      margin-top: 15px;
+    }
+
+    &:hover {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    div {
+      width: 50%;
+      height: 50%;
+      padding: 15px;
+      padding-bottom: 300px;
+      margin-top: 15px;
+    }
+
+    &:hover {
+      width: 100%;
+      height: auto;
+    }
   }
 `

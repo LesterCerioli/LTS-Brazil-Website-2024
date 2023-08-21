@@ -4,7 +4,11 @@ import {
   AiOutlineCloudDownload,
   AiOutlineAreaChart,
 } from 'react-icons/ai'
-import { BiSolidHappyAlt, BiSolidMobileVibration } from 'react-icons/bi'
+import {
+  BiSolidHappyAlt,
+  BiSolidMobileVibration,
+  BiServer,
+} from 'react-icons/bi'
 import {
   BsBriefcaseFill,
   BsFillPersonCheckFill,
@@ -266,7 +270,7 @@ export const specialties = [
   ,
   {
     id: 13,
-    image: <GrHostMaintenance size={40} />,
+    image: <BiServer size={40} />,
     title: 'IT Service: Mantendo a Tecnologia Funcional',
     text: 'Nossos serviços de IT garantem que sua infraestrutura tecnológica esteja funcionando sem problemas, permitindo que você se concentre no que faz de melhor: seu negócio.',
   },

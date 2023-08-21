@@ -54,4 +54,8 @@ export const Services = styled.div`
       top: 50%;
     }
   }
+
+  @media screen and (max-width: 480px) {
+    width: 480px;
+  }
 `

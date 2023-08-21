@@ -27,9 +27,10 @@ export const ProgressBar = styled.div`
     width: 20%;
     position: relative;
     z-index: 999;
-    display: inline;
+    font-size: 20px;
 
     p {
+      font-size: 10px;
     }
 
     div {
@@ -74,5 +75,26 @@ export const ProgressBar = styled.div`
     margin-top: 10px;
     display: flex;
     flex-direction: row;
+  }
+
+  @media screen and (max-width: 480px) {
+    div {
+      width: 480px;
+      margin: 5px;
+      padding: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      font-size: 18px;
+    }
+
+    @media screen and (min-width: 481) and(max-width: 768px) {
+      /* Additional styles for screens up to 768px */
+      li {
+        width: 25%; /* Adjust the width of li elements */
+      }
+    }
   }
 `

@@ -23,4 +23,24 @@ export const SubHero = styled.section`
     font-weight: 300;
     width: 80vw;
   }
+  @media screen and (max-width: 480px) {
+    div {
+      width: 480px;
+
+      font-size: 20px;
+    }
+    section {
+      width: 480px;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    section {
+      width: 768px;
+
+      height: auto;
+      padding: 20px;
+    }
+  }
 `

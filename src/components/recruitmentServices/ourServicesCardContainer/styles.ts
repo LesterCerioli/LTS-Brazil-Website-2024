@@ -14,7 +14,7 @@ const slide = keyframes`
 `
 
 export const ServicesCardContainer = styled.div`
-  max-width: 100vw;
+  width: 100vw;
   height: 40vw;
   display: flex;
   flex-direction: column;
@@ -32,5 +32,23 @@ export const ServicesCardContainer = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding-top: 50px;
+    width: 480px;
+    height: auto;
+    font-size: 20px;
+    margin-left: 50px;
+
+    div {
+      width: 480px;
+    }
+  }
+  @media screen and (min-width: 481) and(max-width: 768px) {
+    padding-top: px;
+    width: 850px;
+    height: auto;
+    margin-left: 50px;
   }
 `

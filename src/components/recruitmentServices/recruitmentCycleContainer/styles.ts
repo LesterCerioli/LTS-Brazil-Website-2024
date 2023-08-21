@@ -1,20 +1,20 @@
 import styled from 'styled-components'
 
 export const ProBarContainer = styled.div`
-  width: 100%;
+  width: 100vw;
   padding-top: 36px;
+  margin-left: -450px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  z-index: 999;
+
+  justify-content: space-around;
   margin-bottom: 50px;
 
   div {
     width: 300px;
-
-    justify-content: space-around;
-
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
@@ -22,5 +22,21 @@ export const ProBarContainer = styled.div`
   h1 {
     padding: 32px;
     margin-bottom: 30px;
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-left: 0;
+
+    > div {
+      margin-right: 200px;
+    }
+
+    div {
+      width: 110px;
+      font-size: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns */
+      gap: 10px;
+    }
   }
 `

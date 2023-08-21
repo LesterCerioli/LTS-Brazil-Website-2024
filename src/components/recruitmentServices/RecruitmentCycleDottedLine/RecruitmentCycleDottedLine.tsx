@@ -10,6 +10,8 @@ function RecruitmentCycleDottedLine() {
         <span></span>
         <span></span>
         <span></span>
+        <span></span>
+        <span></span>
       </div>
     </S.DottedBar>
   )
