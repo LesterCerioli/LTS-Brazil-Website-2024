@@ -5,46 +5,36 @@ import MapLink from "./mapLink/mapLink";
 
 const Form = () => {
   return (
-    <S.Form>
+    <S.Container>
       <div>
 
         <S.Title>
-          
           <h1>Fale conosco</h1>
           <label className="line"></label>
         </S.Title>
 
-        <S.Data>
-          <label>
-            
+        <S.Data>                  
           <input 
           type="text"
            placeholder="Nome" 
            required />
-          </label>
-
-          <label>
+                  
             <input
              type="email" 
              placeholder="Email" 
              required />
-          </label>
-
-          <label>
+         
             <input 
             type="tel" 
             placeholder="Telefone" 
             required />
-          </label>
-
-          <label>
+          
             <textarea
               rows={8}
               cols={70}
               id="myTextarea"
               placeholder="Mensagem"
             ></textarea>
-          </label>
         </S.Data>
 
         <S.FirstButton>
@@ -63,9 +53,9 @@ const Form = () => {
         </S.GooglePrivacy>
 
         <S.Text>
-          <label>
+          
           <h4 className="sucesso">O seu sucesso é a nossa recompensa!!!</h4>
-          </label>
+        
         </S.Text>
 
         <S.SecondButton>
@@ -85,7 +75,7 @@ const Form = () => {
 
         <S.Address>
           <label>
-            <p className="endereco">Av Vicente de Carvalho, </p>
+            <p className="endereco">Av Vicente de Carvalho, 1086 </p>
           </label>
         </S.Address>
 
@@ -107,7 +97,7 @@ const Form = () => {
       
 
       
-    </S.Form>
+    </S.Container>
   );
 };
 

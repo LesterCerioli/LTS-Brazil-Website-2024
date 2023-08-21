@@ -1,55 +1,76 @@
 import styled from 'styled-components'
 
-export const Form = styled.div`
+export const Container = styled.div`
     
 
-    div{
-        font-family: Montserrat, arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100vh;
-        width: 100vw;
-        
-        
-     
+div{
+font-family: Montserrat, arial, sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 100vh;
+width: 100vw;
+margin: 0 auto;
+max-width: 98%;  
  }
 
 `;
 
 
 export const Title = styled.div`
-    h1{
-        font-size: 40px;
-        color: #021F3E;
-        margin: 30px 40px;
+h1{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-size: 2.5rem;
+color: #021F3E;
+margin: 30px 40px;
 
     }
 
-    .line{
-    border-bottom: 2px solid #E2E2E2;
-    width: 50px;
-    margin: 20px 30px;
+.line{
+border-bottom: 2px solid #E2E2E2;
+width: 50px;
+margin: 20px 30px;
     
 }  
 `;
 
 export const Data = styled.div`
-    input, textarea {
+
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 90%;
+margin: 0 auto;
+gap: 3px;
+
+input{
 font-family: Montserrat, arial, sans-serif;
-margin-top: 20px;
+margin-top: 1.25rem;
 outline: none;
-padding: 15px;
-width: 750px;
+padding: 1rem;
+width: 90%;
 border: 1px solid #E2E2E2;
-border-radius: 10px;
+border-radius: 0.625rem;
+
+} 
+
+textarea {
+font-family: Montserrat, arial, sans-serif;
+margin-top: 1.25rem;
+outline: none;
+padding: 1rem;
+width: 90%;
+border: 1px solid #E2E2E2;
+border-radius: 0.625rem;
+margin-bottom: 2rem;
 
 }
 
-textarea{
 
-margin-bottom: 30px;
-}
 
 input:hover{
 transition: 0.8s;
@@ -61,23 +82,36 @@ transition: 0.8s;
 transform: scale(1.03);
 }
 
+
+@media screen and (min-width: 480px) and (max-width: 1024px)
+{
+     input{
+        max-width:98%;
+     }
+    
+    textarea{
+        max-width: 98%;
+     }
+      
+    }
+
 `;
 
 export const FirstButton = styled.div`
-   button{
-    width: 150px;
-    height: 50px;
+button{
+    width: 9.5rem;
+    height: 3.2rem;
     background-color: #021F3E;
     color: #FFF;
-    border-radius: 10px;
-    font-size: 15px;
+    border-radius: 0.65rem;
+    font-size: 0.95rem;
     outline: none;
     cursor: pointer;
-    padding: 10px;
-    margin-bottom:15px;
+    padding: 0.65rem;
+    margin-bottom:2rem;
     border: none;
     
-   }
+}
 
    button:hover{
     transition: 0.8s;
@@ -88,76 +122,104 @@ export const FirstButton = styled.div`
 
 export const GooglePrivacy = styled.div`
 .privacidade{
-    font-family: Montserrat, Arial, sans-serif;
-    font-size: 11px;
-    color: #595959;
-    margin-bottom: 60px;
-    text-decoration: none;
-   }
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-family: Montserrat, Arial, sans-serif;
+font-size: 0.69rem;
+color: #595959;
+margin-bottom: 3.75rem;
+text-decoration: none; 
+padding: 5px;
+}
 `;
 
 export const Text = styled.div`
-.sucesso{
-        color: #1B1B1B;
-        font-size: 22px;
-        font-weight: 400;
-        margin-top: 30px;
-        
-    }
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 1.88rem;
+width: 98%;
+    
+    
+   
+
+  h4{ 
+    text-align: center;
+    color: #1B1B1B;
+    font-size: 1.38rem;
+    font-weight: 400;
+    width: 98%;
+
+    
+}      
+    
 `;
 export const SecondButton = styled.div`
 .mensagem{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 200px;
-    height: 50px;
-    background-color: #021F3E;
-    color: #FFF;
-    border-radius: 10px;
-    border: none;
-    font-size: 15px;
-    outline: none;
-    cursor: pointer;
-    padding: 0 15px;
-    margin: 30px ;
+display: flex;
+justify-content: space-around;
+align-items: center;
+width: 12.5rem;
+height: 3.125rem;
+background-color: #021F3E;
+color: #FFF;
+border-radius: 0.625rem;
+border: none;
+font-size: 0.94rem;
+outline: none;
+cursor: pointer;
+padding: 0 15px;
+margin: 30px;
 }
 
 button:hover{
-    transition: 0.8s;
-    transform: scale(1.05);
+transition: 0.8s;
+transform: scale(1.05);
 }
-
 `;
 
 export const Name = styled.div`
 .name{
     color: #1B1B1B;
-    font-size: 22px;
+    font-size: 1.38rem;
     font-weight: 400;
-    margin: 20px;
+    margin: 10px;
 }
 `;
 
 export const Address = styled.div`
 .endereco{
     color: #021F3E;
-    font-size: 20px;
-    margin: 30px;
+    font-size: 1.25rem;
+    margin: 50px ;
     
 }
 `;
 
 export const Email = styled.div`
 a{
+    
     color: #021F3E;
-    text-decoration: none
+    text-decoration: none;
+    width: 98%;   
 }
 `;
 
 export const Map = styled.div`
-margin-top: 40px;
+margin-top: 2.5rem;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 80%;
+margin: 0;
+padding: 10px;
+border: none;
+
 `;
+
 
 
 
