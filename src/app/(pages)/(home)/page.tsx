@@ -75,17 +75,6 @@ const Home: React.FC = () => {
         </div>
 
         <video {...videoProps}></video>
-
-        {/* <video
-          data-aid="HEADER_VIDEO"
-          type="video/mp4"
-          poster="https://img1.wsimg.com/isteam/videos/QzGPEQx"
-          autoplay=""
-          loop="true"
-          muted="true"
-          playsinline=""
-          src="https://categories.api.godaddy.com/v4/videos/raw/video/QzGPEQx"
-        ></video> */}
       </S.Title>
 
       <div>
