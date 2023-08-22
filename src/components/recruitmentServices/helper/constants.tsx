@@ -1,4 +1,7 @@
 import React, { ReactElement } from 'react'
+
+// ↓↓↓↓IMPORTANDO REACT ICONS ↓↓↓↓
+// ↓↓↓↓IMPORTING REACT ICONS↓↓↓
 import {
   AiFillCheckSquare,
   AiOutlineCloudDownload,
@@ -45,6 +48,9 @@ import RH3 from '@/assets/imagesRecruitmentServices/recruitment_hero3.jpg'
 import RH4 from '@/assets/imagesRecruitmentServices/recruitment_hero4.jpg'
 import RH5 from '@/assets/imagesRecruitmentServices/recruitment_hero5.jpg'
 import RH6 from '@/assets/imagesRecruitmentServices/recruitment_hero6.jpg'
+
+// ↑↑↑↑↑ IMPORTANDO REACT ICONS ↑↑↑↑↑
+// ↑↑↑↑↑ IMPORTING REACT ICONS ↑↑↑↑↑
 
 export const heroImages = [
   {

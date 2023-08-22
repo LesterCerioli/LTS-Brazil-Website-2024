@@ -58,4 +58,17 @@ export const OurSpec = styled.div`
       font-size: 14px;
     }
   }
+   @media screen and (max-width: 480px) {
+    max-width: 480px;
+    height: 250px;
+    margin-right: auto;
+    margin-left: auto;
+  } 
+
+  @media screen and (max-width: 768px) {
+    max-width: 768px;
+
+    margin-right: auto;
+    margin-left: auto;
+  }
 `

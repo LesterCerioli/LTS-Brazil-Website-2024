@@ -25,18 +25,25 @@ export const SubHero = styled.section`
   @media screen and (max-width: 480px) {
     section {
       width: 480px;
-      align-items: center;
+
       height: auto;
     }
 
     div {
       width: 480px;
-
       font-size: 20px;
+      h1,
+      h4 {
+        margin-right: 30px;
+      }
     }
   }
 
   @media screen and (max-width: 768px) {
+    h4 {
+      font-weight: 600;
+    }
+
     section {
       width: 768px;
 

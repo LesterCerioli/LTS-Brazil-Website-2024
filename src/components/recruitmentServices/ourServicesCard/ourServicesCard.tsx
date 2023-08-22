@@ -3,13 +3,14 @@ import * as S from './styles'
 
 interface OurServicesProps {
   data: {
+    id: number
     title: string
     text: string
   }
 }
 
 function OurServicesCard(props: OurServicesProps) {
-  const { title, text } = props.data
+  const { id, title, text } = props.data
   return (
     <S.Services>
       <h3>{title}</h3>

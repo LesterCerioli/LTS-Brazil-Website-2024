@@ -20,7 +20,7 @@ export const MainHero = styled.section`
     line-height: 1.5;
   }
 
-  @media screen and (max-width: 480px) {
+   @media screen and (max-width: 480px) {
     section {
       width: 480px;
     }
@@ -29,31 +29,23 @@ export const MainHero = styled.section`
       width: 480px;
       padding-bottom: 50px;
     }
+  } 
 
-    .carousel-root {
-      width: 480px;
-      height: auto;
-    }
-  }
   @media screen and(min-width: 481) and(max-width: 768px) {
-    div {
-      width: 480px;
-      padding-bottom: 50px;
+    section {
+      width: 768px;
     }
-
-    .carousel-root {
-      max-width: 100vw;
+    p {
+      font-weight: 600;
     }
-  }
-  @media screen and(min-width: 481) and(max-width: 768px) {
     div {
-      width: 950px;
+      max-width: 768px;
       padding-bottom: 10px;
     }
 
     .carousel-root {
-      width: 950px;
-      height: 950px;
+      max-width: 768px;
+      height: auto;
       margin-left: auto;
       margin-right: auto;
       justify-content: space-between;

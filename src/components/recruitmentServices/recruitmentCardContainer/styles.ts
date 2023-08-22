@@ -17,30 +17,21 @@ export const RecruitmentCardContainer = styled.div`
     color: #fff;
   }
 
-  @media (max-width: 480px) {
-    width: 480px;
+   @media (max-width: 480px) {
     padding-bottom: 1500px;
-
     div {
-      width: 350px;
-      height: 350px;
-      margin-top: auto;
-      margin-bottom: 35px;
-      p {
-        font-size: 18px;
-      }
+      width: 300px;
+      height: 300px;
+      margin-bottom: 15px;
     }
-  }
-  @media screen and (min-width: 481) and(max-width: 768px) {
-    max-width: 90vw;
-    margin-left: 190px;
-
-    padding: 30px;
-
-    margin-bottom: 300px;
-
+  } 
+  @media screen and (max-width: 768px) {
+    padding-bottom: 1400px;
     div {
-      font-size: 14px;
+      width: 450;
+      height: 300px;
+
+      margin-bottom: 15px;
     }
   }
 `

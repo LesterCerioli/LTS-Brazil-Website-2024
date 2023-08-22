@@ -25,7 +25,6 @@ export const ProBarContainer = styled.div`
     padding: 32px;
     margin-bottom: 30px;
   }
-
   @media screen and (max-width: 480px) {
     h1 {
       margin-left: 100px;
@@ -40,8 +39,26 @@ export const ProBarContainer = styled.div`
       width: 110px;
       font-size: 18px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns */
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      margin-left: 100px;
+    }
+    margin-left: -60px;
+
+    div {
+      width: 210px;
+      font-size: 18px;
+      display: grid;
+      grid-template-columns: repeat(3, 2fr);
+      gap: 10px;
+    }
+    > div {
+      margin-right: 280px;
     }
   }
 `

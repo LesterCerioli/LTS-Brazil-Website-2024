@@ -77,7 +77,7 @@ export const ProgressBar = styled.div`
     flex-direction: row;
   }
 
-  @media screen and (max-width: 480px) {
+   @media screen and (max-width: 480px) {
     div {
       width: 480px;
       margin: 5px;
@@ -89,12 +89,11 @@ export const ProgressBar = styled.div`
       width: 100%;
       font-size: 18px;
     }
+     } 
 
-    @media screen and (min-width: 481) and(max-width: 768px) {
-      /* Additional styles for screens up to 768px */
-      li {
-        width: 25%; /* Adjust the width of li elements */
+    @media screen and (max-width: 768px) {
+      div {
       }
     }
-  }
+ 
 `

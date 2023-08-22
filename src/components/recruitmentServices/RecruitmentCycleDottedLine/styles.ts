@@ -116,4 +116,59 @@ export const DottedBar = styled.div`
       }
     }
   }
+  @media screen and (max-width: 768px) {
+    > div {
+      position: absolute;
+      width: 100%;
+
+      span:nth-child(1) {
+        margin-top: -365px;
+        width: 650px;
+        margin-left: -10px;
+      }
+
+      span:nth-child(2) {
+        margin-top: -260px;
+        width: 650px;
+        margin-left: -15px;
+      }
+
+      span:nth-child(3) {
+        margin-top: -155px;
+        width: 650px;
+        margin-left: -15px;
+      }
+      span:nth-child(4) {
+        margin-top: -55px;
+        width: 650px;
+        margin-left: -15px;
+      }
+
+      span:nth-child(5) {
+        margin-top: -365px;
+        width: 2px;
+        margin-left: -15px;
+        height: 110px;
+        background-image: linear-gradient(to top, #000 1px, transparent 1px);
+        background-size: 130px 6px;
+      }
+
+      span:nth-child(6) {
+        margin-top: -260px;
+        width: 2px;
+        margin-left: 635px;
+        height: 105px;
+        background-image: linear-gradient(to top, #000 1px, transparent 1px);
+        background-size: 118px 6px;
+      }
+      span:nth-child(7) {
+        margin-top: -155px;
+        width: 2px;
+        margin-left: -15px;
+        height: 100px;
+        background-image: linear-gradient(to top, #000 1px, transparent 1px);
+        background-size: 118px 6px;
+      }
+    }
+  }
 `
