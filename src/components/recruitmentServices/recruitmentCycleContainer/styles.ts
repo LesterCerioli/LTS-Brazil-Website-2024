@@ -20,12 +20,17 @@ export const ProBarContainer = styled.div`
     gap: 25px;
   }
   h1 {
+    margin-left: 50vw;
+
     padding: 32px;
     margin-bottom: 30px;
   }
 
   @media screen and (max-width: 480px) {
-    margin-left: 0;
+    h1 {
+      margin-left: 100px;
+    }
+    margin-left: -60px;
 
     > div {
       margin-right: 200px;

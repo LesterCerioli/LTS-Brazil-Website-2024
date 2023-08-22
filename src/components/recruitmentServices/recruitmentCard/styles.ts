@@ -35,15 +35,16 @@ export const RecruitmentCard = styled.div`
 
   @media screen and (max-width: 480px) {
     div {
-      width: 50%;
-      height: 50%;
+      width: 225px;
+      height: 150px;
       padding: 5px;
       margin-top: 15px;
     }
-
     &:hover {
-      width: 100%;
-      height: auto;
+      width: 225px;
+      height: 150px;
+      background-color: rgb(5, 52, 98);
+      transition: width 1s, height 1s, background-color linear 0.5s;
     }
   }
 

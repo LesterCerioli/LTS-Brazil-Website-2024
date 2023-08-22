@@ -56,6 +56,9 @@ export const Services = styled.div`
   }
 
   @media screen and (max-width: 480px) {
+    span {
+      animation: none;
+    }
     width: 480px;
   }
 `

@@ -36,10 +36,10 @@ export const ServicesCardContainer = styled.div`
 
   @media screen and (max-width: 480px) {
     padding-top: 50px;
+    margin-top: 50px;
     width: 480px;
     height: auto;
     font-size: 20px;
-    margin-left: 50px;
 
     div {
       width: 480px;

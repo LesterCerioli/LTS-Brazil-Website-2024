@@ -35,6 +35,10 @@ export const CarrousselStyles = styled.div`
       font-weight: 500;
       font-size: 20px;
     }
+    .carousel-root {
+      width: 480px;
+      height: 480px;
+    }
   }
   @media screen and (max-width: 768px) {
     h4 {

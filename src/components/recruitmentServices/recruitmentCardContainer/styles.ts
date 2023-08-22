@@ -22,7 +22,6 @@ export const RecruitmentCardContainer = styled.div`
     padding-bottom: 1500px;
 
     div {
-      margin-left: -15px;
       width: 350px;
       height: 350px;
       margin-top: auto;

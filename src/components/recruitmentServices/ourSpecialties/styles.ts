@@ -35,9 +35,6 @@ export const OurSpec = styled.div`
     height: 310px;
     transition: width 1s, height 1s, background-color linear 0.5s;
     color: #fff;
-
-    div {
-    }
   }
 
   div {
