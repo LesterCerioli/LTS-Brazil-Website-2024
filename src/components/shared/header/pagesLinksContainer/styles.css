@@ -2,8 +2,8 @@
     position: fixed;
     width: 100%;
     background-color: transparent;
-    transition: 0.5s ;
-    transform: scale(1);
+    transition: 0.5s;
+    
   }
   
   .navbar.scrolled {
@@ -19,6 +19,20 @@
   .navbar.scrolled img {
     transform: scale(0.5);
     transition: 0.5s;
-
+    padding-top: 0;
   }
-  
+
+  @media (max-width: 1000px) {
+    .navbar{
+    padding-left: 40px; 
+    padding-right: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+     .logo {
+      width: 64px;
+      height: 64px;
+    }
+
+}
+

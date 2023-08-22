@@ -9,40 +9,73 @@ export const TopHeader = styled.div`
     flex-shrink: 1;
     flex-wrap: wrap;
     margin-bottom: 10px;
+    height: fit-content;
+    max-height: 100%;
+
+    @media (max-width: 1340px) {
+        display: flex;
+        flex-direction: column;
+        max-height: 100%;
+    }
     `
 
 export const ContainerFluid = styled.div`
     padding-top: 5px;
     display: flex;
     justify-content: space-between;
-    width: 92%;
+    width: 100%;
     border-bottom: 1px solid rgba(15, 14, 27, .1);
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+    max-height: 100%;
+    
+    @media (max-width: 1340px) {
+        display: flex;
+        flex-direction: column;
+        max-height: 100%;
+        align-items: center;
+    }
     `
 
 export const SocialsContainer = styled.div`
     display: flex;
     width: 50%;
-    max-width: 441.598px;
+    max-width: 100%;
     min-height: 1px;
-    padding: 0px 15px 7px 15px;
+    padding: 0px 45px;
     align-items: flex-start;
-    flex-shrink: 0;
     margin-top: 5px;
+    flex-wrap: wrap;
+    
+    @media (max-width: 1340px) {
+        display: flex;
+        max-height: 100%;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+    }
+
     `
 
 export const ContactContainer = styled.div`
     display: flex;
     width: 50%;
-    height: 35px;
-    max-width: 1324.792px;
-    min-height: 1px;
-    flex-shrink: 0;
+    max-width: 100%;
     justify-content: space-evenly;
     margin-top: 5px;
+    flex-wrap: wrap;
+    padding: 0 45px;
+
+    @media (max-width: 1340px) {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-height: 100%;
+        align-items: center;
+        width: 100%;
+    }
 `
 
 export const InstagramIcon = styled(FaInstagram)`
@@ -77,6 +110,7 @@ export const ContactLink = styled.a`
     font-weight: 500;
     line-height: 18px; 
     display: flex;
+    text-decoration: none;
 `
 
 
