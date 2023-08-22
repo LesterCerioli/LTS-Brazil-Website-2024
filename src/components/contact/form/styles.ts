@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
     
 
-div{
+form{
 font-family: Montserrat, arial, sans-serif;
 display: flex;
 flex-direction: column;

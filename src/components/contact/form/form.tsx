@@ -3,10 +3,49 @@ import * as S from "./styles";
 import {BsWhatsapp} from "react-icons/bs";
 import MapLink from "./mapLink/mapLink";
 
+
+
+// apagar até aqui
+
+
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+
+const schemaForma = z.object({
+  dataClient: z.object({
+    name: z.string().min(6, 'Por favor, informe seu nome completo'),
+    email: z.string().min(6, 'Por favor, informe seu e-mail'),
+    tel: z.string().min(9, 'Por favor, informe seu telefone')
+  })
+
+});
+
+
+
+
+
 const Form = () => {
+
+  const { handleSubmit,
+     register,
+      formState: { errors }
+    } = useForm({
+      criteriaMode: 'all',
+      mode: 'all',
+      resolver: zodResolver(schemaForma)
+    });  
+
+
+
+   const handleFormSubmit = (data) => {
+    console.log(data);
+  };
+
   return (
     <S.Container>
-      <div>
+      <form onSubmit={handleSubmit(handleFormSubmit)}>
 
         <S.Title>
           <h1>Fale conosco</h1>
@@ -14,20 +53,25 @@ const Form = () => {
         </S.Title>
 
         <S.Data>                  
-          <input 
+          <input
+          {...register('Nome')} 
           type="text"
            placeholder="Nome" 
-           required />
+            
+           />
                   
             <input
+            {...register('Email')}
              type="email" 
              placeholder="Email" 
-             required />
+              
+             />
          
             <input 
+            {...register('Telefone')}
             type="tel" 
             placeholder="Telefone" 
-            required />
+            />
           
             <textarea
               rows={8}
@@ -93,7 +137,7 @@ const Form = () => {
           <MapLink></MapLink>
         </S.Map>
         
-      </div>
+      </form>
       
 
       
