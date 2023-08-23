@@ -1,6 +1,6 @@
 "use client";
-import { Card, DevUx } from "@/components/services/card/card";
-import { Portal } from "@/components/services/card/card";
+import { Card, DevUx } from "@/components/services/card/cardComponent";
+import { Portal } from "@/components/services/card/cardComponent";
 import * as S from "./styles";
 import { cardUx, portalCard, services } from "@/data/services";
 
