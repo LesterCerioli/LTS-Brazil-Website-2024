@@ -1,3 +1,4 @@
+"use client";
 import styled from "styled-components";
 
 export const Container = styled.nav`
@@ -41,11 +42,12 @@ export const LeftContainer = styled.div`
     flex-direction: column;
     position: fixed;
     justify-content: space-between;
-    top: 5px;
+    top: 0px;
+    padding-top: 20px;
     right: 0;
     width: 100%;
     height: 200px;
-    background-color: white;
+    background-color: var(--white);
     z-index: 1000;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
@@ -64,6 +66,7 @@ export const CloseButton = styled.button`
   font-size: 14px;
   margin-top: 10px;
   cursor: pointer;
+  padding-bottom: 10px;
 `;
 
 export const LeftLink = styled.a`
@@ -111,8 +114,8 @@ export const RightContainer = styled.div`
     padding-top: 30px;
     right: 0;
     width: 100%;
-    height: 200px;
-    background-color: white;
+    height: 230px;
+    background-color: var(--white);
     z-index: 1000;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;

@@ -1,36 +1,38 @@
 "use client";
 import React, { useState, useEffect } from 'react';
-import * as S from './styles'; 
+import * as S from './styles';
 import './styles.css';
-import { CgClose } from "react-icons/cg";
+import { CgClose } from 'react-icons/cg';
 import Link from 'next/link';
+import LCSLogo from '../logo/logo';
 
 export function LinksContainer() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  const handleScroll = () => {
-    if (window.scrollY >= 10) { 
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
-
-  const handleResize = () => {
-    setIsMobile(window.innerWidth <= 1000);
-    setMenuOpen(false);
-  };
-
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 1000);
+      setMenuOpen(false);
+    };
+
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
-    handleResize(); 
+    handleResize();
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
@@ -52,18 +54,18 @@ export function LinksContainer() {
         <Link className='link' href="/">
           <S.LeftLink>Início</S.LeftLink>
         </Link>
-        <Link className='link' href="/servicos">
+        <Link className='link' href="/services">
           <S.LeftLink>Serviços</S.LeftLink>
         </Link>
-        <Link className='link' href="/contato">
+        <Link className='link' href="/contact">
           <S.LeftLink>Contato</S.LeftLink>
         </Link>
-        <Link className='link' href="/consultoria">
+        <Link className='link' href="/consultancy">
           <S.LeftLink>Consultoria</S.LeftLink>
         </Link>
       </S.LeftContainer>
       <S.LogoContainer>
-        <img className='logo' src='/assets/imagesNav/lcsLogo.png'></img>
+        <LCSLogo />
       </S.LogoContainer>
       <S.RightContainer className={menuOpen ? 'show' : ''}>
         <Link className='link' href="/aboutUs">
@@ -72,7 +74,7 @@ export function LinksContainer() {
         <Link className='link' href="/portfolio">
           <S.RightLink>Portfolio</S.RightLink>
         </Link>
-        <Link className='link' href="/servicos-de-recrutamento">
+        <Link className='link' href="/recruitmentServices">
           <S.RightLink>Serviços de Recrutamento</S.RightLink>
         </Link>
         {menuOpen && (
