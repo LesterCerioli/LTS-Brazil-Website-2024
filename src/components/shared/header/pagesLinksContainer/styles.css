@@ -15,7 +15,10 @@
     opacity: 0.9;
     z-index: 1000;
   }
-
+  
+  .link {
+    text-decoration: none;
+  }
   .navbar.scrolled img {
     transform: scale(0.5);
     transition: 0.5s;
