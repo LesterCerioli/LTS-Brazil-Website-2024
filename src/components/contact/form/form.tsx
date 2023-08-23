@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./styles";
 import {BsWhatsapp} from "react-icons/bs";
-import MapLink from "./mapLink/mapLink";
+import MapLink from "./mapLink/map";
 import {MdEmail} from "react-icons/md"
 import {BsTelephoneFill} from "react-icons/bs"
 import { useForm } from "react-hook-form";
