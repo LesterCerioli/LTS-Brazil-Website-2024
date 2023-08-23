@@ -91,7 +91,7 @@ const { handleSubmit,
            )}
           
             <textarea
-              rows={8}
+              rows={10}
               cols={70}
               id="myTextarea"
               placeholder="Mensagem"
