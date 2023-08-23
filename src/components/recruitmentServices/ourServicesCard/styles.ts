@@ -55,12 +55,8 @@ export const Services = styled.div`
     }
   }
 
-   @media screen and (max-width: 480px) {
-    background-color: rgb(5, 52, 98);
-    color: #fff;
-
-    width: 480px;
-  } 
+  @media screen and (max-width: 480px) {
+  }
   @media screen and (max-width: 768px) {
   }
 `

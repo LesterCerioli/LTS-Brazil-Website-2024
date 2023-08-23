@@ -64,55 +64,32 @@ export const DottedBar = styled.div`
   @media screen and (max-width: 480px) {
     > div {
       position: absolute;
-      width: 100%;
+      width: 400px;
 
       span:nth-child(1) {
-        margin-top: -470px;
-        width: 400px;
-        margin-left: 15px;
+        display: none;
       }
 
       span:nth-child(2) {
-        margin-top: -335px;
-        width: 400px;
-        margin-left: 15px;
+        display: none;
       }
 
       span:nth-child(3) {
-        margin-top: -200px;
-        width: 400px;
-        margin-left: 15px;
+        display: none;
       }
       span:nth-child(4) {
-        margin-top: -65px;
-        width: 400px;
-        margin-left: 15px;
+        display: none;
       }
 
       span:nth-child(5) {
-        margin-top: -330px;
-        width: 2px;
-        margin-left: 15px;
-        height: 120px;
-        background-image: linear-gradient(to top, #000 1px, transparent 1px);
-        background-size: 130px 6px;
+        display: none;
       }
 
       span:nth-child(6) {
-        margin-top: -460px;
-        width: 2px;
-        margin-left: 411px;
-        height: 120px;
-        background-image: linear-gradient(to top, #000 1px, transparent 1px);
-        background-size: 118px 6px;
+        display: none;
       }
       span:nth-child(7) {
-        margin-top: -190px;
-        width: 2px;
-        margin-left: 411px;
-        height: 120px;
-        background-image: linear-gradient(to top, #000 1px, transparent 1px);
-        background-size: 118px 6px;
+        display: none;
       }
     }
   }

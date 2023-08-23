@@ -34,18 +34,9 @@ export const ServicesCardContainer = styled.div`
     justify-content: space-around;
   }
 
-   @media screen and (max-width: 480px) {
-    width: 480px;
-    padding-top: 50px;
-    margin-top: 50px;
-    width: 480px;
-    height: auto;
-    font-size: 20px;
-    &:hover {
-      width: 100%;
-      height: auto;
-    }
-  } 
+  @media screen and (max-width: 480px) {
+    max-width: 480px;
+  }
 
   @media screen and (max-width: 768px) {
     width: 768px;

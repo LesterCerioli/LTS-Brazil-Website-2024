@@ -26,20 +26,13 @@ export const ProBarContainer = styled.div`
     margin-bottom: 30px;
   }
   @media screen and (max-width: 480px) {
-    h1 {
-      margin-left: 100px;
-    }
     margin-left: -60px;
-
-    > div {
-      margin-right: 200px;
-    }
 
     div {
       width: 110px;
       font-size: 18px;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 2fr);
       gap: 10px;
     }
   }
@@ -51,7 +44,7 @@ export const ProBarContainer = styled.div`
     margin-left: -60px;
 
     div {
-      width: 210px;
+      width: 160px;
       font-size: 18px;
       display: grid;
       grid-template-columns: repeat(3, 2fr);

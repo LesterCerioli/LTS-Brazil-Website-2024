@@ -39,7 +39,7 @@ export const CarrousselStyles = styled.div`
       width: 460px;
       height: 460px;
     }
-  } 
+  }
   @media screen and (max-width: 768px) {
     h4 {
       font-weight: 600;

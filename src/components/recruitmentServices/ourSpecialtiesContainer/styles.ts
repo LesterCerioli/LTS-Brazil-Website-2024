@@ -20,6 +20,7 @@ export const OurSpecialtiesCon = styled.div`
   }
 
    @media screen and (max-width: 480px) {
+    
     max-width: 480px;
     height: auto;
   } 

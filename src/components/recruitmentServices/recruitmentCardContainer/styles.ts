@@ -17,14 +17,15 @@ export const RecruitmentCardContainer = styled.div`
     color: #fff;
   }
 
-   @media (max-width: 480px) {
+  @media (max-width: 480px) {
     padding-bottom: 1500px;
     div {
-      width: 300px;
+      margin-right: 160px;
+      width: 450px;
       height: 300px;
       margin-bottom: 15px;
     }
-  } 
+  }
   @media screen and (max-width: 768px) {
     padding-bottom: 1400px;
     div {
