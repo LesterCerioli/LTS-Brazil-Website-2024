@@ -2,46 +2,53 @@ import React from "react";
 import * as S from "./styles";
 import {BsWhatsapp} from "react-icons/bs";
 import MapLink from "./mapLink/mapLink";
-
-
-
-// apagar até aqui
-
-
+import {MdEmail} from "react-icons/md"
+import {BsTelephoneFill} from "react-icons/bs"
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 
-const schemaForma = z.object({
+
+
+const schemaForm = z.object({
   dataClient: z.object({
-    name: z.string().min(6, 'Por favor, informe seu nome completo'),
-    email: z.string().min(6, 'Por favor, informe seu e-mail'),
-    tel: z.string().min(9, 'Por favor, informe seu telefone')
+    name: z.string().min(10, 'Informe seu nome completo'),
+    email: z.string().min(6, 'Informe seu e-mail'),
+    tel: z.string().max(12).regex(/^(\(?\d{2}\)?\s?)?(\d{4,5}\-?\d{4})$/, {
+
+    message: "Informe um telefone válido",
+
+    }),
   })
 
 });
 
-
-
-
+type FormProps = z.infer<typeof schemaForm>
 
 const Form = () => {
 
-  const { handleSubmit,
+const { handleSubmit,
      register,
       formState: { errors }
-    } = useForm({
+    } = useForm<FormProps>({
       criteriaMode: 'all',
       mode: 'all',
-      resolver: zodResolver(schemaForma)
+      resolver: zodResolver(schemaForm),
+      defaultValues: {
+        dataClient: {
+          name: '',
+          email: '',
+          tel: '',
+        }
+      }
     });  
 
-
-
-   const handleFormSubmit = (data) => {
+   const handleFormSubmit = (data: FormProps) => {
     console.log(data);
   };
+
+  console.log(errors);
 
   return (
     <S.Container>
@@ -54,24 +61,34 @@ const Form = () => {
 
         <S.Data>                  
           <input
-          {...register('Nome')} 
+          {...register('dataClient.name')} 
           type="text"
            placeholder="Nome" 
+          
             
            />
+           {errors.dataClient?.name?.message && (
+              <p style={{ color: 'red', fontSize: '10px', textAlign: 'left' }}>{errors.dataClient?.name?.message}</p>
+           )}
                   
             <input
-            {...register('Email')}
+            {...register('dataClient.email')}
              type="email" 
-             placeholder="Email" 
-              
+             placeholder="Email"
              />
+             {errors.dataClient?.email?.message && (
+              <p style={{ color: 'red', fontSize: '10px', textAlign: 'left' }}>{errors.dataClient?.email?.message}</p>
+           )}
          
             <input 
-            {...register('Telefone')}
+            {...register('dataClient.tel')}
             type="tel" 
-            placeholder="Telefone" 
+            placeholder="Telefone"
+            
             />
+            {errors.dataClient?.tel?.message && (
+              <p style={{ color: 'red', fontSize: '10px', textAlign: 'left' }}>{errors.dataClient?.tel?.message}</p>
+           )}
           
             <textarea
               rows={8}
@@ -125,11 +142,11 @@ const Form = () => {
 
         <S.Email>
           <label>
-            <a href="mailto:commercial2018@lucastechnologyservice.com">E-mail: commercial2018@lucastecnologyservice.com </a>
+            <a href="mailto:commercial2018@lucastechnologyservice.com"><MdEmail style={{ fontSize: '22px', marginRight: '5px' }} />  commercial2018@lucastecnologyservice.com </a>
           </label>
 
           <label>
-            <a href="+552130425441">Tel: +55 21 3042-5441</a>
+            <a href="+552130425441"><BsTelephoneFill style={{ fontSize: '22px', marginRight: '5px' }}/> +55 21 3042-5441</a>
           </label>
         </S.Email>
 

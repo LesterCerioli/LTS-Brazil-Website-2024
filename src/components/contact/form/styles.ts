@@ -12,6 +12,8 @@ height: 100vh;
 width: 100vw;
 margin: 0 auto;
 max-width: 98%;  
+background-color: inherit;
+
  }
 
 `;
@@ -46,6 +48,7 @@ justify-content: center;
 width: 90%;
 margin: 0 auto;
 gap: 3px;
+background-color: inherit;
 
 input{
 font-family: Montserrat, arial, sans-serif;
@@ -55,6 +58,7 @@ padding: 1rem;
 width: 90%;
 border: 1px solid #E2E2E2;
 border-radius: 0.625rem;
+background-color: inherit;
 
 } 
 
@@ -200,15 +204,19 @@ export const Address = styled.div`
 
 export const Email = styled.div`
 a{
-    
+    display: flex;
+    align-content: center;
+    justify-content: center;
     color: #021F3E;
     text-decoration: none;
     width: 98%;   
+    padding: 3px;
+    
 }
 `;
 
 export const Map = styled.div`
-margin-top: 2.5rem;
+margin-top: 2.5em;
 display: flex;
 flex-direction: column;
 align-items: center;
