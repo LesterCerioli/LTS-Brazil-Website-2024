@@ -36,7 +36,7 @@ export const LeftContainer = styled.div`
     min-width: 40%;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 20px;
     flex-wrap: wrap;
     height: fit-content;
     
@@ -107,7 +107,7 @@ export const RightContainer = styled.div`
     min-width: 40%;
     justify-content: space-evenly;
     align-items: center;
-    padding-top: 30px;
+    padding-top: 20px;
     flex-wrap: wrap;
     height: fit-content;
 
