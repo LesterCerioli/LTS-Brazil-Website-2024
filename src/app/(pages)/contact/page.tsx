@@ -1,10 +1,11 @@
 "use client";
 import * as S from "./styles";
+import Form from '@/components/contact/form/form'
 
-export function SampleComponent() {
+export default function Contact() {
   return (
     <S.Container>
-      <p>Teste</p>
+      <Form />
     </S.Container>
   );
 }
