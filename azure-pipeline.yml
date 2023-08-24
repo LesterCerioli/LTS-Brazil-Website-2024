@@ -1,9 +1,8 @@
 trigger:
-- '*'
+  - '*'
 
 pr:
-- '*'
-
+  - '*'
 
 jobs:
 - job: Debian
@@ -15,14 +14,14 @@ jobs:
       versionSpec: "14.x"
     displayName: "Install Node.js"
 
-  - script: |
+      - script: |
 
-      npm install
-    displayName: "Install Dependencies"
+          npm install
+        displayName: 'Install Dependencies'
 
-  - script: |
-      npm build
-    displayName: "Build"
+      - script: |
+          npm build
+        displayName: 'Build'
 
   - script: |
       cd test
