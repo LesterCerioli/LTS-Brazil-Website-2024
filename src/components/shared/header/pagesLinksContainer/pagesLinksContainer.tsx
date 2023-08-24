@@ -80,9 +80,11 @@ const Navbar: React.FC = () => {
         <NavbarLink href="/contact" label="Contato" />
         <NavbarLink href="/consultancy" label="Consultoria" />
       </S.LeftContainer>
-      <S.LogoContainer>
+      <S.LogoContainer id='logoContainer'>
         <LCSLogo />
+        <S.ContactLink id='contactLink' href='tel:+552130425441'>+55 21 3042-5441</S.ContactLink>
       </S.LogoContainer>
+      <div id='navDiv'></div>
       <S.RightContainer className={menuOpen ? 'show' : ''}>
         <NavbarLink href="/aboutUs" label="Sobre Nós" />
         <NavbarLink href="/portfolio" label="Portfolio" />

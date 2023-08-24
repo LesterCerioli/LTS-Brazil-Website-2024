@@ -6,7 +6,9 @@ export const Container = styled.nav`
     max-width: 100%;
     height: fit-content;
     justify-content: space-between; 
-    align-items: center;
+    align-items: flex-start;
+    background-color: transparent;
+    z-index: 1000;
     
     @media (min-width: 1000px) and (max-width: 1300px) {
       align-content: center;
@@ -21,7 +23,7 @@ export const Container = styled.nav`
       .show {
       display: flex;
     }
-    .navbar {
+      .navbar {
       padding-right: 50px; 
       max-width: 100%;
       flex-wrap: wrap;
@@ -34,6 +36,7 @@ export const LeftContainer = styled.div`
     min-width: 40%;
     justify-content: space-evenly;
     align-items: center;
+    padding-top: 30px;
     flex-wrap: wrap;
     height: fit-content;
     
@@ -72,22 +75,42 @@ export const CloseButton = styled.button`
 export const LogoContainer = styled.div`
     max-width: 20%;
     display: flex;
-    
+    flex-direction: column;
+    padding-top: 16px;
+    height: 200px;
+    align-items: center; 
+    justify-content: space-around;    
     
     @media (max-width: 1000px) {
         max-height: 100%;
         max-width: 100%;
-        
+       justify-content: flex-start;
+       padding-top: 0;
+       gap: 10px;
     }
 `
+    export const ContactLink = styled.a`
+        color: #1B1B1B;
+        font-family: Montserrat;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px; 
+        display: flex;
+        text-decoration: none;
+
+        
+    `
 
 export const RightContainer = styled.div`
     display: flex;
     min-width: 40%;
     justify-content: space-evenly;
     align-items: center;
+    padding-top: 30px;
     flex-wrap: wrap;
     height: fit-content;
+
     
     @media (max-width: 1000px) {
     display: flex;
@@ -127,7 +150,8 @@ export const HamburgerMenu = styled.div`
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    padding: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
     z-index: 1001;
 
     .bar {

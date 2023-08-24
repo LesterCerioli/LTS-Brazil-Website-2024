@@ -2,12 +2,14 @@
 .navbar {
     position: fixed;
     width: 100%;
-    background-color: transparent;
+    height: fit-content;
     transition: 0.5s;
-    
+    background-color: transparent;
+    z-index: 1000;
   }
   
   .navbar.scrolled {
+    width: 100%;
     transition: 0.5s ease-in-out;
     background-color: #ffffff; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
@@ -15,22 +17,44 @@
     height: 62px;
     opacity: 0.9;
     z-index: 1000;
+    padding: 0 20px 0 20px;
   }
   
-  
+
   .navbar.scrolled img {
-    transform: scale(0.5);
+    transform: scale(0.8);
     transition: 0.5s;
     padding-top: 0;
   }
 
+  .navbar.scrolled #logoContainer{
+    height: 90px;
+    width: 90px;
+    padding-top: 50px;
+    
+  }
+
+  .navbar.scrolled #contactLink{
+    display: none;
+  }
+
+  
+    @media (min-width: 1001px) {
+      #navDiv {
+        display: none;
+    }
+  }
+
   @media (max-width: 1000px) {
     .navbar{
-    padding-left: 40px; 
-    padding-right: 40px;
     display: flex;
     justify-content: space-between;
   }
 
+  @media (max-width: 1000px) {
+    .navbar.scrolled #logoContainer {
+        padding-top: 0;
+    }
+}
 }
 
