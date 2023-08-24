@@ -16,3 +16,7 @@
 h1 {
   font-family: "Archivo Black", arial, sans-serif;
 }
+
+a {
+  text-decoration: none;
+}

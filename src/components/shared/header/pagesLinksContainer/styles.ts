@@ -69,22 +69,6 @@ export const CloseButton = styled.button`
   padding-bottom: 10px;
 `;
 
-export const LeftLink = styled.a`
-    color: #1B1B1B;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 1.136px;
-    text-transform: uppercase;
-    text-decoration: none;
-
-    @media (min-width: 1001px) and (max-width: 1300px) {
-      font-size: 11px;
-    }
-`
-
 export const LogoContainer = styled.div`
     max-width: 20%;
     display: flex;
@@ -124,21 +108,6 @@ export const RightContainer = styled.div`
       transform: translateX(0);
     }
   }
-`
-
-export const RightLink = styled.a`
-    color: #1B1B1B;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 1.136px;
-    text-transform: uppercase;
-
-    @media (min-width: 1001px) and (max-width: 1300px) {
-      font-size: 11px;
-    }
 `
 
 export const NavBarFixed = styled.nav`

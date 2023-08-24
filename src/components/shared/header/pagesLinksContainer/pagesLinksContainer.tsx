@@ -1,12 +1,40 @@
-"use client";
 import React, { useState, useEffect } from 'react';
 import * as S from './styles';
 import './styles.css';
 import { CgClose } from 'react-icons/cg';
 import Link from 'next/link';
+import styled from 'styled-components';
 import LCSLogo from '../logo/logo';
 
-export function LinksContainer() {
+interface NavbarLinkProps {
+  href: string;
+  label: string;
+}
+
+const StyledNavbarLink = styled.div`
+  color: #1B1B1B;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1.136px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+
+  @media (min-width: 1001px) and (max-width: 1300px) {
+    font-size: 11px;
+  }
+`;
+
+const NavbarLink: React.FC<NavbarLinkProps> = ({ href, label }) => (
+  <Link href={href}>
+    <StyledNavbarLink>{label}</StyledNavbarLink>
+  </Link>
+);
+
+const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -17,11 +45,7 @@ export function LinksContainer() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY >= 10);
     };
 
     const handleResize = () => {
@@ -51,40 +75,26 @@ export function LinksContainer() {
         </S.HamburgerMenu>
       )}
       <S.LeftContainer className={menuOpen ? 'show' : ''}>
-        <Link className='link' href="/">
-          <S.LeftLink>Início</S.LeftLink>
-        </Link>
-        <Link className='link' href="/services">
-          <S.LeftLink>Serviços</S.LeftLink>
-        </Link>
-        <Link className='link' href="/contact">
-          <S.LeftLink>Contato</S.LeftLink>
-        </Link>
-        <Link className='link' href="/consultancy">
-          <S.LeftLink>Consultoria</S.LeftLink>
-        </Link>
+        <NavbarLink href="/" label="Início" />
+        <NavbarLink href="/services" label="Serviços" />
+        <NavbarLink href="/contact" label="Contato" />
+        <NavbarLink href="/consultancy" label="Consultoria" />
       </S.LeftContainer>
       <S.LogoContainer>
         <LCSLogo />
       </S.LogoContainer>
       <S.RightContainer className={menuOpen ? 'show' : ''}>
-        <Link className='link' href="/aboutUs">
-          <S.RightLink>Sobre Nós</S.RightLink>
-        </Link>
-        <Link className='link' href="/portfolio">
-          <S.RightLink>Portfolio</S.RightLink>
-        </Link>
-        <Link className='link' href="/recruitmentServices">
-          <S.RightLink>Serviços de Recrutamento</S.RightLink>
-        </Link>
+        <NavbarLink href="/aboutUs" label="Sobre Nós" />
+        <NavbarLink href="/portfolio" label="Portfolio" />
+        <NavbarLink href="/recruitmentServices" label="Serviços de Recrutamento" />
         {menuOpen && (
           <S.CloseButton onClick={toggleMenu}>
-            <CgClose></CgClose>
+            <CgClose />
           </S.CloseButton>
         )}
       </S.RightContainer>
     </S.Container>
-  )
-}
+  );
+};
 
-export default LinksContainer;
+export default Navbar;

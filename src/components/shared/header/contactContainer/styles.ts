@@ -76,6 +76,11 @@ export const ContactContainer = styled.div`
         align-items: center;
         width: 100%;
     }
+
+    @media (max-width: 410px) {
+        width: 100%;
+        padding: 0;
+    }
 `
 
 export const InstagramIcon = styled(FaInstagram)`
@@ -111,6 +116,10 @@ export const ContactLink = styled.a`
     line-height: 18px; 
     display: flex;
     text-decoration: none;
+
+    @media (max-width: 320px) {
+        font-size: 12px;
+    }
 `
 
 
