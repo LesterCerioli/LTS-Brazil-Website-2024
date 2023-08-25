@@ -141,7 +141,7 @@ export const NavBarFixed = styled.nav`
 
 export const HamburgerMenu = styled.div`
   display: none;
-
+  padding-top: 8px;
   @media (max-width: 1000px) {
     display: block;
   }
