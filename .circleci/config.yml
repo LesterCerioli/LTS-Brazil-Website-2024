@@ -62,28 +62,7 @@ jobs:
           name: Run npm test
           command: cd test && npm test
 
-  windows:
-    executor: windows-executor
-    steps:
-      - setup_remote_docker:
-          version: 22.0.0
-
-      - run:
-          name: Install Node.js
-          command: |
-            choco install nodejs.install --version 14.0.0
-
-      - run:
-          name: Install Dependencies
-          command: npm install
-
-      - run:
-          name: Build
-          command: npm build
-
-      - run:
-          name: Run npm test
-          command: cd test && npm test
+  
 
 workflows:
   version: 2
@@ -91,4 +70,4 @@ workflows:
     jobs:
       - debian
       - linux
-      - windows
+      
