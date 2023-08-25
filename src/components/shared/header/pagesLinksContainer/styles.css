@@ -22,7 +22,7 @@
   
 
   .navbar.scrolled img {
-    transform: scale(0.8);
+    transform: scale(0.5);
     transition: 0.5s;
     padding-top: 0;
   }
