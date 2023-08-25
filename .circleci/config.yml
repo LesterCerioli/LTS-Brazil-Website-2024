@@ -1,0 +1,94 @@
+version: 2.1
+executors:
+  debian-executor:
+    docker:
+      - image: 'debian:stable-slim'
+
+  ubuntu-executor:
+    docker:
+      - image: 'ubuntu:latest'
+
+  windows-executor:
+    docker:
+      - image: 'mcr.microsoft.com/windows:ltsc2019'
+
+jobs:
+  debian:
+    executor: debian-executor
+    steps:
+      - setup_remote_docker:
+          version: 22.0.0
+
+      - run:
+          name: Install Node.js
+          command: |
+            apt-get update && apt-get install -y curl
+            curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
+            apt-get install -y nodejs
+
+      - run:
+          name: Install Dependencies
+          command: npm install
+
+      - run:
+          name: Build
+          command: npm build
+
+      - run:
+          name: Run npm test
+          command: cd test && npm test
+
+  linux:
+    executor: ubuntu-executor
+    steps:
+      - setup_remote_docker:
+          version: 22.0.0
+
+      - run:
+          name: Install Node.js
+          command: |
+            curl -fsSL https://deb.nodesource.com/setup_14.x | bash -
+            apt-get install -y nodejs
+
+      - run:
+          name: Install Dependencies
+          command: npm install
+
+      - run:
+          name: Build
+          command: npm build
+
+      - run:
+          name: Run npm test
+          command: cd test && npm test
+
+  windows:
+    executor: windows-executor
+    steps:
+      - setup_remote_docker:
+          version: 22.0.0
+
+      - run:
+          name: Install Node.js
+          command: |
+            choco install nodejs.install --version 14.0.0
+
+      - run:
+          name: Install Dependencies
+          command: npm install
+
+      - run:
+          name: Build
+          command: npm build
+
+      - run:
+          name: Run npm test
+          command: cd test && npm test
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - debian
+      - linux
+      - windows
