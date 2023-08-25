@@ -29,7 +29,11 @@ font-size: 2.5rem;
 color: #021F3E;
 margin: 30px 40px;
 
+
     }
+
+
+    
 
 .line{
 border-bottom: 2px solid #E2E2E2;
@@ -227,6 +231,7 @@ padding: 10px;
 border: none;
 
 `;
+
 
 
 //import MapLink from "./mapLink";

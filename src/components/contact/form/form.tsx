@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import * as S from "./styles";
 import { BsWhatsapp } from "react-icons/bs";
 import MapLink from "./mapLink/mapLink";
@@ -7,6 +7,7 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+
 
 const schemaForm = z.object({
   dataClient: z.object({
@@ -23,7 +24,17 @@ const schemaForm = z.object({
 
 type FormProps = z.infer<typeof schemaForm>;
 
+const phoneNumber = "+552130425441";
+
 const Form = () => {
+
+  const [isPhonePopupOpen, setIsPhonePopupOpen] = useState(false);
+
+  const handlePhonePopup = () => {
+    setIsPhonePopupOpen(!isPhonePopupOpen);
+  };
+
+
   const handleWhatsAppClick = () => {
     const phoneNumber = "+555521964108815";
     const message = "Olá, um instante, por favor";
@@ -162,7 +173,7 @@ const Form = () => {
           </label>
 
           <label>
-            <a href="+552130425441">
+            <a href={`tel:${phoneNumber}`} onClick={handlePhonePopup}>
               <BsTelephoneFill
                 style={{ fontSize: "22px", marginRight: "5px" }}
               />
@@ -171,9 +182,12 @@ const Form = () => {
           </label>
         </S.Email>
 
+       
+        
         <S.Map>
           <MapLink></MapLink>
         </S.Map>
+
       </form>
     </S.Container>
   );
