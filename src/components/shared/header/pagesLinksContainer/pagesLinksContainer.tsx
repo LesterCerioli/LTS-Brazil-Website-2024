@@ -25,6 +25,7 @@ const StyledNavbarLink = styled.div`
 
   @media (min-width: 1001px) and (max-width: 1300px) {
     font-size: 11px;
+    padding-top: 10px;
   }
 `;
 
