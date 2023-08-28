@@ -45,6 +45,20 @@ export const RecruitmentCard = styled.div`
     transition: width 1s, height 1s, background-color linear 0.5s;
   }
 
+  @media screen and (max-width: 375px) {
+    div {
+      width: 350px;
+    }
+
+    h2 {
+      margin-top: -30px;
+      margin-bottom: 5px;
+    }
+    p {
+      padding-bottom: 5px;
+    }
+  }
+
   @media screen and (max-width: 480px) {
     div {
       width: 450px;

@@ -34,8 +34,12 @@ export const ServicesCardContainer = styled.div`
     justify-content: space-around;
   }
 
-  @media screen and (max-width: 480px) {
-    max-width: 480px;
+  @media screen and (max-width: 375px) {
+    max-width: 375px;
+
+    div {
+      animation: none;
+    }
   }
 
   @media screen and (max-width: 768px) {
