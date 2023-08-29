@@ -28,6 +28,8 @@ const phoneNumber = "+552130425441";
 
 const Form = () => {
 
+  
+
   const [isPhonePopupOpen, setIsPhonePopupOpen] = useState(false);
 
   const handlePhonePopup = () => {
@@ -66,6 +68,10 @@ const Form = () => {
   };
 
   console.log(errors);
+
+  const showAlert = () => {
+    alert("Agradecemos o seu contato.");
+  };
 
   return (
     <S.Container>
@@ -119,7 +125,7 @@ const Form = () => {
 
         <S.FirstButton>
           <label>
-            <button type="submit">Enviar</button>
+            <button type="submit" onClick={showAlert}>Enviar</button>
           </label>
         </S.FirstButton>
 
