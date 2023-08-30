@@ -128,6 +128,8 @@ button{
 
 `;
 
+
+
 export const GooglePrivacy = styled.div`
 .privacidade{
 display: flex;

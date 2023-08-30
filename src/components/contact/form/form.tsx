@@ -1,34 +1,142 @@
-import React, { useState } from "react";
+
+
+"use client";
+
+import React, { useEffect, useState } from "react";
+
 import * as S from "./styles";
+
 import { BsWhatsapp } from "react-icons/bs";
+
 import MapLink from "./mapLink/mapLink";
+
 import { MdEmail } from "react-icons/md";
+
 import { BsTelephoneFill } from "react-icons/bs";
+
 import { useForm } from "react-hook-form";
+
 import { z } from "zod";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 
+ 
 
 const schemaForm = z.object({
+
   dataClient: z.object({
+
     name: z.string().min(10, "Informe seu nome completo"),
+
     email: z.string().min(6, "Informe seu e-mail"),
-    tel: z
-      .string()
-      .max(12)
-      .regex(/^(\(?\d{2}\)?\s?)?(\d{4,5}\-?\d{4})$/, {
-        message: "Informe um telefone válido",
-      }),
+
+    tel: z.string().max(12).regex(/^(\(?\d{2}\)?\s?)?(\d{4,5}\-?\d{4})$/, {
+
+      message: "Informe um telefone válido",
+
+    }),
+
   }),
+
 });
+
+ 
 
 type FormProps = z.infer<typeof schemaForm>;
 
+ 
+
 const phoneNumber = "+552130425441";
+
+ 
 
 const Form = () => {
 
-  
+  const [isSending, setIsSending] = useState(false);
+
+  const [formData, setFormData] = useState<FormProps | null>(null);
+
+  const [isThankYouVisible, setIsThankYouVisible] = useState(false);
+
+ 
+
+  useEffect(() => {
+
+    const storedData = localStorage.getItem("formData");
+
+    if (storedData) {
+
+      setFormData(JSON.parse(storedData));
+
+    }
+
+  }, []);
+
+ 
+
+  const handleFormSubmit = async (data: FormProps) => {
+
+    setIsSending(true);
+
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+
+ 
+
+    localStorage.setItem("formData", JSON.stringify(data));
+
+    setIsSending(false);
+
+    setFormData(data);
+
+    setIsThankYouVisible(true);
+
+  };
+
+ 
+
+  const handleFormClear = () => {
+
+    localStorage.removeItem("formData");
+
+    setFormData(null);
+
+  };
+
+ 
+
+  const {
+
+    handleSubmit,
+
+    register,
+
+    reset, 
+
+    formState: { errors },
+
+  } = useForm<FormProps>({
+
+    criteriaMode: "all",
+
+    mode: "all",
+
+    resolver: zodResolver(schemaForm),
+
+    defaultValues: {
+
+      dataClient: {
+
+        name: "",
+
+        email: "",
+
+        tel: "",
+
+      },
+
+    },
+
+  });
 
   const [isPhonePopupOpen, setIsPhonePopupOpen] = useState(false);
 
@@ -46,37 +154,21 @@ const Form = () => {
     window.open(whatsappLink);
   };
 
-  const {
-    handleSubmit,
-    register,
-    formState: { errors },
-  } = useForm<FormProps>({
-    criteriaMode: "all",
-    mode: "all",
-    resolver: zodResolver(schemaForm),
-    defaultValues: {
-      dataClient: {
-        name: "",
-        email: "",
-        tel: "",
-      },
-    },
-  });
-
-  const handleFormSubmit = (data: FormProps) => {
-    console.log(data);
-  };
-
-  console.log(errors);
-
-  const showAlert = () => {
-    alert("Agradecemos o seu contato.");
-  };
+ 
 
   return (
+
     <S.Container>
-      <form onSubmit={handleSubmit(handleFormSubmit)}>
-        <S.Title>
+
+      <form onSubmit={handleSubmit((data) => {
+
+        handleFormSubmit(data);
+
+        reset(); 
+
+      })}>
+
+<S.Title>
           <h1>Fale conosco</h1>
           <label className="line"></label>
         </S.Title>
@@ -125,10 +217,13 @@ const Form = () => {
 
         <S.FirstButton>
           <label>
-            <button type="submit" onClick={showAlert}>Enviar</button>
+            <button type="submit" className={isSending ? "sending" : ""}
+            disabled={isSending}>{isSending ? "Enviando..." : "Enviar"}</button>
           </label>
+
         </S.FirstButton>
 
+        
         <S.GooglePrivacy>
           <label>
             <a
@@ -195,8 +290,24 @@ const Form = () => {
         </S.Map>
 
       </form>
+
+        {isThankYouVisible && (
+
+          <S.Text>
+
+            <h4 className="sucesso">Obrigado pelo seu contato!</h4>
+
+          </S.Text>
+
+        )}
+
+      
+
     </S.Container>
-  );
+
+)  ;
+
 };
+
 
 export default Form;
