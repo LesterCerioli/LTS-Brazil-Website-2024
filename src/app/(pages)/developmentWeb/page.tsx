@@ -14,5 +14,3 @@ export default function DevelopmentWeb() {
   );
 }
 
-// improtar styles
-//colocar tudo dentro do S.container
