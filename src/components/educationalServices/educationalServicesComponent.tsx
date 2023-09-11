@@ -1,6 +1,5 @@
 import React from "react";
 import * as S from "./styles";
-import Image from "next/image";
 
 interface EducationalServicesProps {
     title: string;
@@ -15,27 +14,27 @@ export function EducationalServicesComponent(props: EducationalServicesProps) {
     return (
         <S.Container>
             <S.TitleContainer>
-                <h1>{props.title}</h1>
+                <S.Title>{props.title}</S.Title>
+                <S.Subtitle>{props.subtitle}</S.Subtitle>
             </S.TitleContainer>
-            <S.SubtitleContainer>
-                <h5>{props.subtitle}</h5>
-            </S.SubtitleContainer>
             <S.ImageContainer>
-                <Image src='' alt=''/>
+                <S.Hero src='/assets/imagesEducationalServices/educationalServices_hero.svg' alt='Educational Services Banner'/>
             </S.ImageContainer>
             <S.CardsContainer>
-                <S.Card>
-                    <p>{props.card1Text}</p>
-                </S.Card>   
-                <S.Card>
-                    <p>{props.card2Text}</p>
-                </S.Card>   
-                <S.Card>
-                    <p>{props.card3Text}</p>
-                </S.Card>   
-                <S.Card>
-                    <p>{props.card4Text}</p>
-                </S.Card>   
+                <S.CardsSubcontainer>
+                    <S.Card>
+                        <S.CardText>{props.card1Text}</S.CardText>
+                    </S.Card>   
+                    <S.Card>
+                        <S.CardText>{props.card2Text}</S.CardText>
+                    </S.Card>   
+                    <S.Card>
+                        <S.CardText>{props.card3Text}</S.CardText>
+                    </S.Card>   
+                    <S.Card>
+                        <S.CardText>{props.card4Text}</S.CardText>
+                    </S.Card>
+                </S.CardsSubcontainer>   
             </S.CardsContainer>
         </S.Container>
     )
