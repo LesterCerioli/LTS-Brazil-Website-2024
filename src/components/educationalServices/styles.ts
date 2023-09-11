@@ -30,7 +30,7 @@ export const Container = styled.section`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: min-content;
+    height: 100%;
     flex-direction: column;
 `
 
@@ -45,7 +45,7 @@ export const TitleContainer = styled.div`
     animation-name: ${slideRight};
 
     @media (max-width: 425px) {
-        margin-top: 20px;
+        margin: 20px 0 20px 0;
         background: #A9A9A9;
         border-radius: 35px;
     }
@@ -59,6 +59,7 @@ export const Title = styled.h1`
     font-weight: 400;
     line-height: normal;
     transition: font-size 0.5s;
+    margin-bottom: 20px;
 
 @media (min-width: 426px) and (max-width: 768px) {
     font-size: 36px;
@@ -72,7 +73,7 @@ export const Title = styled.h1`
 export const Subtitle = styled.h5`
     font-size: 18px;
     color: #000;
-    font-weight: 530;
+    font-weight: 550;
     line-height: 1.5;
     letter-spacing: 0.025em;
     text-align: center;
@@ -110,6 +111,14 @@ export const CardsContainer = styled.div`
     align-items: center;
     animation: slide 1s ease 0s 1 normal forwards;
     animation-name: ${slideRight};
+
+    @media (min-width: 426px) and (max-width: 624px) {
+      width: 100%;
+    }
+
+    @media (max-width: 425px){
+      animation-name: ${slideLeft};
+    }
 `
 
 export const CardsSubcontainer = styled.div`
@@ -119,6 +128,10 @@ export const CardsSubcontainer = styled.div`
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
+
+    @media (min-width: 426px) and (max-width: 624px) {
+      width: 100%;
+    }
 `
 
 export const Card = styled.div`
@@ -135,7 +148,7 @@ export const Card = styled.div`
     &:hover {
     width: 240px;
     height: 240px;
-    background-color: rgb(96, 96, 96);
+    background-color: rgb(90, 90, 90);
     transition: width 1s, height 1s, background-color linear 0.5s;
   }
 `
@@ -145,6 +158,6 @@ export const CardText = styled.p`
     font-family: Poppins;
     font-size: 18px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 450;
     letter-spacing: 0.45px;
 `
