@@ -25,24 +25,20 @@ const slideLeft = keyframes`
 
 `
 
-
-
 export const Container = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%;
+    height: min-content;
     flex-direction: column;
 `
 
 export const TitleContainer = styled.div`
     padding: 10px;
     display: flex;
-    justify-content: center;
     text-align: center;
-    align-items: center;
-    overflow: hidden; /* Evita que o título ultrapasse os limites da div */
+    overflow: hidden;
     flex-direction: column;
     max-width: 80%;
     animation: slide 1s ease 0s 1 normal forwards;
@@ -76,11 +72,10 @@ export const Title = styled.h1`
 export const Subtitle = styled.h5`
     font-size: 18px;
     color: #000;
-    font-weight: 500;
+    font-weight: 530;
     line-height: 1.5;
     letter-spacing: 0.025em;
     text-align: center;
-    margin: 10px;
     padding: 5px;
 `
 
@@ -100,7 +95,7 @@ export const ImageContainer = styled.div`
 export const Hero = styled.img`
   max-width: 100%;
   height: auto;
-  padding: 10px 10px;
+  padding: 0 10px 0 10px;
 
   @media (max-width: 425px){
     display: none;
@@ -110,6 +105,7 @@ export const Hero = styled.img`
 export const CardsContainer = styled.div`
     width: 100%;
     display: flex;
+    margin-bottom: 20px;
     justify-content: center;
     align-items: center;
     animation: slide 1s ease 0s 1 normal forwards;
@@ -128,7 +124,7 @@ export const CardsSubcontainer = styled.div`
 export const Card = styled.div`
     width: 230px;
     height: 230px;
-    flex-shrink: 0;
+    padding: 10px;
     border-radius: 35px;
     background: #A9A9A9;
     text-align: center;
@@ -137,8 +133,8 @@ export const Card = styled.div`
     margin: 10px;
 
     &:hover {
-    width: 250px;
-    height: 250px;
+    width: 240px;
+    height: 240px;
     background-color: rgb(96, 96, 96);
     transition: width 1s, height 1s, background-color linear 0.5s;
   }
