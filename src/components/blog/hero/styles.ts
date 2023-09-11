@@ -34,6 +34,7 @@ export const contentContainer = styled.div`
     align-items: center;
 
     h3 {
+      margin-top: 100px;
       width: 550px;
       padding-top: 35px;
       color: #fff;
