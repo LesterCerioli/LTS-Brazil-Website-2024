@@ -13,23 +13,13 @@ class BlogPostContainer extends Component {
       <div>
         <h1> Confira nossos artigos! </h1>
         <Link href="/blogPosts">
-          <Carousel interval={3500} showThumbs={false} autoPlay infiniteLoop>
+          <Carousel interval={2500} showThumbs={false} autoPlay infiniteLoop>
             <div>
-              <Image
-                src={carouselImage1}
-                alt="image1"
-                width={1080}
-                height={720}
-              />
+              <Image src={carouselImage1} alt="image1" width={780} />
             </div>
             <div>
               {" "}
-              <Image
-                src={carouselImage2}
-                alt="image2"
-                width={1080}
-                height={720}
-              />
+              <Image src={carouselImage2} alt="image2" width={780} />
             </div>
           </Carousel>
         </Link>
