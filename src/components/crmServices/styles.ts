@@ -37,17 +37,11 @@ export const Container = styled.section`
 export const TitleContainer = styled.div`
     display: flex;
     text-align: center;
-    margin: 20px;
+    margin: 30px;
     overflow: hidden;
     max-width: 80%;
     animation: slide 1s ease 0s 1 normal forwards;
     animation-name: ${slideRight};
-
-    @media (max-width: 425px) {
-        margin: 20px 0 20px 0;
-        background: #A9A9A9;
-        border-radius: 35px;
-    }
 `
 
 export const Title = styled.h1`
@@ -71,35 +65,46 @@ export const Title = styled.h1`
 export const ImageContainer = styled.div`
     display: flex;
     justify-content: flex-start;
-    min-width: 90%;
-    height: 403px;
+    max-width: 90%;
+    max-height: 403px;
     border-radius: 10px;
-    background: url('/assets/imagesCRM/background_hero_1.png') no-repeat;
+    background: url('/assets/imagesCRM/home_2.svg') no-repeat;
     background-size: cover;
     background-position: center;
+    animation: slide 1s ease 0s 1 normal forwards;
+    animation-name: ${slideRight};
+
+    @media (max-width: 600px) {
+      min-width: 100%;
+    }
 `
 export const Hero = styled.img`
   max-width: 70%;
   height: 100%;
 
-  @media (max-width: 425px){
-    display: none;
-  }
+  @media (max-width: 600px) {
+      min-width: 100%;
+    }
 `;
 
 export const SubtitleContainer = styled.div`
   max-width: 90%;
-  margin: 20px 0 20px 0;
+  margin: 30px 0 30px 0;
+
+  @media (max-width: 600px) {
+      min-width: 100%;
+      padding: 15px;
+    }
 `
 
 export const Subtitle = styled.h5`
     color: #000;
-  text-align: center;
+  text-align: justify;
   font-family: Montserrat;
   font-size: 22px;
   font-style: normal;
   font-weight: 500;
-  line-height: 152.875%; /* 33.632px */
+  line-height: 33px;
   letter-spacing: 0.55px;
 `
 
@@ -107,22 +112,29 @@ export const CardContainer = styled.div`
     background: url('/assets/imagesCRM/background_hero_2.png') no-repeat;
     background-size: cover;
     background-position: center;
-    max-width: 90%;
-    min-height: 302px;
-    text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    min-height: 302px;
+    text-align: center;
     margin: 10px;
     animation: slide 1s ease 0s 1 normal forwards;
-    animation-name: ${slideRight};
+    animation-name: ${slideLeft};
 
-    @media (min-width: 426px) and (max-width: 624px) {
+    @media (min-width: 601px) and (max-width: 1050px) {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-height: 1080px;
     }
 
-    @media (max-width: 425px){
-      animation-name: ${slideLeft};
+    @media (max-width: 600px) {
+      min-width: 100%;
+      display: flex;
+      padding: 20px 0 20px 0;
     }
 `
 
@@ -130,41 +142,87 @@ export const SecondCardContainer = styled.div`
     background: url('/assets/imagesCRM/background_hero_3.png') no-repeat;
     background-size: cover;
     background-position: center;
-    max-width: 90%;
-    min-height: 302px;
-    text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    min-height: 302px;
+    text-align: center;
     margin: 10px;
     animation: slide 1s ease 0s 1 normal forwards;
-    animation-name: ${slideLeft};
+    animation-name: ${slideRight};
 
-    @media (min-width: 426px) and (max-width: 624px) {
+    @media (min-width: 601px) and (max-width: 1050px) {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-height: 1080px;
     }
 
-    @media (max-width: 425px){
-      animation-name: ${slideLeft};
+    @media (max-width: 600px) {
+      min-width: 100%;
+      display: flex;
+      padding: 20px 0 20px 0;
     }
 `
 
-export const Card = styled.div`
+export const LeftCard = styled.div`
     display: flex;
     text-align: center;
-    max-width: 45%;
+    max-width: 48%;
     height: 230px;
+    padding: 7px;
+    overflow: hidden;
     border-radius: 0px 10px 10px 0px;
     background: rgba(255, 255, 255, 0.70);
     
-
-    /*&:hover {
-    width: 240px;
-    height: 240px;
-    background-color: rgb(90, 90, 90);
+    &:hover {
+    width: max-content;
+    background-color: rgb(160, 160, 160);
     transition: width 1s, height 1s, background-color linear 0.5s;
-  }*/
+    
+  }
+
+    @media (min-width: 601px) and (max-width: 1050px) {
+      height: fit-content;
+    }
+
+    @media (max-width: 600px) {
+      display: flex;
+      min-width: 80%;
+      height: fit-content;
+    }
 `
+
+export const RightCard = styled.div`
+    display: flex;
+    align-items: center;
+    text-align: center;
+    max-width: 45%;
+    min-height: 230px;
+    padding: 7px;
+    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+    background: rgba(255, 255, 255, 0.70);
+
+    &:hover {
+    width: max-content;
+    height: max-content;
+    background-color: rgb(160, 160, 160);
+    transition: width 1s, height 1s, background-color linear 0.5s;
+  }
+    @media (min-width: 601px) and (max-width: 1050px) {
+      height: fit-content;
+      margin-left: 55%;
+    }
+
+    @media (max-width: 600px) {
+      display: none;
+    }
+  `
+
 export const CardText = styled.p`
   color: #000;
   text-align: center;
@@ -172,6 +230,18 @@ export const CardText = styled.p`
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 152.875%; /* 36.69px */
+  line-height: 36.69px;
   letter-spacing: 0.6px;
+  transition: font-size 0.5s;
+
+  @media (min-width: 601px) and (max-width: 1050px) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+@media (max-width: 600px) {
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+  }
 `

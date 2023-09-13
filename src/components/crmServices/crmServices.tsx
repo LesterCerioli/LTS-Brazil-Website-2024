@@ -18,29 +18,29 @@ export function CRMServices(props: CRM_ERPServices) {
                 <S.Title>{props.title}</S.Title>
             </S.TitleContainer>
             <S.ImageContainer>
-                <S.Hero src='/assets/imagesCRM/LTS_logo.png' alt='Lucas Technology Services Logo'/>
+                <S.Hero src='/assets/imagesCRM/LTS_logo.svg' alt='Lucas Technology Services Logo'/>
             </S.ImageContainer>
             <S.SubtitleContainer>
                 <S.Subtitle>{props.subtitle}</S.Subtitle>
             </S.SubtitleContainer>
             <S.CardContainer>
-                <S.Card>
+                <S.LeftCard>
                     <S.CardText>{props.card1Text}</S.CardText>
-                </S.Card>
-                <S.Card>
+                </S.LeftCard>
+                <S.RightCard>
                     <S.CardText>{props.card2Text}</S.CardText>
-                </S.Card>
+                </S.RightCard>
             </S.CardContainer>
             <S.SubtitleContainer>
                 <S.Subtitle>{props.subtitle2}</S.Subtitle>
             </S.SubtitleContainer>   
             <S.SecondCardContainer>
-                <S.Card>
+                <S.LeftCard>
                     <S.CardText>{props.card3Text}</S.CardText>
-                </S.Card>
-                <S.Card>
+                </S.LeftCard>
+                <S.RightCard>
                     <S.CardText>{props.card4Text}</S.CardText>
-                </S.Card>
+                </S.RightCard>
             </S.SecondCardContainer>  
         </S.Container>
     )
