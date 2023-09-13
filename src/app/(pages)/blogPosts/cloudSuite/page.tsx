@@ -1,12 +1,12 @@
 "use client";
 import * as S from "./styles";
 
-import Hero from "@/components/blog/hero/Hero";
+import CloudSuite from "@/components/blog/cloudSuite/CloudSuite";
 
 export default function FrontEndPosts() {
   return (
     <S.Container>
-      <Hero />
+      <CloudSuite />
     </S.Container>
   );
 }

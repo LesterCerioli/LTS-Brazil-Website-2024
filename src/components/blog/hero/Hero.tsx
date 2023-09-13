@@ -2,7 +2,7 @@ import React from "react";
 import pcVintage from "@/assets/imagesBlog/veio 1.svg";
 import Image from "next/image";
 import * as S from "./styles";
-import Posts from "../posts/Posts";
+import Posts from "../postsPage/Posts";
 import posts from "../helper/postsData";
 import BlogPostContainer from "../blogPostContainer/blogPostContainer";
 
