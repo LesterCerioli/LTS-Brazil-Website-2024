@@ -68,7 +68,7 @@ export const ImageContainer = styled.div`
     max-width: 90%;
     max-height: 403px;
     border-radius: 10px;
-    background: url('/assets/imagesCRM/home_2.svg') no-repeat;
+    background: url('/assets/imagesCRM/home_1.png') no-repeat;
     background-size: cover;
     background-position: center;
     animation: slide 1s ease 0s 1 normal forwards;
@@ -99,13 +99,17 @@ export const SubtitleContainer = styled.div`
 
 export const Subtitle = styled.h5`
     color: #000;
-  text-align: justify;
+  text-align: center;
   font-family: Montserrat;
   font-size: 22px;
   font-style: normal;
   font-weight: 500;
   line-height: 33px;
   letter-spacing: 0.55px;
+
+  @media (max-width: 1020px) {
+    text-align: justify;
+  }
 `
 
 export const CardContainer = styled.div`
@@ -115,10 +119,11 @@ export const CardContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    max-width: 90%;
-    min-height: 302px;
     text-align: center;
+    flex-wrap: wrap;
+    padding: 20px 0 20px 0;
+    max-width: 90%;
+    min-height: 302px; 
     margin: 10px;
     animation: slide 1s ease 0s 1 normal forwards;
     animation-name: ${slideLeft};
@@ -145,11 +150,12 @@ export const SecondCardContainer = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     flex-wrap: wrap;
+    padding: 20px 0 20px 0;
     max-width: 90%;
     min-height: 302px;
-    text-align: center;
-    margin: 10px;
+    margin: 10px 0 20px 0;
     animation: slide 1s ease 0s 1 normal forwards;
     animation-name: ${slideRight};
 
@@ -172,7 +178,7 @@ export const LeftCard = styled.div`
     display: flex;
     text-align: center;
     max-width: 48%;
-    height: 230px;
+    height: fit-content;
     padding: 7px;
     overflow: hidden;
     border-radius: 0px 10px 10px 0px;
@@ -180,6 +186,7 @@ export const LeftCard = styled.div`
     
     &:hover {
     width: max-content;
+    height: max-content;
     background-color: rgb(160, 160, 160);
     transition: width 1s, height 1s, background-color linear 0.5s;
     
@@ -198,10 +205,9 @@ export const LeftCard = styled.div`
 
 export const RightCard = styled.div`
     display: flex;
-    align-items: center;
     text-align: center;
     max-width: 45%;
-    min-height: 230px;
+    min-height: 200px;
     padding: 7px;
     overflow: hidden;
     border-radius: 10px 0 0 10px;
