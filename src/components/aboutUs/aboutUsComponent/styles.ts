@@ -5,7 +5,7 @@ export const Container = styled.div`
     justify-content: center;
     text-align: center;
     width: 100%;
-}
+
 `;
 
 export const Body = styled.div`
