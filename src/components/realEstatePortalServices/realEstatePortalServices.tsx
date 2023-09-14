@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./styles";
 
-interface EducationalServicesProps {
+interface RealEstatePortalServicesProps {
     title: string;
     subtitle: string;
     card1Text: string;
@@ -10,7 +10,7 @@ interface EducationalServicesProps {
     card4Text: string;
 }
 
-export function EducationalServicesComponent(props: EducationalServicesProps) {
+export function RealEstatePortalServicesComponent(props: RealEstatePortalServicesProps) {
     return (
         <S.Container>
             <S.TitleContainer>
@@ -18,7 +18,7 @@ export function EducationalServicesComponent(props: EducationalServicesProps) {
                 <S.Subtitle>{props.subtitle}</S.Subtitle>
             </S.TitleContainer>
             <S.ImageContainer>
-                <S.Hero src='/assets/imagesEducationalServices/educationalServices_hero.svg' alt='Educational Services Banner'/>
+                <S.Hero src='/assets/imagesRealEstate/realEstatePortalServices_hero.svg' alt='Real Estate Portal Services Banner'/>
             </S.ImageContainer>
             <S.CardsContainer>
                 <S.CardsSubcontainer>
@@ -40,4 +40,4 @@ export function EducationalServicesComponent(props: EducationalServicesProps) {
     )
 }
 
-export default EducationalServicesComponent;
+export default RealEstatePortalServicesComponent;

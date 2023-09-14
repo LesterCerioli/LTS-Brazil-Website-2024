@@ -1,11 +1,12 @@
 "use client";
 import * as S from "./styles";
 import React from "react";
-import EducationalServicesComponent from "@/components/realEstatePortalServices/realEstatePortalServices";
-export default function EducationalServices() {
+import RealEstatePortalServicesComponent from "@/components/realEstatePortalServices/realEstatePortalServices";
+
+export default function RealEstatePortalServices() {
     return (
         <S.Container>
-            <EducationalServicesComponent
+            <RealEstatePortalServicesComponent
                 title="Portal Imobiliário"
                 subtitle="Na dinâmica do mercado imobiliário, a presença online é a chave para o sucesso. Nossa equipe especializada combina inovação e tecnologia para criar portais imobiliários que conectam propriedades a sonhos realizados."
                 card1Text="Design e Desenvolvimento de Portais Intuitivos"
