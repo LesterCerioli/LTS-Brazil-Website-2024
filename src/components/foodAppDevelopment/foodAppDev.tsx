@@ -18,7 +18,7 @@ export default function FoodAppDev() {
       </S.Mission>
       
       <S.Imag>
-        <S.Img src='/assets/imagesDevWeb/services_hero.svg'></S.Img>
+        <S.Img src='/assets/imagesFoodAppDev/foodServices_hero.svg'></S.Img>
       </S.Imag>
  
       <S.Resources>
