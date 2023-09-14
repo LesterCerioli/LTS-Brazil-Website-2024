@@ -1,12 +1,12 @@
 "use client";
 import * as S from "./styles";
 
-import BackEnd from "@/components/blog/backEndPosts/BackEndPosts";
+import BackEndPostsContainer from "@/components/blog/backEndPostsContainer/BackEndPostsContainer";
 
 export default function BackendPosts() {
   return (
     <S.Container>
-      <BackEnd />
+      <BackEndPostsContainer />
     </S.Container>
   );
 }

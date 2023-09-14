@@ -5,21 +5,21 @@ import devOps from "@/assets/imagesBlog/devOpsCard.png";
 
 export const postCategoryImages = [
   {
-    link: "blogPosts/frontend",
+    link: "posts/frontend",
     image: front,
   },
   {
-    link: "blogPosts/backend",
+    link: "posts/backend",
     image: back,
   },
 
   {
-    link: "blogPosts/cloudSuite",
+    link: "posts/cloudSuite",
     image: cloud,
   },
 
   {
-    link: "blogPosts/devOps",
+    link: "posts/devOps",
     image: devOps,
   },
 ];

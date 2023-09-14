@@ -14,11 +14,11 @@ class BlogPostContainer extends Component {
       <S.BlogPostsContainer>
         <div>
           <h1> Confira nossos artigos! </h1>
-          <Link href="/blogPosts">
+          <Link href="/blog/posts">
             <h3>Ver artigos</h3>
           </Link>
           <S.CarouselStyles>
-            <Link href="/blogPosts">
+            <Link href="/blog/posts">
               <div>
                 <Carousel
                   interval={2500}
