@@ -7,7 +7,7 @@ export const Container = styled.div`
 
     
 
-    background: url('/assets/imagesFoodAppDev/thumb_food_mobile.svg') no-repeat;
+    background: url('/assets/imagesFoodAppDev/foodServices_mobile.png') no-repeat;
     background-size: cover;
     background-position: center;
     }

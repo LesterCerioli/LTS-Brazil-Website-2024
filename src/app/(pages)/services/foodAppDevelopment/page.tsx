@@ -1,5 +1,5 @@
 "use client";
-import FoodAppDev from '@/components/foodAppDevelopment/foodAppDev';
+import Food from '@/components/foodAppDevelopment/foodAppDev';
 import * as S from "./styles";
 import Image from 'next/image';
 
@@ -8,7 +8,7 @@ import Image from 'next/image';
 export default function FoodAppDev() {
   return (
     <S.Container>
-      <S.FoodAppDev />
+      <Food/>
     </S.Container>
     
   );

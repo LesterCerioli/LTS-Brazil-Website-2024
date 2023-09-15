@@ -8,11 +8,11 @@ export default function FoodAppDev() {
        
        <S.Mission>
          <S.Title> 
-          Desenvolvimento Web
+         O portal do seu Restaurante
          </S.Title>
         
         <S.Subtitle>
-          Desenvolvimento de Sites Profissionais para o Sucesso Online, onde  transformamos ideias em presença online notável. Somos uma equipe de especialistas dedicados a criar soluções digitais que impressionam e geram resultados. Combinando design atraente e funcionalidades avançadas, oferecemos uma variedade de serviços personalizados para atender às suas necessidades.
+          No coração da indústria culinária, sabemos que a presença online é essencial. Nossos especialistas dedicados combinam criatividade e tecnologia para criar portais personalizados que satisfazem os apetites digitais dos restaurantes.
         </S.Subtitle>        
         
       </S.Mission>
@@ -20,24 +20,25 @@ export default function FoodAppDev() {
       <S.Imag>
         <S.Img src='/assets/imagesFoodAppDev/foodServices_hero.svg'></S.Img>
       </S.Imag>
+      
  
       <S.Resources>
         <S.Itens>
           
           <S.Card>            
-            Sites modernos, atraentes, otimizados para funcionar perfeitamente em todos os dispositivos, garantindo a melhor experiência do usuário.
+          Integração:  Menus Online,  Pedidos, reservas e redes sociais
           </S.Card>
 
           <S.Card >  
-          Transforme sua ideia de negócio em uma loja online de sucesso. Oferecemos soluções de comércio eletrônico personalizadas para impulsionar suas vendas online.        
+          Design e desenvolvimento de site e app Mobile       
           </S.Card>
         
           <S.Card>
-            Garantimos que seu site seja rápido e eficiente, melhorando sua classificação nos mecanismos de busca e a satisfação do cliente. 
+          Gestão de agendamento de mesas, vendas e estoque 
           </S.Card>
 
           <S.Card>
-            Simplificamos a gestão do seu site com a integração de sistemas de gerenciamento de conteúdo (CMS) robustos, permitindo que você atualize facilmente seu conteúdo.        
+          Otimização para motores de busca - SEO  
           </S.Card>
 
         </S.Itens>

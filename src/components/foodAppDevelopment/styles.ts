@@ -60,6 +60,7 @@ export const Title = styled.h1`
   width: 90%;
   color: #000;
   box-sizing: border-box;
+  margin-top:60px;
 
   @media (min-width: 426px) and (max-width: 768px) {
     font-size: 36px;
