@@ -46,7 +46,7 @@ export const TitleContainer = styled.div`
     animation-name: ${slideRight};
 
     @media (max-width: 425px) {
-        margin: 50px 0 20px 0;
+        margin: 60px 0 20px 0;
         background: #A9A9A9;
         border-radius: 35px;
     }
