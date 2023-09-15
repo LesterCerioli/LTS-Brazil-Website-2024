@@ -5,6 +5,7 @@ function BackEndPostsContainer() {
   return (
     <div>
       <Post1 />
+      <Post1 />
     </div>
   );
 }
