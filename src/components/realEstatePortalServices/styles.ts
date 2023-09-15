@@ -57,7 +57,7 @@ export const Title = styled.h1`
     font-family: Poppins;
     font-size: 48px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 600;
     line-height: normal;
     transition: font-size 0.5s;
     margin-bottom: 20px;

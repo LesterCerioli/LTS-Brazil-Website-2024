@@ -40,6 +40,7 @@ export const TitleContainer = styled.div`
     margin: 30px;
     overflow: hidden;
     max-width: 80%;
+    margin: 80px 0 25px 0;
     animation: slide 1s ease 0s 1 normal forwards;
     animation-name: ${slideRight};
 `
