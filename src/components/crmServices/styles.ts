@@ -114,7 +114,7 @@ export const Subtitle = styled.h5`
 `
 
 export const CardContainer = styled.div`
-    background: url('/assets/imagesCRM/background_hero_2.png') no-repeat;
+    background: url('/assets/imagesCRM/background_1.svg') no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -145,7 +145,7 @@ export const CardContainer = styled.div`
 `
 
 export const SecondCardContainer = styled.div`
-    background: url('/assets/imagesCRM/background_hero_3.png') no-repeat;
+    background: url('/assets/imagesCRM/background_2.svg') no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
