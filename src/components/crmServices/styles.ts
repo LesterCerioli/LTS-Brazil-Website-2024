@@ -40,7 +40,6 @@ export const TitleContainer = styled.div`
     margin: 30px;
     overflow: hidden;
     max-width: 80%;
-    margin: 80px 0 25px 0;
     animation: slide 1s ease 0s 1 normal forwards;
     animation-name: ${slideRight};
 `
@@ -114,7 +113,7 @@ export const Subtitle = styled.h5`
 `
 
 export const CardContainer = styled.div`
-    background: url('/assets/imagesCRM/background_1.svg') no-repeat;
+    background: url('/assets/imagesCRM/background_hero_2.png') no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -145,7 +144,7 @@ export const CardContainer = styled.div`
 `
 
 export const SecondCardContainer = styled.div`
-    background: url('/assets/imagesCRM/background_2.svg') no-repeat;
+    background: url('/assets/imagesCRM/background_hero_3.png') no-repeat;
     background-size: cover;
     background-position: center;
     display: flex;
