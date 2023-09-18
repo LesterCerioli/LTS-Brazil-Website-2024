@@ -17,7 +17,7 @@ export const OurGithub = () => {
           </div>
           <S.GithubContainer>
             <S.Subtitle>Nosso repositório</S.Subtitle>
-              <a href='https://github.com/Lucas-Technology-Services'>
+              <a href='https://github.com/Lucas-Technology-Services' target="_blank">
                 <S.Button>Nosso Github</S.Button>
               </a>
           </S.GithubContainer>
