@@ -13,6 +13,14 @@ export const Posts = styled.div`
   h1 {
     margin: 35px;
   }
+  @media (max-width: 390px) {
+    display: flex;
+    width: 390px;
+    margin-left: 0px;
+    h1 {
+      width: 390px;
+    }
+  }
 `;
 
 export const ImagesContainer = styled.div`
@@ -22,5 +30,17 @@ export const ImagesContainer = styled.div`
     align-items: center;
     justify-content: center;
     margin: 40px;
+  }
+
+  @media (max-width: 390px) {
+    display: flex;
+    margin-left: 50px;
+    div {
+      width: 380px;
+      .images {
+        width: 330px;
+        height: 330px;
+      }
+    }
   }
 `;

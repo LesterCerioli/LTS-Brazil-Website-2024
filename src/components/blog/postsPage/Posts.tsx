@@ -30,7 +30,12 @@ function Posts() {
           <div>
             {shuffledImages.map((item, index) => (
               <a key={index} href={item.link}>
-                <Image src={item.image} alt={`Image ${index}`} width={500} />
+                <Image
+                  src={item.image}
+                  alt={`Image ${index}`}
+                  width={500}
+                  className="images"
+                />
               </a>
             ))}
           </div>
@@ -41,6 +46,3 @@ function Posts() {
 }
 
 export default Posts;
-
-
-
