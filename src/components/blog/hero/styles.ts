@@ -7,11 +7,20 @@ export const heroContainer = styled.div`
   h1 {
     margin-top: 150px;
   }
+
+  @media (max-width: 390px) {
+    display: flex;
+    width: 390px;
+  }
 `;
 
 export const welcomeContainer = styled.div`
   position: relative;
   z-index: 10;
+  @media (max-width: 390px) {
+    display: flex;
+    width: 390px;
+  }
 `;
 
 export const contentContainer = styled.div`
@@ -25,6 +34,19 @@ export const contentContainer = styled.div`
     background: linear-gradient(to bottom, #4d6485, #052596);
     margin-bottom: 150px;
     border-radius: 35px;
+
+    @media (max-width: 390px) {
+      width: 370px;
+
+      > div {
+        width: 370px;
+        h3 {
+          width: 330px;
+          margin-left: 50px;
+          font-size: 20px;
+        }
+      }
+    }
   }
 
   div {
@@ -48,4 +70,12 @@ export const contentContainer = styled.div`
 `;
 export const imageContainer = styled.div`
   margin-top: -455px;
+
+  @media (max-width: 390px) {
+    .img {
+      width: 200px;
+      margin-left: -160px;
+      margin-top: 10px;
+    }
+  }
 `;

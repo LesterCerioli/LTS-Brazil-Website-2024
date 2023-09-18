@@ -3,7 +3,7 @@ import pcVintage from "@/assets/imagesBlog/veio 1.svg";
 import Image from "next/image";
 import * as S from "./styles";
 import Posts from "../postsPage/Posts";
-import posts from "../helper/postsData";
+
 import BlogPostContainer from "../blogPostContainer/blogPostContainer";
 
 function Hero() {
@@ -24,7 +24,12 @@ function Hero() {
               </h3>
             </div>
             <S.imageContainer>
-              <Image src={pcVintage} alt="pc vintage" width={454} />
+              <Image
+                src={pcVintage}
+                alt="pc vintage"
+                width={454}
+                className="img"
+              />
             </S.imageContainer>
           </div>
         </S.contentContainer>
