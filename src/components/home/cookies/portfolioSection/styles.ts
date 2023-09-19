@@ -34,43 +34,19 @@ line-height: normal;
 `
 
 export const CardsContainer = styled.div`
-    max-width: 80%;
+    
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-
-    @media (min-width: 531px) and (max-width: 1083px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    @media (max-width: 530px) {
-        width: 100%;
-    }
+    
+    
 `
 
 export const Card = styled.div`
-   margin: 15px; 
-   max-width: 404px;
+
 `
 
 export const CardImage = styled.img`
-    max-width: 403px;
-    max-height: 270px;
 
-    @media (max-width: 530px)  {
-        max-width: 100%;
-    }
-`
-
-export const CardText = styled.p`
-    color: #000;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 200;
-    line-height: normal;
 `
 
 export const ButtonContainer = styled.div`
