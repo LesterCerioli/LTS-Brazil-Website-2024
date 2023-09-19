@@ -11,22 +11,18 @@ import React from "react"
                 <S.Subtitle>Visite nossa página e explore a variedade de serviços que oferecemos para atender às suas necessidades.</S.Subtitle>
             </S.TitleContainer>
             <S.CardsContainer>
-                <S.Card>
-                    <S.CardImage src="assets/imagesHome/Rectangle 153.svg"/>
-                </S.Card>
-                <S.Card>
-                    <S.CardImage src="assets/imagesHome/Rectangle 154.svg"/>
-                </S.Card>
-                <S.Card>
-                    <S.CardImage src="assets/imagesHome/Rectangle 155.svg"/>
-                </S.Card>
-                <S.Card>
-                    <S.CardImage src="assets/imagesHome/Rectangle 156.svg"/>
-                </S.Card>
+                <S.LeftCardsContainer>
+                    <S.CardImage src="assets/imagesHome/portfolio_card_1.svg"/>
+                    <S.CardImage src="assets/imagesHome/portfolio_card_2.svg"/>
+                </S.LeftCardsContainer>
+                <S.RightCardsContainer>
+                    <S.CardImage src="assets/imagesHome/portfolio_card_3.svg"/>
+                    <S.CardImage src="assets/imagesHome/portfolio_card_4.svg"/>
+                </S.RightCardsContainer>   
             </S.CardsContainer>
             <S.ButtonContainer>
                 <S.Button>
-                    <S.ButtonText>Saiba mais</S.ButtonText>
+                    <S.ButtonText href="portfolio">Saiba mais</S.ButtonText>
                 </S.Button>
             </S.ButtonContainer>
         </S.Container>

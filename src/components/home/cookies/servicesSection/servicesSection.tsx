@@ -38,7 +38,7 @@ import React from "react"
             </S.CardsContainer>
             <S.ButtonContainer>
                 <S.Button>
-                    <S.ButtonText>Saiba mais</S.ButtonText>
+                    <S.ButtonText href="services">Saiba mais</S.ButtonText>
                 </S.Button>
             </S.ButtonContainer>
         </S.Container>

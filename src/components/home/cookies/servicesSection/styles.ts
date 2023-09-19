@@ -92,7 +92,7 @@ background: #5050EA;
 
 `
 
-export const ButtonText = styled.p`
+export const ButtonText = styled.a`
 color: #FFF;
 font-family: Montserrat;
 font-size: 18px;

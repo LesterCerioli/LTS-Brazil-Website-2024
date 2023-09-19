@@ -24,15 +24,6 @@ line-height: normal;
 margin-bottom: 5px;
 `
 
-export const Subtitle = styled.h6`
-color: #000;
-font-family: Montserrat;
-font-size: 21px;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
-`
-
 export const CardsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -59,6 +50,15 @@ export const Card = styled.div`
 
 export const CardImage = styled.img`
     margin: 10px;
+`
+
+export const Subtitle = styled.h6`
+color: #000;
+font-family: Montserrat;
+font-size: 21px;
+font-style: normal;
+font-weight: 300;
+line-height: normal;
 `
 
 export const ButtonContainer = styled.div`
