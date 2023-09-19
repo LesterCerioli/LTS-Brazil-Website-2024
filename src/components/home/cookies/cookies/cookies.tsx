@@ -21,3 +21,5 @@ export function Cookies() {
     );
   }
 }
+
+export default Cookies;
