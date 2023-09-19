@@ -3,8 +3,14 @@
 //criar os outros objetos como o exempo abaixo
 //improtomar o botão
 
-import imgServicesHero from '@/assets/imagesServices/services_hero.svg';
-import imgMobile from '@/assets/imagesServices/Thumb_mobile.svg';
+import imgFood from '@/assets/imagesServices/thumb_food.svg';
+import imgMobile from '@/assets/imagesServices/thumb_mobile.svg';
+import imgEducational from '@/assets/imagesServices/thumb_educationalServices.svg';
+import imgServices from '@/assets/imagesServices/services_hero.svg';
+import imgRealState from '@/assets/imagesServices/thumb_realState.svg';
+import imgTravel from '@/assets/imagesServices/thumb_travelServices.svg';
+import imgErpCrm from '@/assets/imagesServices/thumb_erp-crm.svg';
+import imgUi from '@/assets/imagesServices/ui.svg';
 
 
 
@@ -12,8 +18,8 @@ export const servicesPageData = [
     {
         id:1, 
         title:  'Desenvolvimento Web de portais para restaurante',
-        image: 'imgServicesHero',
-        link: ' ',
+        image: 'imgFood',
+        link: 'services/foodAppDevelopment ',
         
     },
 
@@ -21,55 +27,55 @@ export const servicesPageData = [
         id:2, 
         title:  'Desenvolvimento Mobile',
         image: 'imgMobile',
-        link: ' ',
+        link: 'services/mobileAppDevelopment',
         
         
     },
 
     {
         id:3, 
-        title:  'Serviços Educacionais',
-        image: 'image',
-        link: ' ',
+        title:  'Desenvolvimento Web Portais para Educação',
+        image: 'imgEducational',
+        link: 'services/educationalServices',
         
     },
 
     {
         id:4, 
-        title:  'Educational Services',
-        image: 'image',
-        link: ' ',
+        title:  'Desenvolvimento de CRMs/ERPs',
+        image: 'imgErpCrm',
+        link: 'services/crmServices',
         
     },
 
     {
         id:5, 
-        title:  'Services',
-        image: 'image',
-        link: ' ',
+        title:  'Desenvolvimento de Serviços Web',
+        image: 'imgServices',
+        link: 'services/developmentWeb',
     },
 
     {
         id:6, 
-        title:  'Real State',
-        image: 'image',
-        link: ' ',
+        title:  'Desenvolvimento de serviços imobiliários',
+        image: 'imgRealState',
+        link: '',
         subtitle: 'subtitle',
         
     },
 
     {
         id:7, 
-        title:  'Travel Services',
-        image: 'image',
+        title:  'Portal de viagens',
+        image: 'imgTravel',
         link: ' ',
         
     },
 
     {
         id:8, 
-        title:  'title',
-        image: 'image',
+        title:  'UX/UI Design',
+        image: 'imgUi',
         link: ' ',
         
         
