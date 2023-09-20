@@ -18,7 +18,7 @@ export const servicesPageData = [
     {
         id:1, 
         title:  'Desenvolvimento Web de portais para restaurante',
-        image: 'imgFood',
+        image: {imgFood},
         link: 'services/foodAppDevelopment ',
         
     },
