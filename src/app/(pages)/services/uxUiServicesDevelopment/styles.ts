@@ -7,7 +7,7 @@ export const Container = styled.div`
 
     
 
-    background: url('/assets/imagesUxUi/UxUi_background.png') no-repeat;
+    background: url('/assets/imagesUxUi/black_red_simple_tips.svg') no-repeat;
     background-size: cover;
     background-position: center;
     }
