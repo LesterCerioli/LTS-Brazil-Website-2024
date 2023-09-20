@@ -59,8 +59,8 @@ export const servicesPageData = [
         id:6, 
         title:  'Desenvolvimento de serviços imobiliários',
         image: 'imgRealState',
-        link: '',
-        subtitle: 'subtitle',
+        link: 'services/realEstatePortalServices',
+        
         
     },
 
@@ -68,7 +68,7 @@ export const servicesPageData = [
         id:7, 
         title:  'Portal de viagens',
         image: 'imgTravel',
-        link: ' ',
+        link: 'services/travelServices',
         
     },
 
@@ -76,7 +76,7 @@ export const servicesPageData = [
         id:8, 
         title:  'UX/UI Design',
         image: 'imgUi',
-        link: ' ',
+        link: 'services/uiUxServicesDevelopment',
         
         
     },
