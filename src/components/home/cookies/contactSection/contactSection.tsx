@@ -9,10 +9,12 @@ import React from "react"
             <S.TitleContainer>
                 <S.Title>Contato</S.Title>
             </S.TitleContainer>
-            <S.CardsContainer>
-                    <S.CardImage src="assets/imagesHome/contact_card_1.svg"/>
-                    <S.CardImage src="assets/imagesHome/contact_card_2.svg"/>   
-            </S.CardsContainer>
+            <S.CardsMainContainer>
+                <S.CardsContainer>
+                        <S.CardImage src="assets/imagesHome/contact_card_1.svg"/>
+                        <S.CardImage src="assets/imagesHome/contact_card_2.svg"/>   
+                </S.CardsContainer>
+            </S.CardsMainContainer>
             <S.ButtonContainer>
                 <S.Button>
                     <S.ButtonText href="contact">Saiba mais</S.ButtonText>

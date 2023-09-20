@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
 display: flex;
 flex-direction: column;
-
+align-items: center;
 `
 
 export const TitleContainer = styled.div`
@@ -28,6 +28,7 @@ export const CardsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    width: 80%;
 `
 
 export const LeftCardsContainer = styled.div`
@@ -50,6 +51,7 @@ export const Card = styled.div`
 
 export const CardImage = styled.img`
     margin: 10px;
+    min-width: 300px;
 `
 
 export const Subtitle = styled.h6`

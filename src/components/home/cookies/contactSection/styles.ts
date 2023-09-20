@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
 display: flex;
 flex-direction: column;
-
+align-items: center;
 `
 
 export const TitleContainer = styled.div`
@@ -24,19 +24,16 @@ line-height: normal;
 margin-bottom: 5px;
 `
 
-export const Subtitle = styled.h6`
-color: #000;
-font-family: Montserrat;
-font-size: 21px;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
+export const CardsMainContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
 `
 
 export const CardsContainer = styled.div`
     display: flex;
-    flex-wrap: wrap;
     align-items: flex-start;
+    width: 80%;
 `
 
 export const LeftCardsContainer = styled.div`
@@ -53,12 +50,9 @@ export const RightCardsContainer = styled.div`
     align-items: flex-start;
 `
 
-export const Card = styled.div`
-
-`
-
 export const CardImage = styled.img`
     margin: 10px;
+    max-width: 49%;
 `
 
 export const ButtonContainer = styled.div`
