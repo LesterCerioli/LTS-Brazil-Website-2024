@@ -4,14 +4,19 @@ export const Container = styled.section`
 display: flex;
 flex-direction: column;
 align-items: center;
+margin-bottom: 20px;
 `
 
 export const TitleContainer = styled.div`
-width: 78%;
+max-width: 66%;
 display: flex;
 flex-direction: column;
 justify-content:flex-start;
 margin: 20px;
+
+@media (max-width: 1023px) {
+    max-width: 95%;
+}
 `
 
 export const Title = styled.h3`
@@ -41,14 +46,22 @@ export const CardsMainContainer = styled.div`
 export const CardsContainer = styled.div`
     display: flex;
     align-items: flex-start;
-    width: 80%;
+    max-width: 70%;
+    
+    @media (max-width: 1023px) {
+       max-width: 100%;
+    }
+
 `
 
 export const LeftCardsContainer = styled.div`
     display: flex;
     flex-direction: column;
-   
     margin: 5px;
+
+    @media (max-width: 1023px) {
+        display: none;
+    }
 `
 
 export const RightCardsContainer = styled.div`
@@ -57,15 +70,49 @@ export const RightCardsContainer = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
     margin: 5px;
+
+    @media (max-width: 1023px) {
+    width: 100%;
+    padding: 0 10px 0 10px;
+    }
 `
 
-export const CardImage = styled.img`
+export const CardImage1 = styled.img`
     margin: 10px;
     max-width: 100%;
+
+    @media (max-width: 1023px) {
+        display: none;
+    }
+`
+export const CardImage2 = styled.img`
+    margin: 10px;
+    max-width: 100%;
+
+    @media (max-width: 1023px) {
+        display: none;
+    }
+`
+export const CardImage3 = styled.img`
+    margin: 10px;
+    max-width: 100%;
+    
+    @media (max-width: 1023px) {
+    margin: 0; 
+    }
+
+`
+export const CardImage4 = styled.img`
+    margin: 10px;
+    max-width: 100%;
+
+    @media (max-width: 1023px) {
+        display: none;
+    }
 `
 
 export const ButtonContainer = styled.div`
-    width: 78%;
+    width: 66%;
     display: flex;
     justify-content: flex-end;
 
@@ -89,4 +136,5 @@ font-family: Montserrat;
 font-size: 18px;
 font-weight: 600;
 line-height: normal;
+text-decoration: none;
 `

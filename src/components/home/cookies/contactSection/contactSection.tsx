@@ -11,8 +11,8 @@ import React from "react"
             </S.TitleContainer>
             <S.CardsMainContainer>
                 <S.CardsContainer>
-                        <S.CardImage src="assets/imagesHome/contact_card_1.svg"/>
-                        <S.CardImage src="assets/imagesHome/contact_card_2.svg"/>   
+                        <S.CardImage1 src="assets/imagesHome/contact_card_1.svg"/>
+                        <S.CardImage2 src="assets/imagesHome/contact_card_2.svg"/>   
                 </S.CardsContainer>
             </S.CardsMainContainer>
             <S.ButtonContainer>

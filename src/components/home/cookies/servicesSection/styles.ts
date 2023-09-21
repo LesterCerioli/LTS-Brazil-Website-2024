@@ -4,10 +4,11 @@ export const Container = styled.section`
 display: flex;
 flex-direction: column;
 align-items: center;
+margin-bottom: 20px;
 `
 
 export const TitleContainer = styled.div`
-width: 78%;
+min-width: 67%;
 display: flex;
 flex-direction: column;
 justify-content:flex-start;
@@ -34,10 +35,11 @@ line-height: normal;
 `
 
 export const CardsContainer = styled.div`
-    max-width: 80%;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10px 0 10px ;
 
     @media (min-width: 531px) and (max-width: 1083px) {
         display: flex;
@@ -50,17 +52,69 @@ export const CardsContainer = styled.div`
     }
 `
 
+export const TopCardsContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+`
+
+export const BottomCardsContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+`
+
 export const Card = styled.div`
    margin: 15px; 
    max-width: 404px;
 `
 
-export const CardImage = styled.img`
-    max-width: 403px;
-    max-height: 270px;
+export const CardImage1 = styled.img`
+    max-width: 100%;
+    max-height: 100%;
 
     @media (max-width: 530px)  {
         max-width: 100%;
+    }
+`
+export const CardImage2 = styled.img`
+    max-width: 100%;
+    max-height: 100%;
+
+    @media (max-width: 530px)  {
+        max-width: 100%;
+    }
+`
+export const CardImage3 = styled.img`
+    max-width: 100%;
+    max-height: 100%;
+
+    @media (max-width: 530px)  {
+        max-width: 100%;
+    }
+`
+export const CardImage4 = styled.img`
+    max-width: 100%;
+    max-height: 100%;
+
+    @media (max-width: 1023px)  {
+        display: none;
+    }
+`
+export const CardImage5 = styled.img`
+    max-width: 100%;
+    max-height: 100%;
+
+    @media (max-width: 1023px)  {
+        display: none;
+    }
+`
+export const CardImage6 = styled.img`
+    max-width: 100%;
+    max-height: 100%;
+
+    @media (max-width: 1023px)  {
+        display: none;
     }
 `
 
@@ -69,12 +123,17 @@ export const CardText = styled.p`
     font-family: Montserrat;
     font-size: 14px;
     font-style: normal;
-    font-weight: 200;
+    font-weight: 300;
     line-height: normal;
+    margin-top: 5px;
+    
+    @media (max-width: 1023px)  {
+        display: none;
+    }
 `
 
 export const ButtonContainer = styled.div`
-    width: 78%;
+    width: 73%;
     display: flex;
     justify-content: flex-end;
 
@@ -98,4 +157,5 @@ font-family: Montserrat;
 font-size: 18px;
 font-weight: 600;
 line-height: normal;
+text-decoration: none;
 `

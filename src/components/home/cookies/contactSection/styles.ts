@@ -4,14 +4,16 @@ export const Container = styled.section`
 display: flex;
 flex-direction: column;
 align-items: center;
+margin-bottom: 20px;
 `
 
 export const TitleContainer = styled.div`
-width: 78%;
+width: 66%;
 display: flex;
-flex-direction: column;
-justify-content:flex-start;
+
 margin: 20px;
+
+
 `
 
 export const Title = styled.h3`
@@ -33,7 +35,7 @@ export const CardsMainContainer = styled.div`
 export const CardsContainer = styled.div`
     display: flex;
     align-items: flex-start;
-    width: 80%;
+    max-width: 70%;
 `
 
 export const LeftCardsContainer = styled.div`
@@ -50,13 +52,17 @@ export const RightCardsContainer = styled.div`
     align-items: flex-start;
 `
 
-export const CardImage = styled.img`
+export const CardImage1 = styled.img`
+    margin: 10px;
+    max-width: 49%;
+`
+export const CardImage2 = styled.img`
     margin: 10px;
     max-width: 49%;
 `
 
 export const ButtonContainer = styled.div`
-    width: 78%;
+    width: 66%;
     display: flex;
     justify-content: flex-end;
 
@@ -80,4 +86,5 @@ font-family: Montserrat;
 font-size: 18px;
 font-weight: 600;
 line-height: normal;
+text-decoration: none;
 `

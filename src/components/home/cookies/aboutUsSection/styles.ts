@@ -4,10 +4,11 @@ export const Container = styled.section`
 display: flex;
 flex-direction: column;
 align-items: center;
+margin-bottom: 20px;
 `
 
 export const TitleContainer = styled.div`
-width: 78%;
+width: 66%;
 display: flex;
 flex-direction: column;
 justify-content:flex-start;
@@ -28,30 +29,30 @@ export const CardsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
-    width: 80%;
-`
+    max-width: 70%;
 
-export const LeftCardsContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-`
-
-export const RightCardsContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-`
-
-export const Card = styled.div`
-
+    @media (max-width: 1023px) {
+        max-width: 90%;
+    }
 `
 
 export const CardImage = styled.img`
     margin: 10px;
-    min-width: 300px;
+    max-width: 100%;
+
+    @media (max-width: 1023px) {
+    margin: 0; 
+    }
+`
+export const SubtitleContainer = styled.div`
+    max-width: 69%;
+    margin-bottom: 20px;
+
+    @media (max-width: 1023px) {
+    margin: 15px 0 15px 0;
+    max-width: 90% ;
+    }
+
 `
 
 export const Subtitle = styled.h6`
@@ -61,10 +62,12 @@ font-size: 21px;
 font-style: normal;
 font-weight: 300;
 line-height: normal;
+text-align: justify;
+
 `
 
 export const ButtonContainer = styled.div`
-    width: 78%;
+    width: 66%;
     display: flex;
     justify-content: flex-end;
 
@@ -88,4 +91,5 @@ font-family: Montserrat;
 font-size: 18px;
 font-weight: 600;
 line-height: normal;
+text-decoration: none;
 `

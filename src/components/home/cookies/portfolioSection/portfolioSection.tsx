@@ -13,12 +13,12 @@ import React from "react"
             <S.CardsMainContainer>
                 <S.CardsContainer>
                     <S.LeftCardsContainer>
-                        <S.CardImage src="assets/imagesHome/portfolio_card_1.svg"/>
-                        <S.CardImage src="assets/imagesHome/portfolio_card_2.svg"/>
+                        <S.CardImage1 src="assets/imagesHome/portfolio_card_1.svg"/>
+                        <S.CardImage2 src="assets/imagesHome/portfolio_card_2.svg"/>
                     </S.LeftCardsContainer>
                     <S.RightCardsContainer>
-                        <S.CardImage src="assets/imagesHome/portfolio_card_3.svg"/>
-                        <S.CardImage src="assets/imagesHome/portfolio_card_4.svg"/>
+                        <S.CardImage3 src="assets/imagesHome/portfolio_card_3.svg"/>
+                        <S.CardImage4 src="assets/imagesHome/portfolio_card_4.svg"/>
                     </S.RightCardsContainer>   
                 </S.CardsContainer>
             </S.CardsMainContainer>
