@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Posts = styled.div`
   margin-top: 150px;
@@ -21,7 +21,7 @@ export const Posts = styled.div`
       width: 390px;
     }
   }
-`;
+`
 
 export const ImagesContainer = styled.div`
   a {
@@ -43,4 +43,4 @@ export const ImagesContainer = styled.div`
       }
     }
   }
-`;
+`
