@@ -1,8 +1,12 @@
+
+
 import React from "react";
-import * as S from "./styles";
-import { servicesPageData } from "./helper/constant";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import * as S from "./styles";
+
+
+import { servicesPageData } from "./helper/constant";
 
 interface Service {
   id: number;
@@ -11,22 +15,36 @@ interface Service {
   link: string;
 }
 
-interface Props {
-  servicesData: Service[];
-}
-function Services({ servicesData }: Props) {
+const Services: React.FC = () => {
   return (
-    <div>
-      {servicesData.map((service) => (
+    <S.Container>
+     <div>
+      <S.Title>
+        Nossos Serviços
+      </S.Title>
+
+      <S.Subtitle>
+        <h2>Oferecemos uma ampla gama de serviços digitais para atender às necessidades em constante evolução. Com nossa experiência, transformamos ideias em soluções prontas para o mercado. Explore nossos serviços e junte-se à revolução digital.</h2>
+      </S.Subtitle>
+
+      <S.Imag>
+        <Image src="/assets/imagesServices/services_services_hero.svg" alt="services"  width={1060} height={450} layout="responsive" />
+      </S.Imag>
+
+      <S.Section>
+       {servicesPageData.map((service: Service) => (
         <div key={service.id}>
-          <h2>{service.title}</h2>
           <a href={service.link}>
-            <Image src={service.image} alt={service.title} width={200} height={200} />
+            <h2>{service.title}</h2>
+            <Image src={service.image} alt={service.title} width={1060} height={450} layout="responsive" />
           </a>
         </div>
-      ))}
-    </div>
+       ))}
+      </S.Section>
+     </div>
+    </S.Container>
+    
   );
-}
+};
 
 export default Services;

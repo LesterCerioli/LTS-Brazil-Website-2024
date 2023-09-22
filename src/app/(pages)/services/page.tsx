@@ -2,12 +2,12 @@
 import { servicesPageData } from "@/components/services/helper/constant";
 import * as S from "./styles";
 
-import Service from "@/components/services/services"
+import Service from "@/components/services/services";
 
 export default function Services() {
   return (
     <S.Container>
-      <Service servicesData={servicesPageData}/>
+      <Service  />
     </S.Container>
   );
 }
