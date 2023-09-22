@@ -8,15 +8,11 @@ margin-bottom: 20px;
 `
 
 export const TitleContainer = styled.div`
-max-width: 66%;
+min-width: 67%;
 display: flex;
 flex-direction: column;
 justify-content:flex-start;
 margin: 20px;
-
-@media (max-width: 1023px) {
-    max-width: 95%;
-}
 `
 
 export const Title = styled.h3`
@@ -32,6 +28,7 @@ margin-bottom: 5px;
 export const Subtitle = styled.h6`
 color: #000;
 font-family: Montserrat;
+text-align: justify;
 font-size: 21px;
 font-style: normal;
 font-weight: 300;
@@ -115,6 +112,7 @@ export const ButtonContainer = styled.div`
     width: 66%;
     display: flex;
     justify-content: flex-end;
+    margin-top: 10px;
 
     @media (max-width: 1083px) {
         display: flex;

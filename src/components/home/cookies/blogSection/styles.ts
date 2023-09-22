@@ -13,6 +13,11 @@ display: flex;
 flex-direction: column;
 justify-content:flex-start;
 margin: 20px;
+
+@media (max-width: 1023px) {
+    width: 95%;
+    margin: 20px 0 20px 0;
+}
 `
 
 export const Title = styled.h3`
@@ -168,6 +173,7 @@ export const ButtonContainer = styled.div`
     width: 59%;
     display: flex;
     justify-content: flex-end;
+    margin-top: 10px;
 
     @media (max-width: 1083px) {
         display: flex;

@@ -10,10 +10,12 @@ margin-bottom: 20px;
 export const TitleContainer = styled.div`
 width: 66%;
 display: flex;
-
 margin: 20px;
 
-
+@media (max-width: 1023px) {
+    width: 95%;
+    margin: 20px 0 20px 0;
+}
 `
 
 export const Title = styled.h3`
@@ -36,35 +38,37 @@ export const CardsContainer = styled.div`
     display: flex;
     align-items: flex-start;
     max-width: 70%;
-`
 
-export const LeftCardsContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-`
-
-export const RightCardsContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    @media (max-width: 1023px) {
+        max-width: 95%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 `
 
 export const CardImage1 = styled.img`
     margin: 10px;
-    max-width: 49%;
+    max-width: 49%; 
+    
+    @media (max-width: 1023px) {
+        margin: 0;
+    }
 `
 export const CardImage2 = styled.img`
     margin: 10px;
     max-width: 49%;
+    
+    @media (max-width: 1023px) {
+        margin: 0;
+    }
 `
 
 export const ButtonContainer = styled.div`
     width: 66%;
     display: flex;
     justify-content: flex-end;
+    margin-top: 10px;
 
     @media (max-width: 1083px) {
         display: flex;

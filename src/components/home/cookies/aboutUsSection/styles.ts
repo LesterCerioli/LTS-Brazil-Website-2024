@@ -8,11 +8,16 @@ margin-bottom: 20px;
 `
 
 export const TitleContainer = styled.div`
-width: 66%;
+min-width: 66%;
 display: flex;
 flex-direction: column;
 justify-content:flex-start;
 margin: 20px;
+
+@media (max-width: 1023px) {
+    width: 95%;
+    margin: 20px 0 20px 0;
+}
 `
 
 export const Title = styled.h3`
@@ -45,7 +50,7 @@ export const CardImage = styled.img`
     }
 `
 export const SubtitleContainer = styled.div`
-    max-width: 69%;
+    max-width: 66%;
     margin-bottom: 20px;
 
     @media (max-width: 1023px) {

@@ -29,6 +29,7 @@ export const Subtitle = styled.h6`
 color: #000;
 font-family: Montserrat;
 font-size: 21px;
+text-align: justify;
 font-style: normal;
 font-weight: 300;
 line-height: normal;
