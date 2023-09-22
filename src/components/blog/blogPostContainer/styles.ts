@@ -27,6 +27,7 @@ export const BlogPostsContainer = styled.div`
 const ImageContainer = styled.div``
 
 export const CarouselStyles = styled.div`
+  width: 500px;
   margin-bottom: 150px;
   @media (max-width: 390px) {
     max-heght: 355px;
