@@ -25,16 +25,18 @@ export const ProBarContainer = styled.div`
     padding: 32px;
     margin-bottom: 30px;
   }
-  @media screen and (max-width: 480px) {
-    margin-left: -60px;
+
+  @media screen and (max-width: 375px) {
+    width: 100%;
 
     div {
-      width: 110px;
-      font-size: 18px;
-      display: grid;
-      grid-template-columns: repeat(4, 2fr);
-      gap: 10px;
+      width: 100%;
+      margin-left: 5px;
     }
+  }
+
+  @media screen and (max-width: 480px) {
+    margin-left: -60px;
   }
 
   @media screen and (max-width: 768px) {

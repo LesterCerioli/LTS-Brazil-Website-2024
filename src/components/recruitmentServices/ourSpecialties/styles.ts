@@ -58,6 +58,14 @@ export const OurSpec = styled.div`
       font-size: 14px;
     }
   }
+  @media screen and (max-width: 375px) {
+    max-width: 375px;
+    max-height: auto;
+
+    &:hover {
+      width: 65%;
+    }
+  }
   @media screen and (max-width: 480px) {
     max-width: 480px;
     max-height: auto;
