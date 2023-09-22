@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const CarrousselStyles = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const CarrousselStyles = styled.div`
   padding-bottom: 80px;
 
   h1 {
-    margin-top: 30px;
+    margin-top: 95px;
   }
   h4 {
     font-weight: 500;
@@ -68,4 +68,4 @@ export const CarrousselStyles = styled.div`
       font-weight: 600;
     }
   }
-`;
+`
