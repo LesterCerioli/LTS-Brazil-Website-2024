@@ -11,6 +11,7 @@ import { servicesPageData } from "./helper/constant";
 interface Service {
   id: number;
   title: string;
+  subtitle?: string;
   image: string;
   link: string;
 }
@@ -23,20 +24,27 @@ const Services: React.FC = () => {
         Nossos Serviços
       </S.Title>
 
-      <S.Subtitle>
-        <h2>Oferecemos uma ampla gama de serviços digitais para atender às necessidades em constante evolução. Com nossa experiência, transformamos ideias em soluções prontas para o mercado. Explore nossos serviços e junte-se à revolução digital.</h2>
-      </S.Subtitle>
+      {/* <S.Subtitle>
+        Oferecemos uma ampla gama de serviços digitais para atender às necessidades em constante evolução. Com nossa experiência, transformamos ideias em soluções prontas para o mercado. Explore nossos serviços e junte-se à revolução digital.
+      </S.Subtitle> */}
 
-      <S.Imag>
-        <Image src="/assets/imagesServices/services_services_hero.svg" alt="services"  width={1060} height={450} layout="responsive" />
-      </S.Imag>
+      
 
       <S.Section>
+      {/* <S.Imag>
+        <S.Img  src="/assets/imagesServices/services_services_hero.svg"
+         alt="services" 
+         width={1460} 
+         height={450}
+         ></S.Img>
+      </S.Imag> */}
        {servicesPageData.map((service: Service) => (
         <div key={service.id}>
+          <h3>{service.subtitle}</h3>
           <a href={service.link}>
             <h2>{service.title}</h2>
-            <Image src={service.image} alt={service.title} width={1060} height={450} layout="responsive" />
+            
+            <Image src={service.image} alt={service.title} width={1000} height={450} layout="responsive" />
           </a>
         </div>
        ))}

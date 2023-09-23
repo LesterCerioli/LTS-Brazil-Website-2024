@@ -9,59 +9,72 @@ import imgUi from "@/assets/imagesServices/thumb_ux-ui.svg";
 import imgServicesServices from "@/assets/imagesServices/services_services_hero.svg";
 
 export const servicesPageData = [
+  
   {
     id: 1,
+    title: "",
+    subtitle: "Oferecemos uma ampla gama de serviços digitais para atender às necessidades em constante evolução. Com nossa experiência, transformamos ideias em soluções prontas para o mercado. Explore nossos serviços e junte-se à revolução digital.",
+    image: imgServicesServices,
+    link: "services/",
+  },
+
+  
+  
+  {
+    id: 2,
     title: "Desenvolvimento Web de portais para restaurante",
     image: imgFood,
     link: "services/foodAppDevelopment ",
   },
 
   {
-    id: 2,
+    id: 3,
     title: "Desenvolvimento Mobile",
     image: imgMobile,
     link: "services/mobileAppDevelopment",
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Desenvolvimento Web Portais para Educação",
     image: imgEducational,
     link: "services/educationalServices",
   },
 
   {
-    id: 4,
+    id: 5,
     title: "Desenvolvimento de CRMs/ERPs",
     image: imgErpCrm,
     link: "services/crmServices",
   },
 
   {
-    id: 5,
+    id: 6,
     title: "Desenvolvimento de Serviços Web",
     image: imgServices,
     link: "services/developmentWeb",
   },
 
   {
-    id: 6,
+    id: 7,
     title: "Desenvolvimento de serviços imobiliários",
     image: imgRealState,
     link: "services/realEstatePortalServices",
   },
 
   {
-    id: 7,
+    id: 8,
     title: "Portal de viagens",
     image: imgTravel,
     link: "services/travelServices",
   },
 
   {
-    id: 8,
+    id: 9,
     title: "UX/UI Design",
     image: imgUi,
-    link: "services/uiUxServicesDevelopment",
+    link: "services/uxUiServicesDevelopment",
   },
+
+  
 ];

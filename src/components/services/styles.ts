@@ -22,49 +22,81 @@ export const Title = styled.h1`
   letter-spacing: 0.025em;
   padding-top: 20px;
   margin-top: 60px;
-  width: 90%;
+  width: 100%;
   color: #000;
   box-sizing: border-box;
+
+  @media(max-width:425px){
+      margin: 60px auto 10px auto;
+      background: #A9A9A9;
+      border-radius: 35px;
+      padding:15px;}
 `
 
-export const Subtitle = styled.h2`
+// export const Subtitle = styled.h2`
+//   display: flex;
+//   justify-content: center;
+//   text-align: center;   
+//   font-family: "Poppins", sans-serif; 
+//   font-size: 20px;
+//   line-height: 1.25;
+//   letter-spacing: 0.025em;
+//   padding-top: 20px;
+//   margin: auto;
+//   margin-bottom: 30px;
+//   //margin-top: 10px;
+//   width: 90%;
+//   color: #000;
+//   box-sizing: border-box;
+// `
+
+/*export const Imag = styled.div`
+  
+  
+  //max-width: 1060px;
+  width: 85%;
+  box-sizing:border-box;
+  margin: auto;
+  margin-bottom: 40px;
+
+    
+`*/
+
+//  export const Img = styled.img`
+//  display: flex;
+//  flex-direction: column;
+//  justify-content:center;
+//  align-items:center;
+//  width: 100%;
+//  `
+
+
+export const Section = styled.div`
+
+h3{
   display: flex;
   justify-content: center;
   text-align: center;   
   font-family: "Poppins", sans-serif; 
-  font-size: 20px;
-  line-height: 1.25;
+  font-size: 30px;
+  line-height: 1.5;
   letter-spacing: 0.025em;
-  padding-top: 20px;
+  padding-bottom: 40px;
   margin: auto;
-  margin-bottom: 30px;
-  //margin-top: 10px;
+  margin-top: 10px;
   width: 90%;
   color: #000;
   box-sizing: border-box;
-`
 
-export const Imag = styled.div`
-  
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items:center;
-  max-width: 1060px;
-  //max-height: 450px;
-  box-sizing:border-box;
-  margin: auto;
-  margin-bottom: 40px;
-    
-`
+  @media(max-width:425px){
+      margin: auto auto;
+      background: #A9A9A9;
+      border-radius: 35px;
+      padding:15px;
 
-// export const Img = styled.img`
-// width: 9%;
-// `
-
-
-export const Section = styled.div`
-div, h2, a{
+}
+}
+div, h2{
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -73,5 +105,20 @@ div, h2, a{
   padding: 10px;
   margin-bottom: 10px;
 
+  
+
 }
+
+a{
+  text-decoration: none;
+  color: black;
+  font-family: "Poppins", sans-serif;
+}
+
+@media(max-width:425px){
+      margin: auto auto;
+      background: #A9A9A9;
+      border-radius: 35px;
+      padding:15px;}
+
 `

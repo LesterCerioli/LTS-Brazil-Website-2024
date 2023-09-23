@@ -7,7 +7,7 @@ export const Container = styled.div`
 
     
 
-    background: url('/assets/imagesDevWeb/background.png') no-repeat;
+    background: url('/assets/imagesServices/services_services_hero.svg') no-repeat;
     background-size: cover;
     background-position: center;
     }
