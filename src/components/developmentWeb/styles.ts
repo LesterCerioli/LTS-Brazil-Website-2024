@@ -33,7 +33,7 @@ export const Container = styled.div`
 
 export const Mission = styled.div`
  animation: slide 1s ease 0s 1 normal forwards;
-  animation-name: ${slideRight};
+ animation-name: ${slideRight};
 max-width:80%;
 display:flex;
 flex-direction:column;
