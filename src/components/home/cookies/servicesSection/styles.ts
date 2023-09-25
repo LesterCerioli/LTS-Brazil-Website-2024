@@ -68,6 +68,12 @@ export const BottomCardsContainer = styled.div`
 export const Card = styled.div`
    margin: 15px; 
    max-width: 404px;
+   max-height: 350px;
+
+   @media (min-width: 531px) and (max-width: 1300px) {
+    max-height: 320px;
+   }
+
 `
 
 export const CardImage1 = styled.img`
@@ -81,7 +87,7 @@ export const CardImage1 = styled.img`
 export const CardImage2 = styled.img`
     max-width: 100%;
     max-height: 100%;
-
+   
     @media (max-width: 530px)  {
         max-width: 100%;
     }
@@ -119,13 +125,17 @@ export const CardImage6 = styled.img`
     }
 `
 
+export const TextContainer = styled.div`
+    max-width: 100%;
+`
+
 export const CardText = styled.p`
     color: #000;
     font-family: Montserrat;
     font-size: 14px;
-    font-style: normal;
+ 
     font-weight: 300;
-    line-height: normal;
+   
     margin-top: 5px;
     
     @media (max-width: 1023px)  {
@@ -134,7 +144,7 @@ export const CardText = styled.p`
 `
 
 export const ButtonContainer = styled.div`
-    width: 73%;
+    width: 66%;
     display: flex;
     justify-content: flex-end;
 

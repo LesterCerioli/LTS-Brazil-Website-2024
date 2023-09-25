@@ -68,7 +68,7 @@ font-style: normal;
 font-weight: 300;
 line-height: normal;
 text-align: justify;
-
+margin-top: 10px;
 `
 
 export const ButtonContainer = styled.div`

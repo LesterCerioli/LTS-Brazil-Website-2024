@@ -46,8 +46,8 @@ export const CardsContainer = styled.div`
     align-items: flex-start;
     max-width: 67%;
 
-    @media (min-width: 769px) and (max-width: 1300px){
-     width: 100%;   
+    @media (max-width: 1300px){
+     max-width: 95%;   
     }
 `
 
@@ -107,16 +107,17 @@ export const CardImage1 = styled.img`
 
     @media (max-width: 1023px){
         max-width: 100%;
+        margin: 0 0 10px 0;
     }
 `
 export const CardImage2 = styled.img`
     margin: 10px;
-    max-width: 58%;
-    max-height: 100%;
+    max-width: 100%;
+    max-height: 370px;
 
     @media (min-width: 1301px) and (max-width:1760px){
         max-width: 60%;
-        max-height: 330px;
+        max-height: 300px;
 
     }
 
@@ -151,7 +152,7 @@ export const CardImage3 = styled.img`
 `
 export const CardImage4 = styled.img`
     margin: 10px;
-    max-width: 58%;
+    max-width: 54%;
 
     @media (min-width: 1301px) and (max-width:1760px){
         max-width: 60%;
@@ -170,10 +171,10 @@ export const CardImage4 = styled.img`
 `
 
 export const ButtonContainer = styled.div`
-    width: 59%;
+    width: 51%;
     display: flex;
     justify-content: flex-end;
-    margin-top: 10px;
+   
 
     @media (max-width: 1083px) {
         display: flex;
@@ -184,9 +185,8 @@ export const ButtonContainer = styled.div`
 export const Button = styled.button`
 width: 210px;
 height: 50px;
-flex-shrink: 0;
-background: #5050EA;
 
+background: #5050EA;
 `
 
 export const ButtonText = styled.a`
