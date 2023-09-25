@@ -75,7 +75,7 @@ export const RightCardsContainer = styled.div`
 `
 
 export const CardImage1 = styled.img`
-    margin: 10px;
+    margin: 5px;
     max-width: 100%;
 
     @media (max-width: 1023px) {
@@ -83,7 +83,7 @@ export const CardImage1 = styled.img`
     }
 `
 export const CardImage2 = styled.img`
-    margin: 10px;
+    margin: 15px 5px 5px 5px;
     max-width: 100%;
 
     @media (max-width: 1023px) {
@@ -91,7 +91,7 @@ export const CardImage2 = styled.img`
     }
 `
 export const CardImage3 = styled.img`
-    margin: 10px;
+    margin: 5px;
     max-width: 100%;
     
     @media (max-width: 1023px) {
@@ -100,7 +100,7 @@ export const CardImage3 = styled.img`
 
 `
 export const CardImage4 = styled.img`
-    margin: 10px;
+    margin: 5px;
     max-width: 100%;
 
     @media (max-width: 1023px) {

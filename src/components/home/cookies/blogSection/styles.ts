@@ -43,32 +43,24 @@ export const CardsMainContainer = styled.div`
 export const CardsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
-    max-width: 67%;
+    align-items: center;
+    justify-content: center;
+    padding-left: 17%;
+    max-width: 100%;
 
-    @media (max-width: 1300px){
-     max-width: 95%;   
+    @media (max-width: 1023px){
+     max-width: 95%;
+     padding-left: 0 ;
     }
 `
 
 export const LeftCardsContainer = styled.div`
     display: flex;
     width: 100%;
-    max-height: 100%;
+    max-height: 400px;
     justify-content: flex-start;
     align-items: flex-start;
-
-    @media (min-width: 1024px) and (max-width: 1300px){
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-height: 630px;
-    }
-    
-    @media (max-width: 1023px) {
-        max-width: 100%;
-    }
-
+    margin-bottom: 10px;
 `
 
 export const RightCardsContainer = styled.div`
@@ -77,109 +69,49 @@ export const RightCardsContainer = styled.div`
     justify-content: flex-start;
     align-items: flex-start;
 
-    @media (min-width: 1024px) and (max-width: 1300px){
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-height: 630px;
-    }
-
-    @media (max-width: 1023px) {
-    display: none;
-    }
-
 `
 
 export const CardImage1 = styled.img`
-    margin: 10px;
-    max-width: 58%;
+    max-height: 100%;
+    max-width: 50%;
 
-    @media (min-width: 1301px) and (max-width:1760px){
-        max-width: 60%;
-        max-height: 350px;
-
-    }
-
-    @media (min-width: 1024px) and (max-width: 1300px){
-        max-width: 50%;
-        max-height: 250px;
-    }
-
-    @media (max-width: 1023px){
+    @media (max-width: 1023px) {
         max-width: 100%;
-        margin: 0 0 10px 0;
     }
 `
 export const CardImage2 = styled.img`
-    margin: 10px;
-    max-width: 100%;
-    max-height: 370px;
+    max-height: 100%;
+    max-width: 24%;
+    margin-left: 10px;
 
-    @media (min-width: 1301px) and (max-width:1760px){
-        max-width: 60%;
-        max-height: 300px;
-
-    }
-
-    @media (min-width: 769px) and (max-width: 1300px){
-        max-width: 50%;
-        max-height: 230px;
-    }
-
-    @media (max-width: 1023px){
+    @media (max-width: 1023px) {
         display: none;
     }
 `
 export const CardImage3 = styled.img`
-    margin: 10px;
-    max-width: 58%;
     max-height: 100%;
+    max-width: 24%;
+    margin-right: 10px;
 
-    @media (min-width: 1301px) and (max-width:1760px){
-        max-width: 60%;
-        max-height: 330px;
-
-    }
-
-    @media (min-width: 769px) and (max-width: 1300px){
-        max-width: 50%;
-        max-height: 230px;
-    }
-
-    @media (max-width: 1023px){
+    @media (max-width: 1023px) {
         display: none;
     }
 `
 export const CardImage4 = styled.img`
-    margin: 10px;
-    max-width: 54%;
+    max-height: 100%;
+    max-width: 50%;
 
-    @media (min-width: 1301px) and (max-width:1760px){
-        max-width: 60%;
-        max-height: 350px;
-
-    }
-
-    @media (min-width: 769px) and (max-width: 1300px){
-        max-width: 50%;
-        max-height: 250px;
-    }
-
-    @media (max-width: 1023px){
+    @media (max-width: 1023px) {
         display: none;
     }
 `
 
 export const ButtonContainer = styled.div`
-    width: 51%;
+    width: 58%;
     display: flex;
     justify-content: flex-end;
+    margin-top: 20px;
     
-    @media (min-width: 1300px) and (max-width: 1440px) {
-    margin-top: -40px;
-    }
-    
-
     @media (min-width: 338px) and (max-width: 1083px) {
         display: flex;
         justify-content: center;
