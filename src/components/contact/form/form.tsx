@@ -20,7 +20,8 @@ import { z } from "zod";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 
- 
+import { Modal} from "react-modal";
+
 
 const schemaForm = z.object({
 
@@ -52,13 +53,34 @@ const phoneNumber = "+552130425441";
 
 const Form = () => {
 
+  //--------------------
+  //--------------------
+
+  const [modalIsOpen, setModalIsOpen] = useState(false)
   const [isSending, setIsSending] = useState(false);
+  const [formData, setFormData] = useState<FormProps | null>({
+    dataClient:{
+      name:"",
+      email:"",
+      tel:"",
+    },
+  });
 
-  const [formData, setFormData] = useState<FormProps | null>(null);
+  const abrirModal = () => {
+    setModalIsOpen(true);
+  };
 
-  const [isThankYouVisible, setIsThankYouVisible] = useState(false);
+  const fecharModal = () => {
+    setModalIsOpen(false);
+    setFormData({
+      dataClient: {
+        name: "",
+        email: "",
+        tel: "",
+      },
+    });
+  };
 
- 
 
   useEffect(() => {
 
@@ -72,37 +94,29 @@ const Form = () => {
 
   }, []);
 
- 
+  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+
+    setFormData((prevData) => ({
+      prevData,
+      dataClient: {
+        ...prevData?.dataClient,
+        [name]: value,
+      },
+    }));
+  };
+
+
+  const [isThankYouVisible, setIsThankYouVisible] = useState(false);
 
   const handleFormSubmit = async (data: FormProps) => {
-
+    
+    abrirModal();
     setIsSending(true);
-
     await new Promise((resolve) => setTimeout(resolve, 2000));
-
- 
-
-    localStorage.setItem("formData", JSON.stringify(data));
-
+    setModalIsOpen(false);
     setIsSending(false);
 
-    setFormData(data);
-
-    setIsThankYouVisible(true);
-
-  };
-
- 
-
-  const handleFormClear = () => {
-
-    localStorage.removeItem("formData");
-
-    setFormData(null);
-
-  };
-
- 
 
   const {
 
@@ -217,13 +231,36 @@ const Form = () => {
 
         <S.FirstButton>
           <label>
-            <button type="submit" className={isSending ? "sending" : ""}
-            disabled={isSending}>{isSending ? "Enviando..." : "Enviar"}</button>
+
+            <button
+             type="submit"
+             className= {isSending ? 'sending' : ''}
+             disabled={isSending}
+             onClick={abrirModal}
+            >
+              {isSending ? "Enviando" : "Enviar"}
+
+            </button>
+
+
+
+
           </label>
 
         </S.FirstButton>
 
-        
+        <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={() => {reset(), setModalIsOpen(false) }}
+        contentLabel="Exemplo de Modal"
+        ariaHideApp={false} 
+        >
+        <h2>Modal de Exemplo</h2>
+        <p>Seu formulário foi enviado com sucesso!</p>
+        <button onClick={() => setModalIsOpen(false)}>Fechar Modal</button>
+          
+        </Modal>
+
         <S.GooglePrivacy>
           <label>
             <a
@@ -305,8 +342,7 @@ const Form = () => {
 
     </S.Container>
 
-)  ;
-
+)  ;}
 };
 
 
