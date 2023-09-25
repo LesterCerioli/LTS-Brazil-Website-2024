@@ -21,7 +21,7 @@ export const Title = styled.h1`
   line-height: 1.5;
   letter-spacing: 0.025em;
   padding-top: 20px;
-  margin-top: 60px;
+  margin: 60px 0 40px 0;
   width: 100%;
   color: #000;
   box-sizing: border-box;
@@ -33,43 +33,22 @@ export const Title = styled.h1`
       padding:15px;}
 `
 
-// export const Subtitle = styled.h2`
-//   display: flex;
-//   justify-content: center;
-//   text-align: center;   
-//   font-family: "Poppins", sans-serif; 
-//   font-size: 20px;
-//   line-height: 1.25;
-//   letter-spacing: 0.025em;
-//   padding-top: 20px;
-//   margin: auto;
-//   margin-bottom: 30px;
-//   //margin-top: 10px;
-//   width: 90%;
-//   color: #000;
-//   box-sizing: border-box;
-// `
+export const Subtitle = styled.h2`
+ width: 95%;
+ margin-bottom: 40px;
+ text-align: center;
+ padding-left: 15px;
 
-/*export const Imag = styled.div`
+ @media(max-width:425px){
+  background: #A9A9A9;
+  margin: 20px;
+  border-radius:35px;
+  max-width:90%;
+  max-height:90%;
+  padding: 18px;
   
-  
-  //max-width: 1060px;
-  width: 85%;
-  box-sizing:border-box;
-  margin: auto;
-  margin-bottom: 40px;
-
-    
-`*/
-
-//  export const Img = styled.img`
-//  display: flex;
-//  flex-direction: column;
-//  justify-content:center;
-//  align-items:center;
-//  width: 100%;
-//  `
-
+ }
+`
 
 export const Section = styled.div`
 
@@ -88,11 +67,10 @@ h3{
   color: #000;
   box-sizing: border-box;
 
-  @media(max-width:425px){
-      margin: auto auto;
-      background: #A9A9A9;
-      border-radius: 35px;
-      padding:15px;
+  @media(max-width:425px){      
+    border-radius: 35px;
+    padding:15px;
+    margin-bottom: 10px;
 
 }
 }
@@ -104,8 +82,15 @@ div, h2{
   align-items:center;
   padding: 10px;
   margin-bottom: 10px;
+  text-align: center;
 
+  @media(max-width:425px){
+  background: #A9A9A9;
+  margin: 20px;
+  border-radius:35px;
+  max-height:90%;
   
+  }
 
 }
 
@@ -113,12 +98,12 @@ a{
   text-decoration: none;
   color: black;
   font-family: "Poppins", sans-serif;
-}
 
-@media(max-width:425px){
+  @media(max-width:425px){
       margin: auto auto;
-      background: #A9A9A9;
+     background: #A9A9A9;
       border-radius: 35px;
       padding:15px;}
 
+}
 `

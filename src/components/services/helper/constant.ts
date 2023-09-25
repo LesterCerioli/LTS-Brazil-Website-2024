@@ -10,60 +10,51 @@ import imgServicesServices from "@/assets/imagesServices/services_services_hero.
 
 export const servicesPageData = [
   
+  
   {
     id: 1,
-    title: "",
-    subtitle: "Oferecemos uma ampla gama de serviços digitais para atender às necessidades em constante evolução. Com nossa experiência, transformamos ideias em soluções prontas para o mercado. Explore nossos serviços e junte-se à revolução digital.",
-    image: imgServicesServices,
-    link: "services/",
-  },
-
-  
-  
-  {
-    id: 2,
     title: "Desenvolvimento Web de portais para restaurante",
     image: imgFood,
     link: "services/foodAppDevelopment ",
   },
 
   {
-    id: 3,
+    id: 2,
     title: "Desenvolvimento Mobile",
     image: imgMobile,
     link: "services/mobileAppDevelopment",
   },
 
   {
-    id: 4,
+    id: 3,
     title: "Desenvolvimento Web Portais para Educação",
     image: imgEducational,
     link: "services/educationalServices",
   },
 
   {
-    id: 5,
+    id: 4,
     title: "Desenvolvimento de CRMs/ERPs",
     image: imgErpCrm,
     link: "services/crmServices",
   },
 
   {
-    id: 6,
+    id: 5,
     title: "Desenvolvimento de Serviços Web",
     image: imgServices,
     link: "services/developmentWeb",
   },
 
   {
-    id: 7,
+    id: 6,
     title: "Desenvolvimento de serviços imobiliários",
     image: imgRealState,
     link: "services/realEstatePortalServices",
   },
 
   {
-    id: 8,
+    id: 7,
     title: "Portal de viagens",
     image: imgTravel,
     link: "services/travelServices",
