@@ -21,34 +21,53 @@ export const SubHero = styled.section`
     padding-top: 16px;
     font-weight: 300;
     width: 80vw;
-  }
-  @media screen and (max-width: 480px) {
-    section {
-      width: 480px;
 
-      height: auto;
-    }
+    @media screen and (max-width: 375px) {
+      padding-bottom: 35px;
+      div {
+        max-width: 375px;
+        height: auto;
 
-    div {
-      width: 480px;
-      font-size: 20px;
-      h1,
-      h4 {
-        margin-right: 30px;
+        h1 {
+          width: 305;
+          font-weight: 500;
+          font-size: 20px;
+          margin-right: 80px;
+        }
+        h4 {
+          width: 350px;
+          margin-right: 150px;
+        }
       }
     }
-  }
+    @media screen and (max-width: 480px) {
+      section {
+        width: 480px;
 
-  @media screen and (max-width: 768px) {
-    h4 {
-      font-weight: 600;
+        height: auto;
+      }
+
+      div {
+        width: 480px;
+        font-size: 20px;
+        h1,
+        h4 {
+          margin-right: 30px;
+        }
+      }
     }
 
-    section {
-      width: 768px;
+    @media screen and (max-width: 768px) {
+      h4 {
+        font-weight: 600;
+      }
 
-      height: auto;
-      padding: 20px;
+      section {
+        width: 768px;
+
+        height: auto;
+        padding: 20px;
+      }
     }
   }
 `

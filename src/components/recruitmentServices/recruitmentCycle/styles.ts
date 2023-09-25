@@ -77,6 +77,26 @@ export const ProgressBar = styled.div`
     flex-direction: row;
   }
 
+  @media screen and (max-width: 375px) {
+    max-width: 100px;
+    padding-left: 110px;
+    div {
+      max-width: 30px;
+      max-height: 30px;
+
+      align-items: center;
+
+      p {
+        font-size: 14px;
+        margin-left: -25px;
+        margin-top: 15px;
+      }
+    }
+    ~ div {
+      padding-bottom: 70px;
+    }
+  }
+
   @media screen and (max-width: 480px) {
     div {
       width: 480px;
