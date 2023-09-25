@@ -174,19 +174,30 @@ export const ButtonContainer = styled.div`
     width: 51%;
     display: flex;
     justify-content: flex-end;
-   
+    
+    @media (min-width: 1300px) and (max-width: 1440px) {
+    margin-top: -40px;
+    }
+    
 
-    @media (max-width: 1083px) {
+    @media (min-width: 338px) and (max-width: 1083px) {
         display: flex;
         justify-content: center;
     }
+
+    @media (max-width: 337px) {
+    width: 210px;
+}
 `
 
 export const Button = styled.button`
 width: 210px;
 height: 50px;
-
 background: #5050EA;
+
+@media (max-width: 337px) {
+    width: 240px;
+}
 `
 
 export const ButtonText = styled.a`
