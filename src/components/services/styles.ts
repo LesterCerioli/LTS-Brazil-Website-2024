@@ -34,11 +34,12 @@ export const Title = styled.h1`
 `
 
 export const Subtitle = styled.h2`
- width: 95%;
+ width: 100%;
  margin-bottom: 40px;
  text-align: center;
- padding-left: 15px;
+ padding: 15px;
 
+ 
  @media(max-width:425px){
   background: #A9A9A9;
   margin: 20px;
