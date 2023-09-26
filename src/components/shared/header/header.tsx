@@ -1,7 +1,7 @@
 "use client"
 import * as S from "./styles";
 import Image from "next/image";
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { CgClose } from 'react-icons/cg';
 
 
@@ -26,7 +26,7 @@ import { CgClose } from 'react-icons/cg';
           <S.MajorLinksContainer>
             <S.LinksContainer className={isMenuOpen ? 'show-links' : ''}>
               <S.Link href="/">Home</S.Link>
-              <S.Link href="services">Serviços</S.Link>
+              <S.Link href="/services">Serviços</S.Link>
               <S.Link href="portfolio">Portfólio</S.Link>
               <S.Link href="contact">Contato</S.Link>
               <S.Link href="aboutUs">Sobre-nós</S.Link>
