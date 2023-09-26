@@ -18,10 +18,9 @@ import { useForm } from "react-hook-form";
 
 import { z } from "zod";
 
-import { zodResolver } from "@hookform/resolvers/zod";
+import {zodResolver}  from "@hookform/resolvers/zod";
 
-import { Modal} from "react-modal";
-
+import Modal from "react-modal";
 
 const schemaForm = z.object({
 
@@ -41,22 +40,16 @@ const schemaForm = z.object({
 
 });
 
- 
-
 type FormProps = z.infer<typeof schemaForm>;
 
  
 
 const phoneNumber = "+552130425441";
 
- 
 
-const Form = () => {
 
-  //--------------------
-  //--------------------
-
-  const [modalIsOpen, setModalIsOpen] = useState(false)
+export default function Form () {
+    const [modalIsOpen, setModalIsOpen] = useState(false)
   const [isSending, setIsSending] = useState(false);
   const [formData, setFormData] = useState<FormProps | null>({
     dataClient:{
@@ -81,7 +74,6 @@ const Form = () => {
     });
   };
 
-
   useEffect(() => {
 
     const storedData = localStorage.getItem("formData");
@@ -94,17 +86,17 @@ const Form = () => {
 
   }, []);
 
-  const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
+  // const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   const { name, value } = e.target;
 
-    setFormData((prevData) => ({
-      prevData,
-      dataClient: {
-        ...prevData?.dataClient,
-        [name]: value,
-      },
-    }));
-  };
+  //   setFormData((prevData) => ({
+  //     prevData,
+  //     dataClient: {
+  //       ...prevData?.dataClient,
+  //       [name]: value,
+  //     },
+  //   }));
+  // };
 
 
   const [isThankYouVisible, setIsThankYouVisible] = useState(false);
@@ -116,7 +108,7 @@ const Form = () => {
     await new Promise((resolve) => setTimeout(resolve, 2000));
     setModalIsOpen(false);
     setIsSending(false);
-
+  }
 
   const {
 
@@ -168,13 +160,13 @@ const Form = () => {
     window.open(whatsappLink);
   };
 
- 
 
-  return (
 
-    <S.Container>
 
-      <form onSubmit={handleSubmit((data) => {
+  
+ return (
+  <S.Container>
+     <form onSubmit={handleSubmit((data) => {
 
         handleFormSubmit(data);
 
@@ -259,7 +251,7 @@ const Form = () => {
         <p>Seu formulário foi enviado com sucesso!</p>
         <button onClick={() => setModalIsOpen(false)}>Fechar Modal</button>
           
-        </Modal>
+        </Modal> 
 
         <S.GooglePrivacy>
           <label>
@@ -338,12 +330,18 @@ const Form = () => {
 
         )}
 
-      
+  </S.Container>
 
-    </S.Container>
-
-)  ;}
-};
+ )
+}
 
 
-export default Form;
+
+
+
+ 
+
+
+
+ 
+
