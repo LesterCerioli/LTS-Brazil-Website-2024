@@ -19,23 +19,58 @@ background-position: center;
    max-height: 450px;
 }
 
-@media (min-width: 700px) and (max-width: 735px){
+@media (min-width: 677px) and (max-width: 735px){
    background: url('/assets/imagesHome/background_banner.svg') no-repeat;
    width: 100%;
    max-height: 420px;
 }
 
-@media (min-width: 539px) and (max-width: 699px){
+@media (min-width: 643px) and (max-width: 676px){
    background: url('/assets/imagesHome/background_banner.svg') no-repeat;
    width: 100%;
    max-height: 380px;
 }
 
+@media (min-width: 560px) and (max-width: 642px) {
+   background: url('/assets/imagesHome/background_banner.svg') no-repeat;
+   width: 100%;
+   max-height: 360px;
+}
 
-@media (max-width: 534px) {
+@media (min-width: 533px) and (max-width: 559px) {
+   background: url('/assets/imagesHome/background_banner.svg') no-repeat;
+   width: 100%;
+   max-height: 330px;
+}
+
+@media (min-width: 490px) and (max-width: 532px) {
    background: url('/assets/imagesHome/background_banner.svg') no-repeat;
    width: 100%;
    max-height: 300px;
+}
+
+@media (min-width: 452px) and (max-width: 489px) {
+   background: url('/assets/imagesHome/background_banner.svg') no-repeat;
+   width: 100%;
+   max-height: 280px;
+}
+
+@media (min-width: 425px) and (max-width: 451px) {
+   background: url('/assets/imagesHome/background_banner.svg') no-repeat;
+   width: 100%;
+   max-height: 260px;
+}
+
+@media (min-width: 330px) and (max-width: 424px) {
+   background: url('/assets/imagesHome/background_banner.svg') no-repeat;
+   width: 100%;
+   max-height: 237px;
+}
+
+@media (max-width: 329px) {
+   background: url('/assets/imagesHome/background_banner.svg') no-repeat;
+   width: 100%;
+   max-height: 200px;
 }
 `
 

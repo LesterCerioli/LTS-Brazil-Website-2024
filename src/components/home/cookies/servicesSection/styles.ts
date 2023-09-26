@@ -40,7 +40,7 @@ export const CardsContainer = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0 10px 0 10px ;
+    padding: 0 10px 0 10px;
 
     @media (min-width: 531px) and (max-width: 1083px) {
         display: flex;
@@ -66,10 +66,13 @@ export const BottomCardsContainer = styled.div`
 `
 
 export const Card = styled.div`
-   margin: 15px; 
-   max-width: 404px;
+   margin: 0 10px 10px 10px;
+   max-width: 350px;
    max-height: 350px;
 
+   @media (min-width: 1024px) and (max-width: 1320px) {
+    max-width: 315px;
+   }
    @media (min-width: 531px) and (max-width: 1300px) {
     max-height: 320px;
    }
