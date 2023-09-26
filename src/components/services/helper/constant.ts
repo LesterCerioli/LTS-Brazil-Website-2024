@@ -1,11 +1,11 @@
 import imgFood from "@/assets/imagesServices/thumb_food.svg";
-import imgMobile from "@/assets/imagesServices/thumb_mobile.svg";
-import imgEducational from "@/assets/imagesServices/thumb_educationalServices.svg";
-import imgServices from "@/assets/imagesServices/thumb_web_dev.svg";
-import imgRealState from "@/assets/imagesServices/thumb_realEstate.svg";
-import imgTravel from "@/assets/imagesServices/thumb_travelServices.svg";
-import imgErpCrm from "@/assets/imagesServices/thumb_erp-crm.svg";
-import imgUi from "@/assets/imagesServices/thumb_ux-ui.svg";
+import imgMobile from "@/assets/imagesServices/thumb_mobile1.svg";
+import imgEducational from "@/assets/imagesServices/thumb_educational.svg";
+import imgServices from "@/assets/imagesServices/thumb_dev_web.svg";
+import imgRealState from "@/assets/imagesServices/thumb_real_estate.svg";
+import imgTravel from "@/assets/imagesServices/thumb_travel.svg";
+import imgErpCrm from "@/assets/imagesServices/thumb_crm_.svg";
+import imgUi from "@/assets/imagesServices/thumb_ux_ui.svg";
 import imgServicesServices from "@/assets/imagesServices/services_services_hero.svg";
 
 export const servicesPageData = [

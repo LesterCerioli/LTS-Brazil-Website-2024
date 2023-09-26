@@ -26,18 +26,18 @@ export const Title = styled.h1`
   color: #000;
   box-sizing: border-box;
 
-  @media(max-width:425px){
-      margin: 60px auto 10px auto;
-      background: #A9A9A9;
-      border-radius: 35px;
-      padding:15px;}
+  @media(max-width:375px){
+    margin: 60px auto 10px auto;
+    background: #A9A9A9;
+    border-radius: 35px;
+    padding:15px;}
 `
 
 export const Subtitle = styled.h2`
  width: 100%;
  margin-bottom: 40px;
  text-align: center;
- padding: 15px;
+ padding: 20px;
 
  
  @media(max-width:425px){
@@ -100,7 +100,7 @@ a{
   color: black;
   font-family: "Poppins", sans-serif;
 
-  @media(max-width:425px){
+  @media(max-width: 425px){
       margin: auto auto;
      background: #A9A9A9;
       border-radius: 35px;

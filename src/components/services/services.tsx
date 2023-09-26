@@ -37,7 +37,7 @@ const Services: React.FC = () => {
           <a href={service.link}>
             <h2>{service.title}</h2>
             
-            <Image src={service.image} alt={service.title} width={1000} height={450} layout="responsive" />
+            <Image src={service.image} alt={service.title} width={1060}  height={450} />
           </a>
         </div>
        ))}
