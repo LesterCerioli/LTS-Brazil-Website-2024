@@ -1,6 +1,6 @@
+"use client"
 
-
-"use client";
+ 
 
 import React, { useEffect, useState } from "react";
 import * as S from "./styles";
@@ -10,42 +10,55 @@ import { MdEmail } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import {zodResolver}  from "@hookform/resolvers/zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 import Modal from "react-modal";
 import { GoIssueClosed } from "react-icons/go";
 import { NodeNextRequest } from "next/dist/server/base-http/node";
 
+ 
 
 const schemaForm = z.object({
   dataClient: z.object({
-   name: z.string().min(10, "Informe seu nome completo"),
+    name: z.string().min(10, "Informe seu nome completo"),
     email: z.string().min(6, "Informe seu e-mail"),
-    tel: z.string().max(12).regex(/^(\(?\d{2}\)?\s?)?(\d{4,5}\-?\d{4})$/, {
-      message: "Informe um telefone válido",
-    }),
-
+    tel: z
+      .string()
+      .max(12)
+      .regex(/^(\(?\d{2}\)?\s?)?(\d{4,5}\-?\d{4})$/, {
+        message: "Informe um telefone válido",
+      }),
   }),
-
 });
+
+ 
 
 type FormProps = z.infer<typeof schemaForm>;
 
+ 
+
 const phoneNumber = "+552130425441";
 
-export default function Form () {
+ 
+
+export default function Form() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [formData, setFormData] = useState<FormProps | null>({
-    dataClient:{
-      name:"",
-      email:"",
-      tel:"",
+    dataClient: {
+      name: "",
+      email: "",
+      tel: "",
     },
   });
+  const [showRequiredErrors, setShowRequiredErrors] = useState(false);
+
+ 
 
   const abrirModal = () => {
     setModalIsOpen(true);
   };
+
+ 
 
   const fecharModal = () => {
     setModalIsOpen(false);
@@ -58,35 +71,51 @@ export default function Form () {
     });
   };
 
-  useEffect(() => {
+ 
 
+  useEffect(() => {
     const storedData = localStorage.getItem("formData");
+
+ 
 
     if (storedData) {
       setFormData(JSON.parse(storedData));
     }
-
   }, []);
 
-  const [isThankYouVisible, setIsThankYouVisible] = useState(false);
+ 
 
   const handleFormSubmit = async (data: FormProps) => {
-    
-    abrirModal();
-    setIsSending(true);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    setModalIsOpen(false);
-    setIsSending(false);
-  }
+    if (isValidForm(data)) {
+      abrirModal();
+      setIsSending(true);
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      setModalIsOpen(false);
+      setIsSending(false);
+    } else {
+      // Exibir erros obrigatórios
+      setShowRequiredErrors(true);
+    }
+  };
+
+ 
+
+  const isValidForm = (data: FormProps) => {
+    return (
+      !!data.dataClient.name &&
+      !!data.dataClient.email &&
+      !!data.dataClient.tel
+    );
+  };
+
+ 
 
   const {
-
     handleSubmit,
     register,
-    reset, 
+    reset,
     formState: { errors },
   } = useForm<FormProps>({
-
     criteriaMode: "all",
     mode: "all",
     resolver: zodResolver(schemaForm),
@@ -99,12 +128,13 @@ export default function Form () {
     },
   });
 
-  const [isPhonePopupOpen, setIsPhonePopupOpen] = useState(false);
+ const [isPhonePopupOpen, setIsPhonePopupOpen] = useState(false);
 
   const handlePhonePopup = () => {
-   setIsPhonePopupOpen(!isPhonePopupOpen);
+    setIsPhonePopupOpen(!isPhonePopupOpen);
   };
 
+ 
 
   const handleWhatsAppClick = () => {
     const phoneNumber = "+555521964108815";
@@ -114,80 +144,93 @@ export default function Form () {
     )}`;
     window.open(whatsappLink);
   };
- 
- return (
-  <S.Container>
-     <form onSubmit={handleSubmit((data) => {
-        handleFormSubmit(data);
-        reset(); 
-      })}>
 
+ 
+
+  return (
+<S.Container>
+<form
+        onSubmit={handleSubmit((data) => {
+          handleFormSubmit(data);
+          reset();
+        })}
+>
 <S.Title>
-          <h1>Fale conosco</h1>
-          <label className="line"></label>
-        </S.Title>
+<h1>Fale conosco</h1>
+<label className="line"></label>
+</S.Title>
+
+ 
 
         <S.Data>
-          <input
+<input
             {...register("dataClient.name")}
             type="text"
             placeholder="Nome"
+            required
           />
-          {errors.dataClient?.name?.message && (
-            <p style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
-              {errors.dataClient?.name?.message}
-            </p>
+          {(errors.dataClient?.name?.message || showRequiredErrors) && (
+<p style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
+              {errors.dataClient?.name?.message || "Campo obrigatório"}
+</p>
           )}
+
+ 
 
           <input
             {...register("dataClient.email")}
             type="email"
             placeholder="Email"
+            required
           />
-          {errors.dataClient?.email?.message && (
-            <p style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
-              {errors.dataClient?.email?.message}
-            </p>
+          {(errors.dataClient?.email?.message || showRequiredErrors) && (
+<p style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
+              {errors.dataClient?.email?.message || "Campo obrigatório"}
+</p>
           )}
+
+ 
 
           <input
             {...register("dataClient.tel")}
             type="tel"
             placeholder="Telefone"
+            required
           />
-          {errors.dataClient?.tel?.message && (
-            <p style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
-              {errors.dataClient?.tel?.message}
-            </p>
+          {(errors.dataClient?.tel?.message || showRequiredErrors) && (
+<p style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
+              {errors.dataClient?.tel?.message || "Campo obrigatório"}
+</p>
           )}
 
-          <textarea
-            rows={8}
-            cols={70}
-            id="myTextarea"
-            placeholder="Mensagem"
-          ></textarea>
-        </S.Data>
+ 
+
+          <textarea rows={8} cols={70} id="myTextarea" placeholder="Mensagem"></textarea>
+</S.Data>
+
+ 
 
         <S.FirstButton>
-          <label>
-
-            <button
-             type="submit"
-             className= {isSending ? 'sending' : ''}
-             disabled={isSending}
-             onClick={abrirModal}
-            >
+<label>
+<button
+              type="submit"
+              className={isSending ? "sending" : ""}
+              disabled={isSending}
+>
               {isSending ? "Enviando" : "Enviar"}
-            </button>
+</button>
+</label>
+</S.FirstButton>
+</form>
 
-          </label>
+ 
 
-        </S.FirstButton>
-
-        <Modal
+      <Modal
         isOpen={modalIsOpen}
-        onRequestClose={() => {reset(), setModalIsOpen(false) }}
+        onRequestClose={() => {
+          reset();
+          setModalIsOpen(false);
+        }}
         style={{
           overlay: {
             position: "fixed",
@@ -203,7 +246,7 @@ export default function Form () {
             left: "50%",
             fontSize: "30px",
             fontWeight: "500",
-            color:"green",
+            color: "green",
             transform: "translate(-50%, -50%)",
             width: "400px",
             padding: "20px",
@@ -212,111 +255,90 @@ export default function Form () {
             textAlign: "center",
             backgroundColor: "#E8F0FE",
             border: "none",
-            
           },
         }}
         contentLabel="Exemplo de Modal"
-        ariaHideApp={false} 
-        >
-        
-        <p>Obrigado pelo seu contato!</p>
-        <S.Button onClick={() => setModalIsOpen(false)}> 
-        
-        <GoIssueClosed/>
+        ariaHideApp={false}
+>
+<p>Obrigado pelo seu contato!</p>
+<S.Button onClick={() => setModalIsOpen(false)}>
+<GoIssueClosed />
+</S.Button>
+</Modal>
 
-        </S.Button>
-          
-        </Modal> 
+ 
 
-        <S.GooglePrivacy>
-          <label>
-            <a
-              href="https://policies.google.com/privacy"
-              className="privacidade"
-            >
-              Este site é protegido por reCAPTCHA. A Política de Privacidade e
-              os Termos de Serviço do Google são aplicáveis.
-            </a>
-          </label>
-        </S.GooglePrivacy>
+      <S.GooglePrivacy>
+<label>
+<a href="https://policies.google.com/privacy" className="privacidade">
+            Este site é protegido por reCAPTCHA. A Política de Privacidade e os
+            Termos de Serviço do Google são aplicáveis.
+</a>
+</label>
+</S.GooglePrivacy>
 
-        <S.Text>
-          <h4 className="sucesso">O seu sucesso é a nossa recompensa!!!</h4>
-        </S.Text>
+ 
 
-        <S.SecondButton>
-          <label>
-            <button
-              type="submit"
-              className="mensagem"
-              onClick={handleWhatsAppClick}
-            >
-              <BsWhatsapp />
-              <p>Enviar mensagem</p>
-            </button>
-          </label>
-        </S.SecondButton>
+      <S.Text>
+<h4 className="sucesso">O seu sucesso é a nossa recompensa!!!</h4>
+</S.Text>
 
-        <S.Name>
-          <label>
-            <h4 className="name">Lucas Technologia Services</h4>
-          </label>
-        </S.Name>
+ 
 
-        <S.Address>
-          <label>
-            <p className="endereco">Av Vicente de Carvalho, 1086 </p>
-          </label>
-        </S.Address>
+      <S.SecondButton>
+<label>
+<button
+            type="submit"
+            className="mensagem"
+            onClick={handleWhatsAppClick}
+>
+<BsWhatsapp />
+<p>Enviar mensagem</p>
+</button>
+</label>
+</S.SecondButton>
 
-        <S.Email>
-          <label>
-            <a href="mailto:commercial2018@lucastechnologyservice.com">
-              <MdEmail style={{ fontSize: "22px", marginRight: "5px" }} />
-              commercial2018@lucastecnologyservice.com
-            </a>
-          </label>
+ 
 
-          <label>
-            <a href={`tel:${phoneNumber}`} onClick={handlePhonePopup}>
-              <BsTelephoneFill
-                style={{ fontSize: "22px", marginRight: "5px" }}
-              />
-              +55 21 3042-5441
-            </a>
-          </label>
-        </S.Email>
+      <S.Name>
+<label>
+<h4 className="name">Lucas Technologia Services</h4>
+</label>
+</S.Name>
 
-       
-        
-        <S.Map>
-          <MapLink></MapLink>
-        </S.Map>
+ 
 
-      </form>
+      <S.Address>
+<label>
+<p className="endereco">Av Vicente de Carvalho, 1086 </p>
+</label>
+</S.Address>
 
-        {isThankYouVisible && (
+ 
 
-          <S.Text>
+      <S.Email>
+<label>
+<a href="mailto:commercial2018@lucastechnologyservice.com">
+<MdEmail style={{ fontSize: "22px", marginRight: "5px" }} />
+            commercial2018@lucastecnologyservice.com
+</a>
+</label>
 
-            <h4 className="sucesso">Obrigado pelo seu contato!</h4>
+ 
 
-          </S.Text>
+        <label>
+<a href={`tel:${phoneNumber}`} onClick={handlePhonePopup}>
+<BsTelephoneFill style={{ fontSize: "22px", marginRight: "5px" }} />
+            +55 21 3042-5441
+</a>
+</label>
+</S.Email>
 
-        )}
+ 
 
-  </S.Container>
-
- )
+      <S.Map>
+<MapLink></MapLink>
+</S.Map>
+</S.Container>
+  );
 }
-
-
-
-
-
- 
-
-
-
- 
-
