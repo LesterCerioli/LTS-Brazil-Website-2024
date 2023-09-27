@@ -1,26 +1,26 @@
-import React, { ReactComponentElement } from "react";
+import React, { ReactComponentElement } from 'react'
 // import PostsData from "../helper/postsData";
-import * as S from "./styles";
-import Image from "next/image";
+import * as S from './styles'
+import Image from 'next/image'
 
-import { postCategoryImages } from "@/components/blog/helper/postCategotyImages";
+import { postCategoryImages } from '@/components/blog/helper/postCategotyImages'
 
 // vamos pegar o array the imagens e links, iterar e ramdomizar:
 // let's iterate and randomize the images / links array
 
 function shuffleArray(array: any[]) {
-  const shuffledArray = [...array];
+  const shuffledArray = [...array]
 
   for (let i = shuffledArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]]
   }
 
-  return shuffledArray;
+  return shuffledArray
 }
 
 function Posts() {
-  const shuffledImages = shuffleArray(postCategoryImages);
+  const shuffledImages = shuffleArray(postCategoryImages)
 
   return (
     <S.Posts>
@@ -42,7 +42,9 @@ function Posts() {
         </S.ImagesContainer>
       </div>
     </S.Posts>
-  );
+  )
 }
 
-export default Posts;
+Posts.displayName = 'Posts'
+
+export default Posts
