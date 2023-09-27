@@ -1,7 +1,5 @@
 "use client"
 
- 
-
 import React, { useEffect, useState } from "react";
 import * as S from "./styles";
 import { BsWhatsapp } from "react-icons/bs";
@@ -14,8 +12,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Modal from "react-modal";
 import { GoIssueClosed } from "react-icons/go";
 import { NodeNextRequest } from "next/dist/server/base-http/node";
-
- 
 
 const schemaForm = z.object({
   dataClient: z.object({
@@ -30,15 +26,9 @@ const schemaForm = z.object({
   }),
 });
 
- 
-
 type FormProps = z.infer<typeof schemaForm>;
 
- 
-
 const phoneNumber = "+552130425441";
-
- 
 
 export default function Form() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -50,16 +40,11 @@ export default function Form() {
       tel: "",
     },
   });
+
   const [showRequiredErrors, setShowRequiredErrors] = useState(false);
-
- 
-
   const abrirModal = () => {
     setModalIsOpen(true);
   };
-
- 
-
   const fecharModal = () => {
     setModalIsOpen(false);
     setFormData({
@@ -71,20 +56,13 @@ export default function Form() {
     });
   };
 
- 
-
   useEffect(() => {
     const storedData = localStorage.getItem("formData");
-
- 
 
     if (storedData) {
       setFormData(JSON.parse(storedData));
     }
   }, []);
-
- 
-
   const handleFormSubmit = async (data: FormProps) => {
     if (isValidForm(data)) {
       abrirModal();
@@ -98,8 +76,6 @@ export default function Form() {
     }
   };
 
- 
-
   const isValidForm = (data: FormProps) => {
     return (
       !!data.dataClient.name &&
@@ -107,8 +83,6 @@ export default function Form() {
       !!data.dataClient.tel
     );
   };
-
- 
 
   const {
     handleSubmit,
@@ -134,7 +108,6 @@ export default function Form() {
     setIsPhonePopupOpen(!isPhonePopupOpen);
   };
 
- 
 
   const handleWhatsAppClick = () => {
     const phoneNumber = "+555521964108815";
@@ -144,8 +117,6 @@ export default function Form() {
     )}`;
     window.open(whatsappLink);
   };
-
- 
 
   return (
 <S.Container>
@@ -160,23 +131,18 @@ export default function Form() {
 <label className="line"></label>
 </S.Title>
 
- 
-
-        <S.Data>
+<S.Data>
 <input
-            {...register("dataClient.name")}
-            type="text"
-            placeholder="Nome"
-            required
+     {...register("dataClient.name")}
+         type="text"
+         placeholder="Nome"
+         required
           />
           {(errors.dataClient?.name?.message || showRequiredErrors) && (
 <p style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
               {errors.dataClient?.name?.message || "Campo obrigatório"}
 </p>
           )}
-
- 
-
           <input
             {...register("dataClient.email")}
             type="email"
@@ -189,8 +155,6 @@ export default function Form() {
 </p>
           )}
 
- 
-
           <input
             {...register("dataClient.tel")}
             type="tel"
@@ -198,9 +162,9 @@ export default function Form() {
             required
           />
           {(errors.dataClient?.tel?.message || showRequiredErrors) && (
-<p style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
+            <p style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
               {errors.dataClient?.tel?.message || "Campo obrigatório"}
-</p>
+            </p>
           )}
 
  
@@ -208,14 +172,12 @@ export default function Form() {
           <textarea rows={8} cols={70} id="myTextarea" placeholder="Mensagem"></textarea>
 </S.Data>
 
- 
-
-        <S.FirstButton>
+<S.FirstButton>
 <label>
 <button
-              type="submit"
-              className={isSending ? "sending" : ""}
-              disabled={isSending}
+          type="submit"
+          className={isSending ? "sending" : ""}
+          disabled={isSending}
 >
               {isSending ? "Enviando" : "Enviar"}
 </button>
@@ -223,9 +185,7 @@ export default function Form() {
 </S.FirstButton>
 </form>
 
- 
-
-      <Modal
+<Modal
         isOpen={modalIsOpen}
         onRequestClose={() => {
           reset();
@@ -266,8 +226,6 @@ export default function Form() {
 </S.Button>
 </Modal>
 
- 
-
       <S.GooglePrivacy>
 <label>
 <a href="https://policies.google.com/privacy" className="privacidade">
@@ -277,30 +235,19 @@ export default function Form() {
 </label>
 </S.GooglePrivacy>
 
- 
-
-
- 
-
- 
-
-      <S.Name>
+<S.Name>
 <label>
 <h4 className="name">Lucas Technologia Services</h4>
 </label>
 </S.Name>
 
- 
-
-      <S.Address>
+<S.Address>
 <label>
 <p className="endereco">Av Vicente de Carvalho, 1086 </p>
 </label>
 </S.Address>
 
- 
-
-      <S.Email>
+<S.Email>
 <label>
 <a href="mailto:commercial2018@lucastechnologyservice.com">
 <MdEmail style={{ fontSize: "22px", marginRight: "5px" }} />
@@ -308,9 +255,7 @@ export default function Form() {
 </a>
 </label>
 
- 
-
-        <label>
+ <label>
 <a href={`tel:${phoneNumber}`} onClick={handlePhonePopup}>
 <BsTelephoneFill style={{ fontSize: "22px", marginRight: "5px" }} />
             +55 21 3042-5441
@@ -333,7 +278,7 @@ export default function Form() {
 </S.SecondButton>
 </S.WhatsappButton>
 
-      <S.Map>
+<S.Map>
 <MapLink></MapLink>
 </S.Map>
 </S.Container>
