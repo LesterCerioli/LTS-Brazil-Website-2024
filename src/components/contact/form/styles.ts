@@ -1,3 +1,4 @@
+import exp from 'constants';
 import styled from 'styled-components'
 
 
@@ -131,7 +132,6 @@ button{
 `;
 
 
-
 export const GooglePrivacy = styled.div`
 .privacidade{
 display: flex;
@@ -238,6 +238,13 @@ border: none;
 
 
 
-//import MapLink from "./mapLink";
+export const Button = styled.button`
+width:50px;
+border: none;
+font-size: 60px;
+margin-top: 60px;
+background-color: transparent;
+color: green;
 
+`
 

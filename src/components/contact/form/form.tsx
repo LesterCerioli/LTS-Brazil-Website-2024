@@ -3,37 +3,25 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-
 import * as S from "./styles";
-
 import { BsWhatsapp } from "react-icons/bs";
-
 import MapLink from "./mapLink/mapLink";
-
 import { MdEmail } from "react-icons/md";
-
 import { BsTelephoneFill } from "react-icons/bs";
-
 import { useForm } from "react-hook-form";
-
 import { z } from "zod";
-
 import {zodResolver}  from "@hookform/resolvers/zod";
-
 import Modal from "react-modal";
+import { GoIssueClosed } from "react-icons/go";
+import { NodeNextRequest } from "next/dist/server/base-http/node";
+
 
 const schemaForm = z.object({
-
   dataClient: z.object({
-
-    name: z.string().min(10, "Informe seu nome completo"),
-
+   name: z.string().min(10, "Informe seu nome completo"),
     email: z.string().min(6, "Informe seu e-mail"),
-
     tel: z.string().max(12).regex(/^(\(?\d{2}\)?\s?)?(\d{4,5}\-?\d{4})$/, {
-
       message: "Informe um telefone válido",
-
     }),
 
   }),
@@ -42,14 +30,10 @@ const schemaForm = z.object({
 
 type FormProps = z.infer<typeof schemaForm>;
 
- 
-
 const phoneNumber = "+552130425441";
 
-
-
 export default function Form () {
-    const [modalIsOpen, setModalIsOpen] = useState(false)
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [formData, setFormData] = useState<FormProps | null>({
     dataClient:{
@@ -79,25 +63,10 @@ export default function Form () {
     const storedData = localStorage.getItem("formData");
 
     if (storedData) {
-
       setFormData(JSON.parse(storedData));
-
     }
 
   }, []);
-
-  // const handleFormChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-  //   const { name, value } = e.target;
-
-  //   setFormData((prevData) => ({
-  //     prevData,
-  //     dataClient: {
-  //       ...prevData?.dataClient,
-  //       [name]: value,
-  //     },
-  //   }));
-  // };
-
 
   const [isThankYouVisible, setIsThankYouVisible] = useState(false);
 
@@ -113,41 +82,27 @@ export default function Form () {
   const {
 
     handleSubmit,
-
     register,
-
     reset, 
-
     formState: { errors },
-
   } = useForm<FormProps>({
 
     criteriaMode: "all",
-
     mode: "all",
-
     resolver: zodResolver(schemaForm),
-
     defaultValues: {
-
       dataClient: {
-
         name: "",
-
         email: "",
-
         tel: "",
-
       },
-
     },
-
   });
 
   const [isPhonePopupOpen, setIsPhonePopupOpen] = useState(false);
 
   const handlePhonePopup = () => {
-    setIsPhonePopupOpen(!isPhonePopupOpen);
+   setIsPhonePopupOpen(!isPhonePopupOpen);
   };
 
 
@@ -159,19 +114,12 @@ export default function Form () {
     )}`;
     window.open(whatsappLink);
   };
-
-
-
-
-  
+ 
  return (
   <S.Container>
      <form onSubmit={handleSubmit((data) => {
-
         handleFormSubmit(data);
-
         reset(); 
-
       })}>
 
 <S.Title>
@@ -231,11 +179,7 @@ export default function Form () {
              onClick={abrirModal}
             >
               {isSending ? "Enviando" : "Enviar"}
-
             </button>
-
-
-
 
           </label>
 
@@ -244,12 +188,43 @@ export default function Form () {
         <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => {reset(), setModalIsOpen(false) }}
+        style={{
+          overlay: {
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+          },
+          content: {
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            fontSize: "30px",
+            fontWeight: "500",
+            color:"green",
+            transform: "translate(-50%, -50%)",
+            width: "400px",
+            padding: "20px",
+            borderRadius: "10px",
+            boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.3)",
+            textAlign: "center",
+            backgroundColor: "#E8F0FE",
+            border: "none",
+            
+          },
+        }}
         contentLabel="Exemplo de Modal"
         ariaHideApp={false} 
         >
-        <h2>Modal de Exemplo</h2>
-        <p>Seu formulário foi enviado com sucesso!</p>
-        <button onClick={() => setModalIsOpen(false)}>Fechar Modal</button>
+        
+        <p>Obrigado pelo seu contato!</p>
+        <S.Button onClick={() => setModalIsOpen(false)}> 
+        
+        <GoIssueClosed/>
+
+        </S.Button>
           
         </Modal> 
 
