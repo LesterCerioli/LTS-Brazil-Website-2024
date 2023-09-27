@@ -279,24 +279,8 @@ export default function Form() {
 
  
 
-      <S.Text>
-<h4 className="sucesso">O seu sucesso é a nossa recompensa!!!</h4>
-</S.Text>
 
  
-
-      <S.SecondButton>
-<label>
-<button
-            type="submit"
-            className="mensagem"
-            onClick={handleWhatsAppClick}
->
-<BsWhatsapp />
-<p>Enviar mensagem</p>
-</button>
-</label>
-</S.SecondButton>
 
  
 
@@ -334,7 +318,20 @@ export default function Form() {
 </label>
 </S.Email>
 
- 
+<S.WhatsappButton>
+<S.SecondButton>
+
+<button
+            type="submit"
+            className="mensagem"
+            onClick={handleWhatsAppClick}
+>
+<BsWhatsapp />
+<p>Enviar mensagem</p>
+</button>
+
+</S.SecondButton>
+</S.WhatsappButton>
 
       <S.Map>
 <MapLink></MapLink>
