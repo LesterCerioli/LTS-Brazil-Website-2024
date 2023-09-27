@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Section } from '../../../app/(pages)/aboutUs/styles'
+import styled from "styled-components";
+import { Section } from "../../../app/(pages)/aboutUs/styles";
 
 export const MainHero = styled.section`
   align-items: center;
@@ -20,7 +20,25 @@ export const MainHero = styled.section`
     line-height: 1.5;
   }
 
-   @media screen and (max-width: 480px) {
+  @media screen and (max-width: 375px) {
+    section {
+      width: 375px;
+    }
+
+    div {
+      width: 375px;
+      padding-bottom: 50px;
+    }
+    h1 {
+      width: 200px;
+    }
+    h4 {
+      width: 180px;
+      font-weight: 500;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
     section {
       width: 480px;
     }
@@ -29,7 +47,7 @@ export const MainHero = styled.section`
       width: 480px;
       padding-bottom: 50px;
     }
-  } 
+  }
 
   @media screen and(min-width: 481) and(max-width: 768px) {
     section {
@@ -51,4 +69,4 @@ export const MainHero = styled.section`
       justify-content: space-between;
     }
   }
-`
+`;

@@ -29,15 +29,12 @@ export default function UxUiServices() {
           <S.Card>            
           Interfaces bonitas e fáceis de navegar           
           </S.Card>
-
           <S.Card >  
           Identidade visual coerente com sua marca
           </S.Card>
-        
           <S.Card>
            Design Responsivo e adaptável, Web, tablet ou mobile        
           </S.Card>
-
           <S.Card>
            Objetividade sem comprometer o conteúdo         
           </S.Card>

@@ -9,7 +9,7 @@ export const CarrousselStyles = styled.div`
   padding-bottom: 80px;
 
   h1 {
-    margin-top: 30px;
+    margin-top: 95px;
   }
   h4 {
     font-weight: 500;
@@ -25,6 +25,29 @@ export const CarrousselStyles = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+
+  @media screen and (max-width: 375px) {
+    div {
+      max-width: 375px;
+      height: auto;
+      h1 {
+        width: 305;
+        font-weight: 500;
+        font-size: 20px;
+        margin-right: 150px;
+      }
+      h4 {
+        width: 305px;
+        font-size: 16px;
+        margin-right: 200px;
+      }
+      .carousel-root {
+        width: 370px;
+        height: 370px;
+        margin-right: 110px;
+      }
+    }
   }
 
   @media screen and (max-width: 480px) {

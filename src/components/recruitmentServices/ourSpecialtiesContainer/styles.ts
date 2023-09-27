@@ -18,12 +18,15 @@ export const OurSpecialtiesCon = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
   }
+  @media screen and (max-width: 375px) {
+    max-width: 375px;
+    height: auto;
+  }
 
-   @media screen and (max-width: 480px) {
-    
+  @media screen and (max-width: 480px) {
     max-width: 480px;
     height: auto;
-  } 
+  }
 
   @media screen and (max-width: 768px) {
     max-width: 768px;

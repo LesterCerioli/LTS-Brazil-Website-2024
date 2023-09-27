@@ -33,7 +33,7 @@ export const Container = styled.div`
 
 export const Mission = styled.div`
  animation: slide 1s ease 0s 1 normal forwards;
-  animation-name: ${slideRight};
+ animation-name: ${slideRight};
 max-width:80%;
 display:flex;
 flex-direction:column;
@@ -55,7 +55,8 @@ export const Title = styled.h1`
   font-size: 48px;
   line-height: 1.5;
   letter-spacing: 0.025em;
-  padding-top: 20px;
+  padding-top: 40px;
+  margin-top:60px;
   margin-bottom: 15px;
   width: 90%;
   color: #000;

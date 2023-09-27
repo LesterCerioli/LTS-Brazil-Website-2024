@@ -54,7 +54,13 @@ export const Services = styled.div`
       top: 50%;
     }
   }
-
+  @media screen and (max-width: 375px) and (hover: none) {
+    p,
+    h3,
+    span {
+      max-width: 375px;
+    }
+  }
   @media screen and (max-width: 480px) {
   }
   @media screen and (max-width: 768px) {
