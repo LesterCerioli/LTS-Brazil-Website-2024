@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const heroContainer = styled.div`
   display: flex;
@@ -12,7 +12,11 @@ export const heroContainer = styled.div`
     display: flex;
     width: 390px;
   }
-`;
+  @media (max-width: 320px) {
+    display: flex;
+    width: 320px;
+  }
+`
 
 export const welcomeContainer = styled.div`
   position: relative;
@@ -21,7 +25,11 @@ export const welcomeContainer = styled.div`
     display: flex;
     width: 390px;
   }
-`;
+  @media (max-width: 320px) {
+    display: flex;
+    width: 320px;
+  }
+`
 
 export const contentContainer = styled.div`
   > div {
@@ -47,6 +55,18 @@ export const contentContainer = styled.div`
         }
       }
     }
+    @media (max-width: 320px) {
+      width: 300px;
+
+      > div {
+        width: 320px;
+        h3 {
+          width: 300px;
+          margin-left: 50px;
+          font-size: 20px;
+        }
+      }
+    }
   }
 
   div {
@@ -67,7 +87,7 @@ export const contentContainer = styled.div`
       line-height: normal;
     }
   }
-`;
+`
 export const imageContainer = styled.div`
   margin-top: -455px;
 
@@ -78,4 +98,11 @@ export const imageContainer = styled.div`
       margin-top: 10px;
     }
   }
-`;
+  @media (max-width: 320px) {
+    .img {
+      width: 200px;
+      margin-left: -160px;
+      margin-top: 10px;
+    }
+  }
+`

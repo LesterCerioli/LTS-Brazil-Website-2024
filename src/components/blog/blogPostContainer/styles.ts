@@ -9,6 +9,10 @@ export const BlogPostsContainer = styled.div`
       width: 350px;
       margin-left: 50px;
     }
+    @media (max-width: 320px) {
+      width: 310px;
+      margin-left: 50px;
+    }
   }
   a {
     text-decoration: none;
@@ -22,6 +26,9 @@ export const BlogPostsContainer = styled.div`
     margin-top: -150px;
     max-width: 355px;
   }
+  @media (max-width: 320px) {
+    margin-top: -150px;
+  }
 `
 
 const ImageContainer = styled.div``
@@ -32,6 +39,11 @@ export const CarouselStyles = styled.div`
   @media (max-width: 390px) {
     max-heght: 355px;
     max-heght: 355px;
+    margin-right: 15px;
+  }
+  @media (max-width: 320px) {
+    max-heght: 300px;
+    max-heght: 300px;
     margin-right: 15px;
   }
 `

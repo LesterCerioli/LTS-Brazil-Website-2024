@@ -29,19 +29,39 @@ class BlogPostContainer extends Component {
                   infiniteLoop
                 >
                   <div>
-                    <Image src={carouselImage1} alt="backend" width={500} />
+                    <Image
+                      src={carouselImage1}
+                      alt="backend"
+                      width={500}
+                      layout="responsive"
+                    />
                   </div>
                   <div>
                     {' '}
-                    <Image src={carouselImage2} alt="coudSuite" width={500} />
+                    <Image
+                      src={carouselImage2}
+                      alt="coudSuite"
+                      width={500}
+                      layout="responsive"
+                    />
                   </div>
                   <div>
                     {' '}
-                    <Image src={carouselImage3} alt="front end" width={500} />
+                    <Image
+                      src={carouselImage3}
+                      alt="front end"
+                      width={500}
+                      layout="responsive"
+                    />
                   </div>
                   <div>
                     {' '}
-                    <Image src={carouselImage4} alt="devops" width={500} />
+                    <Image
+                      src={carouselImage4}
+                      alt="devops"
+                      width={500}
+                      layout="responsive"
+                    />
                   </div>
                 </Carousel>
               </div>
