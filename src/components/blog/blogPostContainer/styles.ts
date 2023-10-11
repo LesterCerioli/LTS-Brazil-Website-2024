@@ -34,16 +34,15 @@ export const BlogPostsContainer = styled.div`
 const ImageContainer = styled.div``
 
 export const CarouselStyles = styled.div`
-  width: 500px;
+  max-width: 500px;
   margin-bottom: 150px;
+
   @media (max-width: 390px) {
-    max-heght: 355px;
-    max-heght: 355px;
-    margin-right: 15px;
+    max-width: 355px;
   }
+
   @media (max-width: 320px) {
-    max-heght: 300px;
-    max-heght: 300px;
-    margin-right: 15px;
+    max-width: 300px;
+    margin-left: 30px;
   }
 `

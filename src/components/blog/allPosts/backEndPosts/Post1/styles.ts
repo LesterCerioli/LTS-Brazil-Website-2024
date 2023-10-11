@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const PostStylesMainContainer = styled.div`
-  width: 75vw;
+  max-width: 75vw;
   height: auto;
   display: flex;
   flex-direction: row;
@@ -13,14 +13,22 @@ export const PostStylesMainContainer = styled.div`
   box-shadow: 2px 2px 10px 10px rgba(0, 0, 0, 0.25);
 
   @media (max-width: 390px) {
-    width: 390px;
+    max-width: 390px;
     margin-left: 0px;
     .img {
-      width: 350px;
+      max-width: 350px;
+      max-height: 150px;
+    }
+  }
+  @media (max-width: 320px) {
+    max-width: 320px;
+    margin-left: 0px;
+    .img {
+      max-width: 300px;
       height: 150px;
     }
   }
-`;
+`
 
 export const TextContainer = styled.div`
   h1,
@@ -52,6 +60,20 @@ export const TextContainer = styled.div`
   }
 
   @media (max-width: 390px) {
-    width: 380px;
+    max-width: 380px;
   }
-`;
+  @media (max-width: 320px) {
+    max-width: 320px;
+    margin-right: 15px;
+    h1,
+    h2,
+    h3,
+    h4 {
+      max-width: 300px;
+      margin-top: 45px;
+      margin-bottom: 45px;
+      letter-spacing: 1px;
+      line-height: 25px;
+    }
+  }
+`
