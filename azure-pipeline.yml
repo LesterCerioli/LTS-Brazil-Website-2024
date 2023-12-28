@@ -18,7 +18,7 @@ variables:
   environmentName: 'samplereactapp001'
 
   # Agent VM image name
-  name: 'DK3'
+  vmImage: 'ubuntu-latest'
 
 stages:
 - stage: Build
@@ -27,7 +27,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: $(name)
+      vmImage: $(vmImage)
 
     steps:
     - task: NodeTool@0
