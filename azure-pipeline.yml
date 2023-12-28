@@ -9,16 +9,16 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: '6c7be77e-65ee-4146-bbb6-39424d2f8e62'
+  #azureSubscription: '6c7be77e-65ee-4146-bbb6-39424d2f8e62'
 
   # Web app name
-  webAppName: 'samplereactapp001'
+  #webAppName: 'samplereactapp001'
 
   # Environment name
   environmentName: 'samplereactapp001'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  name: 'DK3'
 
 stages:
 - stage: Build
@@ -27,7 +27,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      vmImage: $(vmImageName)
+      vmImage: $(name)
 
     steps:
     - task: NodeTool@0
