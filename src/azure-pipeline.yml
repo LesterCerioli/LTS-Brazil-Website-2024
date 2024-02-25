@@ -8,7 +8,7 @@ pr:
 jobs:
 - job: Debian
   pool:
-    name: 'DS11'
+    vmImage: 'ubuntu-latest'
   steps:
   - task: NodeTool@0
     inputs:
@@ -29,9 +29,9 @@ jobs:
       npm test
     displayName: "Run npm test"
 
-- job: Linux
+- job: Windows
   pool:
-    vmImage: 'ubuntu-latest'
+    vmImage: 'windows-latest'
   steps:
   - task: NodeTool@0
     inputs:
