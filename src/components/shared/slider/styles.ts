@@ -12,6 +12,11 @@ const bannermove = keyframes`
 export const Container = styled.section`
     width: 100%;
     overflow: hidden;
+
+    @media(max-width: 600px){
+        display: none;
+    }
+
 `
 
 export const SliderContainer = styled.article`
@@ -20,6 +25,10 @@ export const SliderContainer = styled.article`
     overflow: hidden;
     justify-content: center;
     animation: ${bannermove} 20s linear infinite;
+    &:hover{
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+    }
 `
 
 export const Slider = styled.div`
@@ -28,69 +37,31 @@ export const Slider = styled.div`
 
 export const SliderList = styled.ul`
     display: flex;
-    flex-direction: row;
     padding-left: 0;
-    margin: 2.5rem;
-    list-style: none;
+    margin: 1rem 2.5rem 1.5rem 2.5rem;
     gap: 5rem;
 `
 
 export const Slide = styled.li`
-    //width: 100%
-    //perspective: 130px;
+    width: 100%;
+    list-style: none;
+    perspective: 50px;
 `
 
-// img {
-//     height: 100%;
-//     width: 100%;
-//     transition: transform 1s;
-//   }
-  
-//   img:hover{
-//     transform: translateZ(20px);
-//   }
-  
-//   section {
-//     width: 100%;
-//     overflow: hidden;
-//   }
-  
-//   article {
-//     display: flex;
-//     width: 250%;
-//     overflow: hidden;
-//     justify-content: center;
-//     animation: bannermove 20s linear infinite;
-//   }
-  
-//   article:hover {
-//     -webkit-animation-play-state: paused;
-//     animation-play-state: paused;
-//   }
-  
-//   div {
-//     width: 100%;
-//   }
-  
-//   ul {
-//     display: flex;
-//     list-style-type: none;
-//     padding-left: 0;
-//     margin: 2.5rem;
-//     gap: 5rem;
-//   }
-  
-//   li {
-//     width: 100%;
-//     perspective: 130px;
-//   }
-  
-//   @keyframes bannermove {
-//     0% {
-//       transform: translateX(0);
-//     }
-//     100% {
-//       transform: translateX(-50%);
-//     }
-//   }
-  
+export const Img = styled.img`
+    height: 100%;
+    width: 100%;
+    transition: transform 1s;
+    &:hover{
+        transform: translateZ(5px);
+    }
+
+    @media(max-width: 1024px){
+        width: 130%;
+    }
+
+    @media(max-width: 768px){
+        width: 200%;
+    }
+
+`
