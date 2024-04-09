@@ -35,98 +35,104 @@ font-weight: 300;
 line-height: normal;
 `
 
-export const CardsContainer = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 10px 0 10px;
+// export const CardsContainer = styled.div`
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+//     padding: 0 10px 0 10px;
+//     overflow: hidden;
 
-    @media (min-width: 531px) and (max-width: 1083px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+//     @media (min-width: 531px) and (max-width: 1083px) {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//     }
 
-    @media (max-width: 530px) {
-        width: 100%;
-    }
-`
+//     @media (max-width: 530px) {
+//         width: 100%;
+//     }
+// `
 
-export const TopCardsContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    max-width: 100%;
-`
+// export const SliderContainer = styled.div`
+//     display: flex;
+//     width: 250%;
+//     overflow: hidden;
+//     justify-content: center;
+//     animation: bannermove 20s linear infinite;
+//     &:hover{
+//         -webkit-animation-play-state: paused;
+//         animation-play-state: paused;
+//     }
+// `
 
-export const BottomCardsContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    max-width: 100%;
-`
+// export const Slider = styled.div`
+//     width: 100%;
+// `
 
-export const Card = styled.div`
-   margin: 0 10px 10px 10px;
-   max-width: 350px;
-   max-height: 350px;
+// export const List = styled.div`
+//     display: flex;
+//     list-style-type: none;
+//     padding-left: 0;
+//     margin: 2.5rem;
+//     gap: 5rem;
 
-   @media (min-width: 1024px) and (max-width: 1320px) {
-    max-width: 315px;
-   }
-   @media (min-width: 531px) and (max-width: 1300px) {
-    max-height: 320px;
-   }
+//    /* @media (min-width: 1024px) and (max-width: 1320px) {
+//     max-width: 315px;
+//    }
+//    @media (min-width: 531px) and (max-width: 1300px) {
+//     max-height: 320px;
+//    } */
 
-`
+// `
 
-export const CardImage1 = styled.img`
-    max-width: 100%;
-    max-height: 100%;
-
-    @media (max-width: 530px)  {
-        max-width: 100%;
-    }
-`
-export const CardImage2 = styled.img`
-    max-width: 100%;
-    max-height: 100%;
+// export const ListItem = styled.img`
+//      width: 100%;
+//      perspective: 130px;
+//     /* @media (max-width: 530px)  {
+//         max-width: 100%;
+//     } */
+// `
+// export const CardImage2 = styled.img`
+//     max-width: 100%;
+//     max-height: 100%;
    
-    @media (max-width: 530px)  {
-        max-width: 100%;
-    }
-`
-export const CardImage3 = styled.img`
-    max-width: 100%;
-    max-height: 100%;
+//     @media (max-width: 530px)  {
+//         max-width: 100%;
+//     }
+// `
+// export const CardImage3 = styled.img`
+//     max-width: 100%;
+//     max-height: 100%;
 
-    @media (max-width: 530px)  {
-        max-width: 100%;
-    }
-`
-export const CardImage4 = styled.img`
-    max-width: 100%;
-    max-height: 100%;
+//     @media (max-width: 530px)  {
+//         max-width: 100%;
+//     }
+// `
+// export const CardImage4 = styled.img`
+//     max-width: 100%;
+//     max-height: 100%;
 
-    @media (max-width: 1023px)  {
-        display: none;
-    }
-`
-export const CardImage5 = styled.img`
-    max-width: 100%;
-    max-height: 100%;
+//     @media (max-width: 1023px)  {
+//         display: none;
+//     }
+// `
+// export const CardImage5 = styled.img`
+//     max-width: 100%;
+//     max-height: 100%;
 
-    @media (max-width: 1023px)  {
-        display: none;
-    }
-`
-export const CardImage6 = styled.img`
-    max-width: 100%;
-    max-height: 100%;
+//     @media (max-width: 1023px)  {
+//         display: none;
+//     }
+// `
+// export const CardImage6 = styled.img`
+//     max-width: 100%;
+//     max-height: 100%;
 
-    @media (max-width: 1023px)  {
-        display: none;
-    }
-`
+//     @media (max-width: 1023px)  {
+//         display: none;
+//     }
+// `
 
 export const TextContainer = styled.div`
     max-width: 100%;
