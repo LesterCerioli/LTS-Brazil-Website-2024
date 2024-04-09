@@ -1,6 +1,8 @@
 "use client"
+import Image from "next/image";
 import * as S from "./styles";
 import React from "react"
+import { Slider } from "@/components/shared/slider/slider";
 
   export function ServicesSection() {
     
@@ -10,7 +12,9 @@ import React from "react"
                 <S.Title>Serviços</S.Title>
                 <S.Subtitle>Visite nossa página e explore a variedade de serviços que oferecemos para atender às suas necessidades.</S.Subtitle>
             </S.TitleContainer>
-            <S.CardsContainer>
+
+            <Slider />
+            {/* <S.CardsContainer>
                 <S.TopCardsContainer>
                     <S.Card>
                         <S.CardImage1 src="assets/imagesHome/services_card_1.svg"/>
@@ -51,7 +55,7 @@ import React from "react"
                         </S.TextContainer>
                     </S.Card>
                 </S.BottomCardsContainer>
-            </S.CardsContainer>
+            </S.CardsContainer> */}
             <S.ButtonContainer>
                 <S.Button>
                     <S.ButtonText href="services">Saiba mais</S.ButtonText>
