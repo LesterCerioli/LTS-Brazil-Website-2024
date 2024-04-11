@@ -1,10 +1,3 @@
-import slide1 from './assets/imagesHome/services_card_1.svg'
-import slide2 from '../../../../../public/assets/imagesHome/services_card_1.svg'
-import slide3 from '../../../../../public/assets/imagesHome/services_card_1.svg'
-import slide4 from '../../../../../public/assets/imagesHome/services_card_1.svg'
-import slide5 from '../../../../../public/assets/imagesHome/services_card_1.svg'
-import slide6 from '../../../../../public/assets/imagesHome/services_card_1.svg'
-
 export const homePageSlider = [
   {id: 1, src: "./assets/imagesHome/services_card_1.svg"},
   {id: 2, src: "./assets/imagesHome/services_card_2.svg"},
