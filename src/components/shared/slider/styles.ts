@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import Link from "next/link";
 
 const scroll = keyframes`
     to {
@@ -32,6 +33,7 @@ export const ScrollerInner = styled.div`
     height: fit-content;
     width: max-content;
     flex-wrap: nowrap;
+    align-items: center;
     animation: ${scroll} var(--_animation-duration, 40s)
         var(--_animation-direction, forwards) linear infinite;
     &:hover{
@@ -44,4 +46,8 @@ export const Img = styled.img`
     /* &:hover{
         transform: translateZ(5px);
      } */
+`
+
+export const NavLink = styled(Link)`
+    pointer-events: ${props => props.href == "#" ? 'none' : 'auto' };
 `
