@@ -1,31 +1,54 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const slideRight = keyframes`
+	0% {
+		opacity: 0;
+		transform: translateX(-450px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+`
+const slideLeft = keyframes`
+	0% {
+		opacity: 0;
+		transform: translateX(450px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+`
 
 export const Container = styled.section`
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
 `
 
 export const TitleContainer = styled.div`
-width: 66%;
-display: flex;
-margin: 20px;
+    width: 66%;
+    display: flex;
+    margin: 20px;
 
-@media (max-width: 1023px) {
-    width: 95%;
-    margin: 20px 0 20px 0;
-}
+    @media (max-width: 1023px) {
+        width: 95%;
+        margin: 20px 0 20px 0;
+    }
 `
 
 export const Title = styled.h3`
-color: #000;
-font-family: Rubik;
-font-size: 48px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-margin-bottom: 5px;
+    color: #000;
+    font-family: Rubik;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 5px;
 `
 
 export const CardsMainContainer = styled.div`
@@ -49,7 +72,11 @@ export const CardsContainer = styled.div`
 
 export const CardImage1 = styled.img`
     margin: 10px;
-    max-width: 49%; 
+    max-width: 49%;
+    animation: slide 1s ease 0s 1 normal forwards;
+    opacity: 0;
+    animation-delay: 2s;
+    animation-name: ${slideRight};
     
     @media (max-width: 1023px) {
         margin: 0;
@@ -58,6 +85,10 @@ export const CardImage1 = styled.img`
 export const CardImage2 = styled.img`
     margin: 10px;
     max-width: 49%;
+    animation: slide 1s ease 0s 1 normal forwards;
+    opacity: 0;
+    animation-delay: 2s;
+    animation-name: ${slideLeft};
     
     @media (max-width: 1023px) {
         margin: 0;
@@ -77,18 +108,17 @@ export const ButtonContainer = styled.div`
 `
 
 export const Button = styled.button`
-width: 210px;
-height: 50px;
-flex-shrink: 0;
-background: #5050EA;
-
+    width: 210px;
+    height: 50px;
+    flex-shrink: 0;
+    background: #5050EA;
 `
 
 export const ButtonText = styled.a`
-color: #FFF;
-font-family: Montserrat;
-font-size: 18px;
-font-weight: 600;
-line-height: normal;
-text-decoration: none;
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    text-decoration: none;
 `

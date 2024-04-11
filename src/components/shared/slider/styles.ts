@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 const scroll = keyframes`
     to {
-        transform: translate(calc(-50% - 2.5rem));
+        transform: translate(calc(-50%));
     }
 `
 
@@ -41,8 +41,7 @@ export const ScrollerInner = styled.div`
 `
 
 export const Img = styled.img`
-    transition: transform 1s;
-    &:hover{
-         perspective: 100px;
-     }
+    /* &:hover{
+        transform: translateZ(5px);
+     } */
 `

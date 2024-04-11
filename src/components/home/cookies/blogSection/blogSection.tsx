@@ -1,6 +1,8 @@
 "use client"
+import { Slider } from "@/components/shared/slider/slider";
 import * as S from "./styles";
 import React from "react"
+import { homePageBlogSlider } from "@/components/shared/slider/helper/imageConstants";
 
   export function BlogSection() {
     
@@ -9,7 +11,10 @@ import React from "react"
             <S.TitleContainer>
                 <S.Title>Blog</S.Title>
             </S.TitleContainer>
-            <S.CardsMainContainer>
+
+            <Slider data={homePageBlogSlider}/>
+
+            {/* <S.CardsMainContainer>
                 <S.CardsContainer>
                     <S.LeftCardsContainer>
                         <S.CardImage1 src="assets/imagesHome/blog_card_1.svg"/>
@@ -20,7 +25,8 @@ import React from "react"
                         <S.CardImage4 src="assets/imagesHome/blog_card_4.svg"/>
                     </S.RightCardsContainer>   
                 </S.CardsContainer>
-            </S.CardsMainContainer>
+            </S.CardsMainContainer> */}
+            
             <S.ButtonContainer>
                 <S.Button>
                     <S.ButtonText href="blog">Saiba mais</S.ButtonText>
