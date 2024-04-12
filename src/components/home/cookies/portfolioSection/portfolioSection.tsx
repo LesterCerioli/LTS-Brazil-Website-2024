@@ -1,8 +1,6 @@
 "use client"
-import { Slider } from "@/components/shared/slider/slider";
 import * as S from "./styles";
-import React from "react"
-import { homePagePortfolioSlider } from "@/components/shared/slider/helper/imageConstants";
+import React from "react";
 
   export function PortfolioSection() {
     
@@ -13,9 +11,7 @@ import { homePagePortfolioSlider } from "@/components/shared/slider/helper/image
                 <S.Subtitle>Visite nossa página e explore a variedade de serviços que oferecemos para atender às suas necessidades.</S.Subtitle>
             </S.TitleContainer>
 
-            <Slider data={homePagePortfolioSlider} />
-
-            {/* <S.CardsMainContainer>
+            <S.CardsMainContainer>
                 <S.CardsContainer>
                     <S.LeftCardsContainer>
                         <S.CardImage1 src="assets/imagesHome/portfolio_card_1.svg"/>
@@ -26,7 +22,7 @@ import { homePagePortfolioSlider } from "@/components/shared/slider/helper/image
                         <S.CardImage4 src="assets/imagesHome/portfolio_card_4.svg"/>
                     </S.RightCardsContainer>   
                 </S.CardsContainer>
-            </S.CardsMainContainer> */}
+            </S.CardsMainContainer>
             
             <S.ButtonContainer>
                 <S.Button>

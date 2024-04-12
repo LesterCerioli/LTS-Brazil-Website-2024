@@ -54,21 +54,21 @@ export const SubtitleContainer = styled.div`
     margin-bottom: 20px;
 
     @media (max-width: 1023px) {
-    margin: 15px 0 15px 0;
-    max-width: 90% ;
+        margin: 15px 0 15px 0;
+        max-width: 90% ;
     }
 
 `
 
 export const Subtitle = styled.h6`
-color: #000;
-font-family: Montserrat;
-font-size: 21px;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
-text-align: justify;
-margin-top: 10px;
+    color: #000;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-style: oblique;
+    font-weight: 300;
+    line-height: normal;
+    text-align: justify;
+    margin-top: 10px;
 `
 
 export const ButtonContainer = styled.div`
