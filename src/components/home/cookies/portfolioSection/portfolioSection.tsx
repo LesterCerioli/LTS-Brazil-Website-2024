@@ -1,6 +1,6 @@
 "use client"
 import * as S from "./styles";
-import React from "react"
+import React from "react";
 
   export function PortfolioSection() {
     
@@ -10,6 +10,7 @@ import React from "react"
                 <S.Title>Portfólio</S.Title>
                 <S.Subtitle>Visite nossa página e explore a variedade de serviços que oferecemos para atender às suas necessidades.</S.Subtitle>
             </S.TitleContainer>
+
             <S.CardsMainContainer>
                 <S.CardsContainer>
                     <S.LeftCardsContainer>
@@ -22,6 +23,7 @@ import React from "react"
                     </S.RightCardsContainer>   
                 </S.CardsContainer>
             </S.CardsMainContainer>
+            
             <S.ButtonContainer>
                 <S.Button>
                     <S.ButtonText href="portfolio">Saiba mais</S.ButtonText>

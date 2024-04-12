@@ -13,7 +13,6 @@ import cardCloudSuite from '@/assets/imagesServices/cloudSuite.png';
 import cardDevMobile from '@/assets/imagesServices/devMobile.png';
 import cardDevWin from '@/assets/imagesServices/devWindows.png';
 
-
 export const services = [
   {
     title: "Desenvolvimento de Software",
