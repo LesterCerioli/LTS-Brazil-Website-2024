@@ -1,18 +1,20 @@
-# Use a imagem oficial do Node.js como base
-FROM node:latest
+# Use uma imagem oficial do Node.js como base (versão específica para evitar problemas de compatibilidade)
+FROM node:16
 
 # Define o diretório de trabalho dentro do contêiner
 WORKDIR /app
 
 # Copia o arquivo de dependências para o diretório de trabalho
-COPY package.json ./
-COPY package-lock.json ./
+COPY package.json package-lock.json ./
 
 # Instala as dependências
 RUN npm install
 
 # Copia todos os arquivos do diretório atual para o diretório de trabalho
 COPY . .
+
+# Verifica se o TypeScript está configurado corretamente
+RUN npm run lint
 
 # Compila o código TypeScript
 RUN npm run build

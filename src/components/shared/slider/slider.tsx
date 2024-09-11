@@ -1,55 +1,26 @@
+import { ImageContainer } from "@/components/crmServices/styles";
 import * as S from "./styles";
 
-export function Slider(){
-    return (
-        <S.Container>
-            <S.SliderContainer>
-                <S.Slider>
-                    <S.SliderList>
-                        <S.Slide>
-                            <S.Img src="assets/imagesHome/services_card_1.svg"/>
-                        </S.Slide>
-                        <S.Slide>
-                            <S.Img src="assets/imagesHome/services_card_2.svg"/>
-                        </S.Slide>
-                        <S.Slide>
-                            <S.Img src="assets/imagesHome/services_card_3.svg"/>
-                        </S.Slide>
-                        <S.Slide>
-                            <S.Img src="assets/imagesHome/services_card_4.svg"/>
-                        </S.Slide>
-                        <S.Slide>
-                            <S.Img src="assets/imagesHome/services_card_5.svg"/>
-                        </S.Slide>
-                        <S.Slide>
-                            <S.Img src="assets/imagesHome/services_card_6.svg"/>
-                        </S.Slide>
-                    </S.SliderList>
-                </S.Slider>
-                <S.Slider>
-                    <S.SliderList>
-                        <S.Slide>
-                            <S.Img src="assets/imagesHome/services_card_1.svg"/>
-                        </S.Slide>
-                        <S.Slide>
-                            <S.Img src="assets/imagesHome/services_card_2.svg"/>
-                        </S.Slide>
-                        <S.Slide>
-                            <S.Img src="assets/imagesHome/services_card_3.svg"/>
-                        </S.Slide>
-                        <S.Slide>
-                            <S.Img src="assets/imagesHome/services_card_4.svg"/>
-                        </S.Slide>
-                        <S.Slide>
-                            <S.Img src="assets/imagesHome/services_card_5.svg"/>
-                        </S.Slide>
-                        <S.Slide>
-                            <S.Img src="assets/imagesHome/services_card_6.svg"/>
-                        </S.Slide>
-                    </S.SliderList>
-                </S.Slider>
-            </S.SliderContainer>
-        </S.Container>
+interface ImageProvider{
+  data: Array<Image>;
+}
 
+interface Image{
+  id: number;
+  src: string;
+  path: string;
+} 
+
+export function Slider({data}: ImageProvider){
+    return (
+      <S.Scroller data-animated="true" data-direction="left" data-speed="fast">
+        <S.ScrollerInner className="scroller__inner">
+            {data.map(({id, src, path}: Image) => (
+              <S.NavLink href={path} key={id}>
+                 <S.Img src={src}/>
+              </S.NavLink>
+            ))};
+        </S.ScrollerInner>
+      </S.Scroller>
     )
 }
