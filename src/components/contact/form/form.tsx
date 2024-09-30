@@ -67,9 +67,27 @@ export default function Form() {
     if (isValidForm(data)) {
       abrirModal();
       setIsSending(true);
+
+      //Sending data for API
+      const response = await fetch('/api/saveFormData', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      if (response.ok) {
+        console.log('Dadso enviados com sucesso.');
+      }
+      else
+      {
+        console.error('Erro ao enviar dados');
+      }
+
       await new Promise((resolve) => setTimeout(resolve, 2000));
       setModalIsOpen(false);
       setIsSending(false);
+
     } else {
       // Exibir erros obrigatórios
       setShowRequiredErrors(true);
