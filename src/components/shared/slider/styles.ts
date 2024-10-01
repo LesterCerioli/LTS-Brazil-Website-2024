@@ -1,67 +1,57 @@
 import styled, { keyframes } from "styled-components";
+import Link from "next/link";
 
-const bannermove = keyframes`
-    0% {
-       transform: translateX(0);
+const scroll = keyframes`
+    to {
+        transform: translate(calc(-50%));
     }
-    100% {
-       transform: translateX(-50%);
-    }
-`
+`;
 
-export const Container = styled.section`
-    width: 100%;
+export const Scroller = styled.div`
     overflow: hidden;
-
-    @media(max-width: 600px){
-        display: none;
+    max-width: 100%;
+    &[data-direction="right"] {
+        --_animation-direction: reverse;
     }
+    &[data-direction="left"] {
+        --_animation-direction: forwards;
+    }
+    &[data-speed="fast"] {
+        --_animation-duration: 20s;
+    }
+    &[data-direction="slow"] {
+        --_animation-duration: 60s;
+    }
+`;
 
-`
-
-export const SliderContainer = styled.article`
+export const ScrollerInner = styled.div`
+    padding-block: 1rem;
     display: flex;
-    width: 250%;
-    overflow: hidden;
-    justify-content: center;
-    animation: ${bannermove} 20s linear infinite;
-    &:hover{
+    gap: 5rem;
+    flex-wrap: wrap;
+    height: fit-content;
+    width: max-content;
+    flex-wrap: nowrap;
+    align-items: center;
+    animation: ${scroll} var(--_animation-duration, 40s)
+        var(--_animation-direction, forwards) linear infinite;
+    &:hover {
         -webkit-animation-play-state: paused;
         animation-play-state: paused;
     }
-`
-
-export const Slider = styled.div`
-    width: 100%;
-`
-
-export const SliderList = styled.ul`
-    display: flex;
-    padding-left: 0;
-    margin: 1rem 2.5rem 1.5rem 2.5rem;
-    gap: 5rem;
-`
-
-export const Slide = styled.li`
-    width: 100%;
-    list-style: none;
-    perspective: 50px;
-`
+`;
 
 export const Img = styled.img`
-    height: 100%;
-    width: 100%;
-    transition: transform 1s;
-    &:hover{
-        transform: translateZ(5px);
+    width: 400px;
+    margin-right: 30px;
+    text-align: center;
+    padding: 50px 0;
+    transition: transform 0.3s ease;
+    &:hover {
+        transform: scale(1.1);
     }
+`;
 
-    @media(max-width: 1024px){
-        width: 130%;
-    }
-
-    @media(max-width: 768px){
-        width: 200%;
-    }
-
-`
+export const NavLink = styled(Link)`
+    pointer-events: ${props => (props.href === "#" ? "none" : "auto")};
+`;
