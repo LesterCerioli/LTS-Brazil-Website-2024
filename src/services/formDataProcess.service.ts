@@ -61,6 +61,25 @@ const sendLogToApi = async () => {
     }
 };
 
+// Função para enviar dados do formulário para a API
+const sendFormDataToApi = async (formData: any) => {
+    const apiUrl = '/api/saveFormData'; // URL do endpoint da API
+    try {
+        const response = await axios.post(apiUrl, formData, {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        console.log('Dados do formulário enviados com sucesso:', response.data);
+    } catch (error) {
+        if (axios.isAxiosError(error)) {
+            console.error('Erro ao enviar dados do formulário para a API:', error.message);
+        } else {
+            console.error('Erro desconhecido:', error);
+        }
+    }
+};
+
 // Função para escrever logs em arquivo de forma segura
 const writeLogsToFile = () => {
     const logStream = fs.createWriteStream(logFilePath, { flags: 'a' });
@@ -85,3 +104,5 @@ const writeLogsToFile = () => {
 enqueueLog('Processo iniciado');
 // Para forçar a escrita no arquivo a qualquer momento (opcional)
 setInterval(writeLogsToFile, 60000); // Escreve no arquivo a cada 60 segundos
+
+export { enqueueLog, sendFormDataToApi };

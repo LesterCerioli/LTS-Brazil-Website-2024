@@ -1,11 +1,7 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import * as S from "./styles";
-import { BsWhatsapp } from "react-icons/bs";
-import MapLink from "./mapLink/mapLink";
-import { MdEmail } from "react-icons/md";
-import { BsTelephoneFill } from "react-icons/bs";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -13,16 +9,15 @@ import Modal from "react-modal";
 import { GoIssueClosed } from "react-icons/go";
 
 const schemaForm = z.object({
-  dataClient: z.object({
-    name: z.string().min(10, "Informe seu nome completo"),
-    email: z.string().min(6, "Informe seu e-mail").email("Email inválido"),
-    tel: z
-      .string()
-      .max(12)
-      .regex(/^(\(?\d{2}\)?\s?)?(\d{4,5}-?\d{4})$/, {
-        message: "Informe um telefone válido",
-      }),
-  }),
+  name: z.string().min(10, "Informe seu nome completo"),
+  email: z.string().min(6, "Informe seu e-mail").email("Email inválido"),
+  telephone: z
+    .string()
+    .max(12)
+    .regex(/^(\(?\d{2}\)?\s?)?(\d{4,5}-?\d{4})$/, {
+      message: "Informe um telefone válido",
+    }),
+  message: z.string().min(1, "Informe sua mensagem"),
 });
 
 type FormProps = z.infer<typeof schemaForm>;
@@ -30,7 +25,6 @@ type FormProps = z.infer<typeof schemaForm>;
 export default function Form() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [isSending, setIsSending] = useState(false);
-  const [showRequiredErrors, setShowRequiredErrors] = useState(false);
 
   const {
     handleSubmit,
@@ -40,32 +34,35 @@ export default function Form() {
   } = useForm<FormProps>({
     resolver: zodResolver(schemaForm),
     defaultValues: {
-      dataClient: {
-        name: "",
-        email: "",
-        tel: "",
-      },
+      name: "",
+      email: "",
+      telephone: "",
+      message: "",
     },
   });
 
   const handleFormSubmit = async (data: FormProps) => {
     setIsSending(true);
-    const response = await fetch('/api/saveFormData', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
+    try {
+      const response = await fetch('http://localhost:3033/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
 
-    if (response.ok) {
-      setModalIsOpen(true);
-    } else {
-      console.error('Erro ao enviar dados');
+      if (response.ok) {
+        setModalIsOpen(true);
+      } else {
+        console.error('Erro ao enviar dados');
+      }
+    } catch (error) {
+      console.error('Erro ao enviar dados:', error);
+    } finally {
+      setIsSending(false);
+      reset();
     }
-
-    setIsSending(false);
-    reset();
   };
 
   return (
@@ -78,42 +75,53 @@ export default function Form() {
 
         <S.Data>
           <input
-            {...register("dataClient.name")}
+            {...register("name")}
             type="text"
             placeholder="Nome"
             required
           />
-          {errors.dataClient?.name && (
+          {errors.name && (
             <p style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
-              {errors.dataClient.name.message}
+              {errors.name.message}
             </p>
           )}
           
           <input
-            {...register("dataClient.email")}
+            {...register("email")}
             type="email"
             placeholder="Email"
             required
           />
-          {errors.dataClient?.email && (
+          {errors.email && (
             <p style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
-              {errors.dataClient.email.message}
+              {errors.email.message}
             </p>
           )}
 
           <input
-            {...register("dataClient.tel")}
+            {...register("telephone")}
             type="tel"
             placeholder="Telefone"
             required
           />
-          {errors.dataClient?.tel && (
+          {errors.telephone && (
             <p style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
-              {errors.dataClient.tel.message}
+              {errors.telephone.message}
             </p>
           )}
 
-          <textarea rows={8} cols={70} id="myTextarea" placeholder="Mensagem"></textarea>
+          <textarea
+            {...register("message")}
+            rows={8}
+            cols={70}
+            placeholder="Mensagem"
+            required
+          ></textarea>
+          {errors.message && (
+            <p style={{ color: "red", fontSize: "10px", textAlign: "left" }}>
+              {errors.message.message}
+            </p>
+          )}
         </S.Data>
 
         <S.FirstButton>
