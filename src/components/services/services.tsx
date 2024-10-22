@@ -2,8 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import * as S from "./styles";
-
-import { servicesPageData } from "./helper/constant";
+import { Slider } from "../shared/slider/slider";
+import { servicePageSlider } from "../shared/slider/helper/imageConstants";
 
 interface Service {
   id: number;
@@ -25,8 +25,9 @@ const Services: React.FC = () => {
         junte-se à revolução digital.
       </S.Subtitle>
 
-      <S.Section>
-        {servicesPageData.map((service: Service) => (
+     
+        <Slider data={servicePageSlider} />
+        {/* {servicesPageData.map((service: Service) => (
           <div key={service.id}>
             <a href={service.link}>
               <h2>{service.title}</h2>
@@ -40,8 +41,8 @@ const Services: React.FC = () => {
               />
             </a>
           </div>
-        ))}
-      </S.Section>
+        ))} */}
+ 
     </S.Container>
   );
 };

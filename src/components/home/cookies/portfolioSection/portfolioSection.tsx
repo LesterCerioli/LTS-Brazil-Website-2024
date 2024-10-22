@@ -1,34 +1,73 @@
-"use client"
-import * as S from "./styles";
-import React from "react"
+import React, { useEffect, useRef, useState } from 'react';
+import * as S from './styles';
 
-  export function PortfolioSection() {
-    
-    return (
-        <S.Container>
-            <S.TitleContainer>
-                <S.Title>Portfólio</S.Title>
-                <S.Subtitle>Visite nossa página e explore a variedade de serviços que oferecemos para atender às suas necessidades.</S.Subtitle>
-            </S.TitleContainer>
-            <S.CardsMainContainer>
-                <S.CardsContainer>
-                    <S.LeftCardsContainer>
-                        <S.CardImage1 src="assets/imagesHome/portfolio_card_1.svg"/>
-                        <S.CardImage2 src="assets/imagesHome/portfolio_card_2.svg"/>
-                    </S.LeftCardsContainer>
-                    <S.RightCardsContainer>
-                        <S.CardImage3 src="assets/imagesHome/portfolio_card_3.svg"/>
-                        <S.CardImage4 src="assets/imagesHome/portfolio_card_4.svg"/>
-                    </S.RightCardsContainer>   
-                </S.CardsContainer>
-            </S.CardsMainContainer>
-            <S.ButtonContainer>
-                <S.Button>
-                    <S.ButtonText href="portfolio">Saiba mais</S.ButtonText>
-                </S.Button>
-            </S.ButtonContainer>
-        </S.Container>
-        
-    );
-}
-            
+const useOnScreen = (ref: React.RefObject<HTMLElement>) => {
+  const [isIntersecting, setIntersecting] = useState(false);
+
+  const observer = new IntersectionObserver(
+    ([entry]) => setIntersecting(entry.isIntersecting),
+    { threshold: 0.1 } 
+  );
+
+  useEffect(() => {
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [ref]);
+
+  return isIntersecting;
+};
+
+const PortfolioSection: React.FC = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const onScreen = useOnScreen(ref);
+
+  useEffect(() => {
+    const elements = document.querySelectorAll('.animated');
+    if (onScreen) {
+      elements.forEach((el) => el.classList.add('animate'));
+    } else {
+      elements.forEach((el) => el.classList.remove('animate'));
+    }
+  }, [onScreen]);
+
+  return (
+    <S.Container ref={ref}>
+      <S.TitleContainer>
+        <S.Title>Our Portfolio</S.Title>
+        <S.Subtitle>Check out our recent works</S.Subtitle>
+      </S.TitleContainer>
+      <S.CardsMainContainer>
+        <S.CardsContainer>
+          <S.LeftCardsContainer>
+            <S.Card>
+              <h3>HOSPITAIS</h3>
+              <S.CardImage1 className="animated" src="assets/imagesHome/hospital.svg" alt="Card 1" />
+            </S.Card>
+            <S.Card>
+              <h3>ESCRITORIOS DE ADVOCACIA</h3>
+              <S.CardImage2 className="animated" src="assets/imagesHome/advocate.svg" alt="Card 2" />
+            </S.Card>
+          </S.LeftCardsContainer>
+          <S.RightCardsContainer>
+            <S.Card>
+              <h3>EMPRESAS DE CONTABILIDADE</h3>
+              <S.CardImage3 className="animated" src="assets/imagesHome/contability.svg" alt="Card 3" />
+            </S.Card>
+            <S.Card>
+              <h3>BANCOS FINANCEIROS</h3>
+              <S.CardImage4 className="animated" src="assets/imagesHome/bank.svg" alt="Card 4" />
+            </S.Card>
+          </S.RightCardsContainer>
+        </S.CardsContainer>
+      </S.CardsMainContainer>
+    </S.Container>
+  );
+};
+
+export default PortfolioSection;

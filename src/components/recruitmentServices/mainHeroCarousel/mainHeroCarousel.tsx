@@ -4,12 +4,22 @@ import { Carousel } from 'react-responsive-carousel'
 import * as S from './styles'
 
 import Image from 'next/image'
-import RH1 from '@/assets/imagesRecruitmentServices/recruitment_hero1.jpg'
-import RH2 from '@/assets/imagesRecruitmentServices/recruitment_hero2.jpg'
-import RH3 from '@/assets/imagesRecruitmentServices/recruitment_hero3.jpg'
-import RH4 from '@/assets/imagesRecruitmentServices/recruitment_hero4.jpg'
-import RH5 from '@/assets/imagesRecruitmentServices/recruitment_hero5.jpg'
-import RH6 from '@/assets/imagesRecruitmentServices/recruitment_hero6.jpg'
+
+import RH1 from '@/assets/imagesServices/thumb_food.svg'
+import RH2 from '@/assets/imagesServices/thumb_food.svg'
+import RH3 from '@/assets/imagesServices/thumb_food.svg'
+import RH4 from '@/assets/imagesServices/thumb_food.svg'
+import RH5 from '@/assets/imagesServices/thumb_food.svg'
+import RH6 from '@/assets/imagesServices/thumb_food.svg'
+
+//AS imagens abaixo não existem mais hoje (15/04/2024)
+
+// import RH1 from '@/assets/imagesRecruitmentServices/recruitment_hero1.jpg'
+// import RH2 from '@/assets/imagesRecruitmentServices/recruitment_hero2.jpg'
+// import RH3 from '@/assets/imagesRecruitmentServices/recruitment_hero3.jpg'
+// import RH4 from '@/assets/imagesRecruitmentServices/recruitment_hero4.jpg'
+// import RH5 from '@/assets/imagesRecruitmentServices/recruitment_hero5.jpg'
+// import RH6 from '@/assets/imagesRecruitmentServices/recruitment_hero6.jpg'
 
 class MainHeroCarousel extends Component {
   render() {

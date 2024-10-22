@@ -6,7 +6,7 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   margin: 0;
 
   @media (max-width: 425px) {
@@ -45,9 +45,10 @@ export const Subtitle = styled.h2`
     background: #a9a9a9;
     margin: 20px;
     border-radius: 35px;
-    max-width: 90%;
-    max-height: 90%;
-    padding: 18px;
+    max-width: 100%;
+    max-height: 100%;
+    text-align: left;
+    padding-bottom: 0px;
   }
 `;
 
