@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Section } from "../../../app/(pages)/aboutUs/styles";
 
 export const MainHero = styled.section`
   align-items: center;

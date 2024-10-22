@@ -10,7 +10,6 @@ import imgServicesServices from "@/assets/imagesServices/services_services_hero.
 
 export const servicesPageData = [
   
-  
   {
     id: 1,
     title: "Desenvolvimento Web de portais para restaurante",

@@ -4,128 +4,106 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+  padding: 0 1rem;
+  margin: 4rem 0;
+  min-height: 100vh;
 `;
 
 export const Title = styled.div`
   h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 3.4rem;
-    margin-top: 8rem;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    text-align: center;
     color: #021F3E;
-    font-weight: 400;
+    font-weight: bold;
   }
 
   .hline {
     border-bottom: 2px solid lightgray;
-    margin: 1rem 7rem;
-    margin-bottom: 4rem;
+    margin: 0 1rem;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     h1 {
-      margin: 0 auto;
-      font-size: 30px;
+      font-size: 2rem;
+      margin: 1.5rem 0;
     }
   }
 `;
 
-export const Section = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 3rem 6rem;
-  gap: 6rem;
-  font-weight: 400;
-
-  @media screen and (max-width: 600px) {
-    flex-direction: column;
-
-    p {
-      margin: 0 8rem;
-      font-size: 1.4rem;
-    }
-  }
-
-`;
-
-export const SectionContent = styled.div`
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
-  margin-bottom: 8rem;
-
-   @media screen and (max-width: 600px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 1rem auto;
-    
-  }
-`;
-
-export const SecondComponent = styled.div`
-  display: flex;
-  justify-content: center;
-  background-color: #F6F6F6;
-  width: 100%;
-
-  
-`;
-
-export const SecondTitle = styled.div`
-  h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 3.4rem;
-    margin-top: 5rem;
-    color: #021F3E;
-
-    @media screen and (max-width: 600px) {
-      width: 80%;
-      flex-wrap: wrap;
-      font-size: 30px;
-      margin: 1rem auto;
-      text-align: center;
-    }
-  }
-
-  
-
-  .htowline {
-    border-bottom: 2px solid lightgray;
-    margin: 1rem 40rem;
-    margin-bottom: 5rem;
-
-    @media screen and (max-width: 600px) {
-      margin: 1rem auto;
-    }
-  }
-`;
-
-export const SecondElement = styled.div`
+export const ImgContainer = styled.div`
   display: flex;
   align-items: center;
-  margin: 2rem 6rem;
-  gap: 6rem;
+  justify-content: center;
+  margin: 2rem 0;
+`;
 
-  @media screen and (max-width: 600px) {
-    flex-direction: column;
-    text-align: center;
-    margin: 0 auto;
+export const BigCardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;
+
+export const BigCard = styled.div`
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1.5rem; 
+  background-color: #f9f9f9;
+  font-size: 1.5rem; 
+
+  @media screen and (max-width: 800px) {
+    padding: 1rem; 
+    font-size: 1rem; 
   }
 `;
 
-export const TextElement = styled.div`
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
+export const SmallCardsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+  margin: auto auto; 
 
-  @media screen and (max-width: 600px) {
-    flex-direction: column;
-
-    p {
-      margin: 0 2.3rem;
-      font-size: 1.4rem;
-    }
+  @media screen and (max-width: 800px) {
+    gap: 1rem; 
+    margin: 0; 
   }
+`;
+
+export const SmallCard = styled.div`
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 1rem; 
+  background-color: #f9f9f9;
+  font-size: 1rem; 
+
+  @media screen and (max-width: 800px) {
+    padding: 1rem; 
+  }
+`;
+
+export const SmallTitle = styled.h5`
+  margin-bottom: 0.5rem;
+`;
+
+export const ContainerCards = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 3rem;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 2rem;
+  }
+`;
+
+export const CardDown = styled.div`
+  display: grid;
+  font-size: 2rem;
+  margin: 2rem;
 `;

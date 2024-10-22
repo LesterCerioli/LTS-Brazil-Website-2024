@@ -72,12 +72,8 @@ export const CardsContainer = styled.div`
 
 export const CardImage1 = styled.img`
     margin: 10px;
-    max-width: 49%;
-    animation: slide 1s ease 0s 1 normal forwards;
-    opacity: 0;
-    animation-delay: 2s;
-    animation-name: ${slideRight};
-
+    max-width: 49%; 
+    
     @media (max-width: 1023px) {
         margin: 0;
     }
@@ -85,11 +81,7 @@ export const CardImage1 = styled.img`
 export const CardImage2 = styled.img`
     margin: 10px;
     max-width: 49%;
-    animation: slide 1s ease 0s 1 normal forwards;
-    opacity: 0;
-    animation-delay: 2s;
-    animation-name: ${slideLeft};
-
+    
     @media (max-width: 1023px) {
         margin: 0;
     }
