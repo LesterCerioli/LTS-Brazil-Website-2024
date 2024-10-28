@@ -31,6 +31,7 @@ import { CgClose } from 'react-icons/cg';
               <S.Link href="contact">Contato</S.Link>
               <S.Link href="aboutUs">Sobre-nós</S.Link>
               <S.Link href="blog">Blog</S.Link>
+              <S.Link href="login">Login</S.Link>
               {isMenuOpen && (
                 <S.CloseButton onClick={toggleMenu}>
                   <CgClose />

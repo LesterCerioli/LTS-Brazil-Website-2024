@@ -11,12 +11,10 @@ interface Post {
 let posts: Post[] = [];
 const validCategories = ['backend', 'frontend', 'devOps'];
 
-
 export async function POST(request: Request): Promise<NextResponse> {
     try {
         const data = await request.json().catch(() => null) as { title: string, content: string, category: string } | null;
 
-        
         if (!data || !data.title || !data.content || !data.category) {
             return NextResponse.json(
                 { message: 'Title, content, and category are required.' },
@@ -24,7 +22,6 @@ export async function POST(request: Request): Promise<NextResponse> {
             );
         }
 
-        
         if (!validCategories.includes(data.category)) {
             return NextResponse.json(
                 { message: `Invalid category. Please choose from: ${validCategories.join(', ')}.` },
@@ -32,17 +29,17 @@ export async function POST(request: Request): Promise<NextResponse> {
             );
         }
 
-        
+        // Define a URL com base na categoria
         let postUrl = '';
         switch (data.category) {
             case 'backend':
-                postUrl = `https://lts-brazil-website-2024.vercel.app/blog/posts/backend`;
+                postUrl = `http://localhost:3000/blog/posts/backend`;
                 break;
             case 'frontend':
-                postUrl = `https://lts-brazil-website-2024.vercel.app/blog/posts/frontend`;
+                postUrl = `http://localhost:3000/blog/posts/frontend`;
                 break;
             case 'devOps':
-                postUrl = `https://lts-brazil-website-2024.vercel.app/blog/posts/devOps`;
+                postUrl = `http://localhost:3000/blog/posts/devOps`;
                 break;
         }
 
@@ -67,7 +64,6 @@ export async function POST(request: Request): Promise<NextResponse> {
         );
     }
 }
-
 
 export async function GET(): Promise<NextResponse> {
     try {
