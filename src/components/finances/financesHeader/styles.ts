@@ -1,8 +1,7 @@
-
 import styled from "styled-components";
 
 export const Container = styled.header`
-  
+
 `
 
 export const NavBar = styled.nav`
@@ -10,7 +9,7 @@ export const NavBar = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 0 80px 0 80px;
+  padding: 10px 20px;
   background: #382EC4;
   
   &.fixed {
@@ -18,12 +17,12 @@ export const NavBar = styled.nav`
     width: 100%;
     top: 0;
     left: 0;
-    right: 0;
     background-color: #382EC4;
     z-index: 1000;
+    box-sizing: border-box;
   }
 
-  @media (min-width: 601px) and (max-width: 1000px) {
+  @media (min-width: 601px) and (max-width: 1200px) {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -46,7 +45,7 @@ export const HamburgerMenu = styled.div`
     margin: 3px 0;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     display: flex;
   }
 `
@@ -54,31 +53,33 @@ export const HamburgerMenu = styled.div`
 export const MajorLinksContainer = styled.div`
   width: 60%;
 
-  @media (min-width: 1001px) and (max-width: 1450px) {
+  @media (min-width: 1201px) and (max-width: 1450px) {
     width: 70%;
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     width: 0%;
   }
 `
 
 export const LinksContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-  padding: 0 90px 0 90px; 
+  justify-content: center;
+  white-space: nowrap;
+  width: 80%;
+  padding: 0; 
+  gap: 35px;
   transition: transform 0.3s ease-in-out;
   
-
   &.show-links {
     transform: translateY(0);
     display: flex;
   }
-@media (min-width: 1001px) and (max-width: 1450px) {
+
+  @media (min-width: 1201px) and (max-width: 1450px) {
     padding: 0;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -99,7 +100,7 @@ export const LinksContainer = styled.div`
 export const Link = styled.a`
   color: #FFF;
   font-family: Montserrat;
-  font-size: 18px;
+  font-size: 17px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -110,7 +111,8 @@ export const Link = styled.a`
     height: 0px;
     padding: 0px;
     border-bottom: 4px solid white;
-}
+  }
+  
   &::after {
     content: '';
     width: 0px;
@@ -120,7 +122,6 @@ export const Link = styled.a`
     transition: .9s;
   }
 
-  
 `
 
 export const CloseButton = styled.button`
@@ -131,5 +132,6 @@ export const CloseButton = styled.button`
   margin-top: 5px;
   cursor: pointer;
   padding-bottom: 10px;
-`
 
+  
+`

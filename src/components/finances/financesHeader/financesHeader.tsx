@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { CgClose } from "react-icons/cg";
 
-export function financesHeader() {
+export function FinancesHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -22,7 +22,7 @@ export function financesHeader() {
         </S.HamburgerMenu>
         <div>
           <Image
-            src="/assets/imagesNavbar/LTS_navbar_logo.png "
+            src="/assets/imagesNavbar/LTS_navbar_logo.png"
             alt="Lucas Tecnologia Services Logo"
             width={76}
             height={43}
@@ -31,11 +31,11 @@ export function financesHeader() {
         <S.MajorLinksContainer>
           <S.LinksContainer className={isMenuOpen ? "show-links" : ""}>
             <S.Link href="/">Home</S.Link>
-            <S.Link href="/blog/posts/frontend">FrontEnd</S.Link>
-            <S.Link href="/blog/posts/backend">BackEnd</S.Link>
-            <S.Link href="/blog/posts/devOps">DevOps</S.Link>
-            <S.Link href="/blog/posts/cloudSuite">CloudSuite</S.Link>
-            <S.Link href="/blog">Blog</S.Link>
+            <S.Link href="/finances/paymentSchedule">Agendamento de Pagamentos</S.Link>
+            <S.Link href="/finances/invoices">Faturas</S.Link>
+            <S.Link href="/finances/billet">Comprovantes</S.Link>
+            <S.Link href="/(pages)/nf/generation">Geração de Notas Fiscais</S.Link>
+            <S.Link href="/finances">Finanças</S.Link>
             {isMenuOpen && (
               <S.CloseButton onClick={toggleMenu}>
                 <CgClose />
