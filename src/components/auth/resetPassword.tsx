@@ -19,9 +19,31 @@ const ResetPassword: React.FC = () => {
             return;
         }
 
-        const response = await fetch()
+        try {
+            const response = await fetch("/api/reset-password", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({email, token, newPassword }),
+            });
+            if (!response.ok)
+            {
+               throw new Error("Failed to reset password.");
+            }
+            setErrorMessage("Password reset successfully.");
 
-    }
+        } catch (error) {
+            setErrorMessage("There was an error reseting ypur password.");
+
+        }
+
+        
+
+    };
+    return (
+        
+    )
 
 
 }
