@@ -32,6 +32,9 @@ const ResetPassword: React.FC = () => {
             }
 
             setErrorMessage("Password reset successfully!");
+
+            // Redirecionar para a rota http://localhost:3000/login após sucesso
+            window.location.href = "http://localhost:3000/login";
         } catch (error) {
             setErrorMessage("There was an error resetting your password.");
         }
