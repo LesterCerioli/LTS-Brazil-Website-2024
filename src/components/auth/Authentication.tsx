@@ -1,15 +1,15 @@
-"use client"; // Make sure this is added
+"use client";
 
-import React, { useState } from "react";
-import styled from "styled-components"; // Import styled-components
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { useRouter } from "next/navigation";
 
-// Define the styled components
 const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; // Full height of the viewport
-  background-color: #001f3f; // Dark blue background
+  height: 100vh;
+  background-color: #001f3f;
 `;
 
 const StyledForm = styled.form`
@@ -18,12 +18,12 @@ const StyledForm = styled.form`
   width: 250px;
 
   label {
-    color: white; // White label color
-    margin-bottom: 5px; // Add spacing between label and input
+    color: white;
+    margin-bottom: 5px;
   }
 
   input {
-    margin-bottom: 10px; // Spacing between inputs
+    margin-bottom: 10px;
   }
 
   button {
@@ -36,8 +36,8 @@ const StyledForm = styled.form`
     letter-spacing: 0.071em;
     font-size: 14px;
     transition: all ease-in-out 0.2s;
-    background-color: white; // Background color for the button
-    color: #001f3f; // Dark text color for contrast
+    background-color: white;
+    color: #001f3f;
 
     &:hover {
       transform: scale(1.1);
@@ -54,6 +54,13 @@ const StyledForm = styled.form`
       color: white;
     }
   }
+
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
 `;
 
 interface AuthenticationProps {
@@ -61,14 +68,29 @@ interface AuthenticationProps {
 }
 
 const Authentication: React.FC<AuthenticationProps> = ({ onLogin }) => {
+  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [forgotPassword, setForgotPassword] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    if (forgotPassword) {
+      router.push("/auth/resetPassword"); // Redirect to the reset password page
+    }
+  }, [forgotPassword, router]);
 
   const handleLogin = (event: React.FormEvent) => {
     event.preventDefault();
-    onLogin(email, password);
+
+    if (email === "lesterlucasit@hotmail.com" && password === "1234") {
+      onLogin(email, password);
+      setErrorMessage("");
+      router.push("/admin");
+    } else {
+      setErrorMessage("Email or password is incorrect.");
+    }
   };
 
   return (
@@ -110,7 +132,9 @@ const Authentication: React.FC<AuthenticationProps> = ({ onLogin }) => {
           />
           <label>Forget my password</label>
         </div>
-        
+
+        {errorMessage && <div className="error-message">{errorMessage}</div>}
+
         <button type="submit" style={{ marginTop: "10px" }}>Login</button>
       </StyledForm>
     </Container>
