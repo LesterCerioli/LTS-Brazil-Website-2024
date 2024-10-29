@@ -42,7 +42,27 @@ const ResetPassword: React.FC = () => {
 
     };
     return (
-        
+        <Container>
+            <StyledForm onSubmit={handleResetPassword}>
+                <div>
+                    <label>Email</label>
+                    <input
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+
+                    />
+
+                </div>
+                <div>
+                    
+                </div>
+
+            </StyledForm>
+
+        </Container>
+
     )
 
 
