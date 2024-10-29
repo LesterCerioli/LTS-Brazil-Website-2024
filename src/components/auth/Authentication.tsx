@@ -77,7 +77,7 @@ const Authentication: React.FC<AuthenticationProps> = ({ onLogin }) => {
 
   useEffect(() => {
     if (forgotPassword) {
-      router.push("/auth/resetPassword"); // Redirect to the reset password page
+      router.push("/reset"); // Redirect to the reset password page
     }
   }, [forgotPassword, router]);
 
