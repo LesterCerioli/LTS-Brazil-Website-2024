@@ -31,9 +31,12 @@ export function AdminHeader() {
           <S.LinksContainer className={isMenuOpen ? "show-links" : ""}>
             <S.Link href="/">Home</S.Link>
             <S.Link href="/admin/accounting">Contabilidade</S.Link>
-            <S.Link href="/admin/commercialAdmin">Administrativo && Comercial</S.Link>
+            <S.Link href="/admin/administrative">Administrativo</S.Link>
+            <S.Link href="/admin/commercial">Comercial</S.Link>
             <S.Link href="/admin/fiscal">Fiscal</S.Link>
             <S.Link href="/admin/it">TI</S.Link>
+            <S.Link href="/admin/pd-department">DP</S.Link>
+            <S.Link href="/admin/hr">RH</S.Link>
             {isMenuOpen && (
               <S.CloseButton onClick={toggleMenu}>
                 <CgClose />

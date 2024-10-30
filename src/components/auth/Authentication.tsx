@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useRouter } from "next/navigation";
@@ -10,6 +8,32 @@ const Container = styled.div`
   align-items: center;
   height: 100vh;
   background-color: #001f3f;
+`;
+
+const Header = styled.header`
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  color: white;
+
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    button {
+      background-color: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 `;
 
 const StyledForm = styled.form`
@@ -74,10 +98,23 @@ const Authentication: React.FC<AuthenticationProps> = ({ onLogin }) => {
   const [rememberMe, setRememberMe] = useState(false);
   const [forgotPassword, setForgotPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [userName, setUserName] = useState("");
+
+  useEffect(() => {
+    
+    const token = localStorage.getItem("authToken");
+    const storedUser = localStorage.getItem("userName");
+    if (token && storedUser) {
+      setIsLoggedIn(true);
+      setUserName(storedUser);
+      router.push("/admin");
+    }
+  }, [router]);
 
   useEffect(() => {
     if (forgotPassword) {
-      router.push("/reset"); // Redirect to the reset password page
+      router.push("/reset"); // Redireciona para a página de redefinição de senha
     }
   }, [forgotPassword, router]);
 
@@ -86,58 +123,88 @@ const Authentication: React.FC<AuthenticationProps> = ({ onLogin }) => {
 
     if (email === "lesterlucasit@hotmail.com" && password === "1234") {
       onLogin(email, password);
+      setIsLoggedIn(true);
+      setUserName(email);
       setErrorMessage("");
+      
+      if (rememberMe) {
+        localStorage.setItem("authToken", "fakeToken"); // token fictício
+        localStorage.setItem("userName", email);
+      }
+      
       router.push("/admin");
     } else {
-      setErrorMessage("Email or password is incorrect.");
+      setErrorMessage("Email ou senha incorretos.");
     }
   };
 
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setUserName("");
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("userName");
+    router.push("/");
+  };
+
   return (
-    <Container>
-      <StyledForm onSubmit={handleLogin}>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        
-        <div className="checkbox-container">
-          <input
-            type="checkbox"
-            checked={rememberMe}
-            onChange={() => setRememberMe(!rememberMe)}
-          />
-          <label>Remember me</label>
-        </div>
-        
-        <div className="checkbox-container">
-          <input
-            type="checkbox"
-            checked={forgotPassword}
-            onChange={() => setForgotPassword(!forgotPassword)}
-          />
-          <label>Forget my password</label>
-        </div>
+    <>
+      {isLoggedIn && (
+        <Header>
+          <div className="user-info">
+            <span>Bem-vindo, {userName}!</span>
+            <button onClick={handleLogout}>Logoff</button>
+          </div>
+        </Header>
+      )}
+      {!isLoggedIn && (
+        <Container>
+          <StyledForm onSubmit={handleLogin}>
+            <div>
+              <label>Email:</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div>
+              <label>Senha:</label>
+              <input
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
 
-        {errorMessage && <div className="error-message">{errorMessage}</div>}
+            <div className="checkbox-container">
+              <input
+                type="checkbox"
+                checked={rememberMe}
+                onChange={() => setRememberMe(!rememberMe)}
+              />
+              <label>Lembrar de mim</label>
+            </div>
 
-        <button type="submit" style={{ marginTop: "10px" }}>Login</button>
-      </StyledForm>
-    </Container>
+            <div className="checkbox-container">
+              <input
+                type="checkbox"
+                checked={forgotPassword}
+                onChange={() => setForgotPassword(!forgotPassword)}
+              />
+              <label>Esqueci minha senha</label>
+            </div>
+
+            {errorMessage && <div className="error-message">{errorMessage}</div>}
+
+            <button type="submit" style={{ marginTop: "10px" }}>
+              Entrar
+            </button>
+          </StyledForm>
+        </Container>
+      )}
+    </>
   );
 };
 
