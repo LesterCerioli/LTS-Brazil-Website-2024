@@ -2,7 +2,7 @@
 import * as S from "./styles";
 
 import FrontEndPostsContainer from "@/components/blog/fronEndPostsContainer/FrontEndPostsContainer";
-import { BlogHeader } from "@/components/blog/blogHeader/BlogHeader";
+import { BlogHeader } from "@/components/blog/blogHeader/blogHeader";
 
 export default function FrontEnd() {
   return (

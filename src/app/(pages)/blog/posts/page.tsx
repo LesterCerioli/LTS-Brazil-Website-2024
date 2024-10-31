@@ -1,7 +1,7 @@
 "use client";
 import * as S from "./styles";
 import BlogPostContainer from "@/components/blog/blogPostContainer/blogPostContainer";
-import { BlogHeader } from "@/components/blog/blogHeader/BlogHeader";
+import { BlogHeader } from "@/components/blog/blogHeader/blogHeader";
 
 import Posts from "@/components/blog/postsPage/Posts";
 

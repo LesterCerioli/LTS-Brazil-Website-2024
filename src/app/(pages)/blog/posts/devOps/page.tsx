@@ -2,7 +2,7 @@
 import * as S from "./styles";
 
 import DevOps from "@/components/blog/devOpsPostContainer/DevOpsPostsContainer";
-import { BlogHeader } from "@/components/blog/blogHeader/BlogHeader";
+import { BlogHeader } from "@/components/blog/blogHeader/blogHeader";
 
 export default function BackendPosts() {
   return (
