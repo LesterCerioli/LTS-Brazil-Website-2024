@@ -3,9 +3,7 @@ import fs from "fs";
 import path from "path";
 
 dotenv.config();
-const contactsFilePath = process.env.CONTACTS_DATA_PATH!;
-const ENCRYPTION_KEY = Buffer.from(process.env.ENCRYPTION_KEY!, "hex");
-const IV_LENGTH = 16;
+const contactsFilePath = process.env.CONTACTS_DATA_PATH;
 
 if (!contactsFilePath) {
     throw new Error("Variável de ambiente CONTACTS_DATA_PATH não está definida.");
