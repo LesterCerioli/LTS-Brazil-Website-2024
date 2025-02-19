@@ -6,7 +6,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import MapLink from "./mapLink/mapLink";
 import { MdEmail } from "react-icons/md";
 import { BsTelephoneFill } from "react-icons/bs";
-import { useForm } from "react-hook-form";
+import { FieldError, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Modal from "react-modal";
@@ -114,7 +114,11 @@ export default function Form() {
           {errors.dataClient?.tel && <p style={{ color: "red", fontSize: "10px" }}>{errors.dataClient?.tel.message}</p>}
 
           <textarea {...register("dataClient.message")} rows={8} placeholder="Mensagem" required />
-          {errors.dataClient?.message && <p style={{ color: "red", fontSize: "10px" }}>{errors.dataClient?.message.message}</p>}
+          {errors.dataClient?.message && (
+            <p style={{ color: "red", fontSize: "10px" }}>
+              {(errors.dataClient?.message as FieldError).message}
+            </p>
+          )}
         </S.Data>
 
         <S.FirstButton>
