@@ -3,9 +3,7 @@ import { saveContactData } from "@/app/services/saveDataContacts";
 
 dotenv.config();
 
-export const config = {
-    runtime: "nodejs",
-};
+
 
 export async function POST(req) {
     try {
