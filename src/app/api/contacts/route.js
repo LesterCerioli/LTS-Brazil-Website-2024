@@ -1,7 +1,7 @@
-import dotenv from "dotenv";
+
 import { saveContactData } from "@/app/services/saveDataContacts";
 
-dotenv.config();
+
 
 
 
