@@ -31,7 +31,7 @@ export default function Form() {
   const [formMessage, setFormMessage] = useState<string | null>(null);
 
   const NEXT_PUBLIC_API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
-  const NEXT_API_CONTACTS = process.env.NEXT_API_CONTACTS;
+  const NEXT_PUBLIC_API_CONTACTS = process.env.NEXT_PUBLIC_API_CONTACTS;
   
   const abrirModal = () => {
     setModalIsOpen(true);
@@ -65,7 +65,7 @@ export default function Form() {
     setIsSending(true);
 
     try {
-      const response = await fetch(`${NEXT_PUBLIC_API_BASE_URL}${NEXT_API_CONTACTS}`, {
+      const response = await fetch(`${NEXT_PUBLIC_API_BASE_URL}${NEXT_PUBLIC_API_CONTACTS}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -77,6 +77,8 @@ export default function Form() {
           message: data.dataClient.message,
         }),
       });
+      console.log("API URL:", `${NEXT_PUBLIC_API_BASE_URL}${NEXT_PUBLIC_API_CONTACTS}`);
+
 
       const result = await response.json();
 
