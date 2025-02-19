@@ -30,8 +30,8 @@ export default function Form() {
   const [isSending, setIsSending] = useState(false);
   const [formMessage, setFormMessage] = useState<string | null>(null);
 
-  const NEXT_PUBLIC_API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
-  const NEXT_PUBLIC_API_CONTACTS = process.env.NEXT_PUBLIC_API_CONTACTS;
+  const NEXT_PUBLIC_API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || "https://lts-brazil-website-2024.vercel.app";
+  const NEXT_PUBLIC_API_CONTACTS = process.env.NEXT_PUBLIC_API_CONTACTS || "/api/contacts";
   
   const abrirModal = () => {
     setModalIsOpen(true);
@@ -77,8 +77,6 @@ export default function Form() {
           message: data.dataClient.message,
         }),
       });
-      console.log("API URL:", `${NEXT_PUBLIC_API_BASE_URL}${NEXT_PUBLIC_API_CONTACTS}`);
-
 
       const result = await response.json();
 
