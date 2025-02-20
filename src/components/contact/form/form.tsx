@@ -12,7 +12,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Modal from "react-modal";
 import { GoIssueClosed } from "react-icons/go";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
+import { Analytics } from "@vercel/analytics/react";
 const schemaForm = z.object({
   dataClient: z.object({
     name: z.string().min(10, "Informe seu nome completo"),
@@ -99,6 +99,7 @@ export default function Form() {
   return (
     <S.Container>
       <SpeedInsights />
+      <Analytics />
       <form onSubmit={handleSubmit(handleFormSubmit)}>
         <S.Title>
           <h1>Fale conosco</h1>
