@@ -2,10 +2,14 @@
 import * as S from "./styles";
 import React from "react";
 import EducationalServicesComponent from "@/components/educationalServices/educationalServicesComponent";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function EducationalServices() {
     return (
         <S.Container>
+            <SpeedInsights />
+            <Analytics />
             <EducationalServicesComponent
                 title="Portais Educacionais"
                 subtitle="Na era da aprendizagem digital, nossa equipe especializada desenvolve portais educacionais sob medida que capacitam educadores e alunos. Explore nossos serviços e junte-se à revolução educacional online."

@@ -8,7 +8,13 @@ import React from "react"
         <S.Container>
             <S.TitleContainer>
                 <S.Title>Portfólio</S.Title>
-                <S.Subtitle>Visite nossa página e explore a variedade de serviços que oferecemos para atender às suas necessidades.</S.Subtitle>
+                <S.Subtitle>
+                    Explore nosso portfólio e descubra como transformamos ideias em{" "}
+                    <strong>soluções inovadoras e de alto impacto</strong>. Cada projeto
+                    reflete nossa <strong>paixão por tecnologia</strong>,{" "}
+                    <strong>excelência em desenvolvimento</strong> e{" "}
+                    <strong>compromisso com resultados extraordinários</strong>.
+                </S.Subtitle>
             </S.TitleContainer>
             <S.CardsMainContainer>
                 <S.CardsContainer>
