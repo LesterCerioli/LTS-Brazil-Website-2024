@@ -11,6 +11,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Modal from "react-modal";
 import { GoIssueClosed } from "react-icons/go";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const schemaForm = z.object({
   dataClient: z.object({
@@ -97,6 +98,7 @@ export default function Form() {
 
   return (
     <S.Container>
+      <SpeedInsights />
       <form onSubmit={handleSubmit(handleFormSubmit)}>
         <S.Title>
           <h1>Fale conosco</h1>
