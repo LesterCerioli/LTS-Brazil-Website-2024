@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 const ALLOWED_ORIGINS = [
     "https://lts-brazil-website-2024.vercel.app"
     
+    
 ];
 
 export function middleware(req: NextRequest) {
