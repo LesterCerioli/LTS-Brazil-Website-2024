@@ -7,10 +7,14 @@ import RecruitmentCardContainer from '@/components/recruitmentServices/recruitme
 import OurServicesCardContainer from '@/components/recruitmentServices/ourServicesCardContainer/ourServicesCardContainer'
 import RecruitmentCycleContainer from '@/components/recruitmentServices/recruitmentCycleContainer/recruitmentCycleContainer'
 import OurSpecialtiesContainer from '@/components/recruitmentServices/ourSpecialtiesContainer/ourSpecialtiesContainer'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export default function RecruitmentServices() {
   return (
     <S.Container>
+      <SpeedInsights />
+      <Analytics />
       <MainHero />
       <SubHero />
       <RecruitmentCardContainer />

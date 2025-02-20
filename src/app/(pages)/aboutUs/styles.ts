@@ -7,29 +7,15 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
-export const Title = styled.div`
-  h1 {
-    display: flex;
-    justify-content: center;
-    font-size: 3.4rem;
-    margin-top: 8rem;
-    color: #021F3E;
-    font-weight: 400;
-  }
-
-  .hline {
-    border-bottom: 2px solid lightgray;
-    margin: 1rem 7rem;
-    margin-bottom: 4rem;
-  }
-
-  @media screen and (max-width: 600px) {
-    h1 {
-      margin: 0 auto;
-      font-size: 30px;
-    }
-  }
-`;
+export const Title = styled.h3`
+    color: #000;
+    font-family: Rubik;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 5px;
+`
 
 export const Section = styled.div`
   display: flex;
@@ -127,5 +113,31 @@ export const TextElement = styled.div`
       margin: 0 2.3rem;
       font-size: 1.4rem;
     }
+  }
+`;
+export const Subtitle = styled.h6`
+  color: #000;
+  font-family: Montserrat;
+  font-size: 21px;
+  text-align: justify;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  text-justify: inter-word;
+  max-width: 90%;
+  margin: 10px auto;
+
+  @media (max-width: 768px) {
+    font-size: 18px; 
+    text-align: left; 
+    max-width: 95%; 
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px; 
+    word-spacing: normal; 
+    line-height: 1.5; 
   }
 `;

@@ -2,10 +2,14 @@
 import * as S from "./styles";
 import React from "react";
 import CRMServices from "@/components/crmServices/crmServices";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function CRMServicesComponent() {
     return (
         <S.Container>
+            <SpeedInsights />
+            <Analytics />
             <CRMServices
                 title="Portal CRM / ERP"
                 subtitle="Com o CRM, ou Gerenciamento de Relacionamento com o Cliente, você pode construir conexões mais fortes com seus clientes. Ele rastreia todas as interações e ajuda a personalizar seu atendimento, criando relacionamentos duradouros e impulsionando suas vendas."

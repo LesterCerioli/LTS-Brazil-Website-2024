@@ -26,14 +26,31 @@ margin-bottom: 5px;
 `
 
 export const Subtitle = styled.h6`
-color: #000;
-font-family: Montserrat;
-font-size: 21px;
-text-align: justify;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
-`
+  color: #000;
+  font-family: Montserrat;
+  font-size: 21px;
+  text-align: justify;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  word-spacing: 1px;
+  text-justify: inter-word;
+  max-width: 90%;
+  margin: 10px auto;
+
+  @media (max-width: 768px) {
+    font-size: 18px; 
+    text-align: left; 
+    max-width: 95%; 
+  }
+
+  @media (max-width: 480px) {
+    font-size: 16px; 
+    word-spacing: normal; 
+    line-height: 1.5; 
+  }
+`;
 
 // export const CardsContainer = styled.div`
 //     width: 100%;
